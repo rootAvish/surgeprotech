@@ -1,0 +1,12 @@
+<form class="form-register" name="registerForm" ng-submit="registerForm.$valid && register.Register()" novalidate>
+  <label class="sr-only" for="name">Name: </label>
+  <input type="text" id="name" ng-model="formData.name" class="form-control" placeholder="name" required>
+  <label for="email" class="sr-only" >E-mail: </label>
+  <input type="email" ng-model="formData.email" id="email" class="form-control" placeholder="e-mail" required>
+  <span class="help-block" ng-show="exists">An account with this e-mail id already exists.</span>
+  <label for="passwd" class="sr-only" >Password: </label>
+  <input type="password" id="passwd" class="form-control" ng-model="formData.password" placeholder="Password" required>
+  <label for="cnfpasswd" class="sr-only">Confirm Password:</label>
+  <input type="password" id="cnfpasswd" class="form-control" placeholder="Confirm Password" required>
+   <input type="submit" value="Register" class="btn btn-default">
+</form>

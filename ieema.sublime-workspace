@@ -1,0 +1,586 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"cons",
+				"console"
+			],
+			[
+				"$rot",
+				"$routeParams	AngularJS"
+			],
+			[
+				"margin",
+				"margin-left"
+			],
+			[
+				"$root",
+				"$rootScope	AngularJS"
+			],
+			[
+				"$roo",
+				"$rootScope	AngularJS"
+			],
+			[
+				"make",
+				"make_response	Flask"
+			],
+			[
+				"lo",
+				"login"
+			],
+			[
+				"ng-v",
+				"ng-view	AngularJS"
+			],
+			[
+				"Paper",
+				"paperId"
+			],
+			[
+				"$roue",
+				"$routeParams	AngularJS"
+			],
+			[
+				"$sc",
+				"$scope	AngularJS"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"con",
+				"console"
+			],
+			[
+				"$lova",
+				"$locationProvider	AngularJS"
+			],
+			[
+				"fun",
+				"fun	Function"
+			],
+			[
+				"$loca",
+				"$locationprovider"
+			],
+			[
+				"$rou",
+				"$routeprovider"
+			],
+			[
+				"f",
+				"for	for (…) {…} (Improved Native For-Loop)"
+			],
+			[
+				"CO",
+				"color"
+			],
+			[
+				"mar",
+				"margin-right"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"for",
+				"form	Tag"
+			],
+			[
+				"li",
+				"li	Tag"
+			],
+			[
+				"h",
+				"head	Tag"
+			],
+			[
+				"send",
+				"send_message"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"wi",
+				"width"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"cip",
+				"ciphrgen"
+			],
+			[
+				"ci",
+				"ciphrgen"
+			],
+			[
+				"ciphe",
+				"ciphrgen"
+			],
+			[
+				"ifma",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"com",
+				"company_login"
+			],
+			[
+				"compl",
+				"complaints"
+			],
+			[
+				"pro",
+				"product"
+			],
+			[
+				"num",
+				"num_samples"
+			],
+			[
+				"sample",
+				"samplelist"
+			],
+			[
+				"clas",
+				"classifier"
+			],
+			[
+				"file",
+				"filenames"
+			],
+			[
+				"fo",
+				"foldername"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "surgeprotech/static/js/app.js",
+			"settings":
+			{
+				"buffer_size": 1012,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "surgeprotech/static/partials/paper.html",
+			"settings":
+			{
+				"buffer_size": 2215,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 285.0,
+		"selected_items":
+		[
+			[
+				"html",
+				"HTMLBeautify"
+			],
+			[
+				"package",
+				"Package Control: Install Package"
+			],
+			[
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"pa",
+				"Package Control: Install Package"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
+				"packageI",
+				"Package Control: Install Package"
+			],
+			[
+				"package control: insta",
+				"Package Control: Install Package"
+			],
+			[
+				"packa",
+				"Package Control: List Packages"
+			],
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			]
+		],
+		"width": 575.0
+	},
+	"console":
+	{
+		"height": 0.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/home/rootavish/IEEMA",
+		"/home/rootavish/IEEMA/surgeprotech",
+		"/home/rootavish/IEEMA/surgeprotech/static",
+		"/home/rootavish/IEEMA/surgeprotech/static/js",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials",
+		"/home/rootavish/IEEMA/surgeprotech/templates"
+	],
+	"file_history":
+	[
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/paperlist.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/register.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/fuckme.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/paper.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/controller.js",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/upload.html",
+		"/home/rootavish/IEEMA/surgeprotech/controllers.py",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/app.js",
+		"/home/rootavish/IEEMA/surgeprotech/templates/index.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/login.html",
+		"/home/rootavish/IEEMA/surgeprotech/templates/forums.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/css/style.css",
+		"/home/rootavish/IEEMA/surgeprotech/config.py",
+		"/home/rootavish/IEEMA/surgeprotech/__init__.py",
+		"/home/rootavish/IEEMA/surgeprotech/models.py",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/service.js",
+		"/home/rootavish/angular-flask/data/db_items.json",
+		"/home/rootavish/.config/sublime-text-3/Packages/JSON Reindent/JSONReindent.sublime-settings",
+		"/home/rootavish/IEEMA/runserver.py",
+		"/home/rootavish/IEEMA/surgeprotech/controller.py",
+		"/home/rootavish/angular-flask/angular_flask/core.py",
+		"/home/rootavish/angular-flask/angular_flask/controllers.py",
+		"/home/rootavish/angular-flask/angular_flask/settings.py",
+		"/home/rootavish/angular-flask/angular_flask/models.py",
+		"/home/rootavish/Downloads/BL&GR/bootloader/bootloader_step.txt",
+		"/home/rootavish/rootavish.github.io/wercker-step.yml",
+		"/home/rootavish/rootavish.github.io/run.sh",
+		"/home/rootavish/rootavish.github.io/wrecker.yml",
+		"/home/rootavish/blog/src/contents/articles/why-am-i-still-here/index.md",
+		"/home/rootavish/Docs/Flask.docset/Contents/Resources/Documents/doc/_sources/deploying/cgi.txt",
+		"/home/rootavish/Downloads/enron/send-mail.py",
+		"/home/rootavish/Downloads/enron/images/dirst.png",
+		"/home/rootavish/Downloads/enron/enron1/ham/1281.2000-06-08.farmer.ham.txt",
+		"/home/rootavish/mbox",
+		"/home/rootavish/ceas08-1/hambox",
+		"/home/rootavish/.cache/.fr-qnPPeq/beck-s/2001_plan/1",
+		"/home/rootavish/.cache/.fr-uM60GE/beck-s/australia/10",
+		"/home/rootavish/.cache/.fr-r4Affo/beck-s/australia/1",
+		"/home/rootavish/.cache/.fr-mEjXol/beck-s/aec/1",
+		"/home/rootavish/.cache/.fr-qR0fIL/beck-s/2001_plan/1",
+		"/home/rootavish/ceas08-1/create_mbox.py",
+		"/home/rootavish/Downloads/mongodb-linux-x86_64-ubuntu1404-3.0.2/README",
+		"/home/rootavish/random-web/untitled.html",
+		"/home/rootavish/random-web/jquery.min.js",
+		"/home/rootavish/Documents/transposition.py",
+		"/home/rootavish/policyhack/RIG/templates/index.html",
+		"/home/rootavish/policyhack/RIG/app.py",
+		"/home/rootavish/mushme/src/mushme.py",
+		"/home/rootavish/policyhack/adminapp.py",
+		"/media/rootavish/KINGSTON/hackathon2.py",
+		"/home/rootavish/policyhack/table.sql",
+		"/home/rootavish/Documents/dataset.json",
+		"/home/rootavish/policyhack/templates/registercomplaint/index.html",
+		"/home/rootavish/policyhack/app.py",
+		"/home/rootavish/RIG/index.html",
+		"/home/rootavish/mushme/src/templates/userprofile/index.html",
+		"/home/rootavish/Documents/mozilla-central.hg",
+		"/home/rootavish/nw/transposition.py",
+		"/home/rootavish/nw/transposition.cpp",
+		"/home/rootavish/Downloads/eustace_labels/labels/testsyl/subjectf1/left-headed/f1lcapam.lab",
+		"/home/rootavish/Downloads/eustace_labels/labels/testsyl/subjectf1/left-headed/f1lcapae.lab",
+		"/home/rootavish/Downloads/eustace_labels/README",
+		"/home/rootavish/.cache/.fr-aim0JZ/TRN/SBC002.trn",
+		"/home/rootavish/project/classifier_pitch.py",
+		"/home/rootavish/project/pitch.py",
+		"/home/rootavish/project/classifier.py",
+		"/home/rootavish/project/test.py",
+		"/home/rootavish/pyaud.py",
+		"/home/rootavish/algorithms/mergesort.cpp",
+		"/home/rootavish/linguist/vendor/grammars/Vala-TMBundle/Syntaxes/Vala.tmLanguage",
+		"/home/rootavish/project/aubiocut",
+		"/home/rootavish/Downloads/eustace_labels/labels/othersyl/subjectm2/right-headed/m2rcomae.uns",
+		"/home/rootavish/Downloads/eustace_labels/labels/othersyl/subjectf1/left-headed/f1lcapae.uns",
+		"/home/rootavish/zsh/Test/A01grammar.ztst",
+		"/home/rootavish/Desktop/Tokenization Using Grammar Bundles in Linguist.txt",
+		"/home/rootavish/linguist/lib/linguist/tokenizer.rb",
+		"/home/rootavish/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/rootavish/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
+		"/home/rootavish/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"    \n",
+			"  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
+			"this",
+			"'\n",
+			"paper",
+			"12",
+			"vivaco",
+			"24.99",
+			"q",
+			"form-register",
+			"formata",
+			"EBEBEB",
+			"placeholder",
+			"control-label",
+			"input-xlarge",
+			"footer",
+			"('",
+			"routeprovider",
+			"hero",
+			"footer",
+			".footer",
+			"footer",
+			"overlay",
+			"footer",
+			"nav",
+			"form",
+			"container",
+			"Logo_IEEMA",
+			"js/",
+			"js",
+			"assets",
+			"DEBUG",
+			"ng-view",
+			"welcome",
+			"before",
+			"					#",
+			"re",
+			"Archive",
+			">\n",
+			"companylogin",
+			"form",
+			"view",
+			"login",
+			"form",
+			"image",
+			"enc",
+			"form",
+			"...>",
+			"])})",
+			"print",
+			"freq",
+			"import",
+			"age",
+			"gender",
+			"extract_shebang",
+			"extract_tokens"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+			"",
+			"4F4F4F",
+			"sr-only",
+			"form-control",
+			"routeProvider",
+			"js/lib/",
+			"/static",
+			"/static/css",
+			"output",
+			"",
+			"pitch"
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "surgeprotech/static/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1012,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								695,
+								695
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "surgeprotech/static/partials/paper.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2215,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2186,
+								2186
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 450.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 26.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.find_results":
+	{
+		"height": 0.0
+	},
+	"project": "ieema.sublime-project",
+	"replace":
+	{
+		"height": 64.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 264.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

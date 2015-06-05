@@ -1,0 +1,22 @@
+<form>
+	<label for="ptitle">Title:</label>
+	<input type="text" id="ptitle" class="form-control" ng-model="formData.title">
+	<span class="help-block">Enter the title of your paper.</span>
+	<label for="pabs">Paper Abstract:</label>
+	<textarea rows="4" id="pabs" class="form-control" ng-model="formData.abstract"></textarea>
+	<span class="help-block">Enter a short abstract of your paper.</span>
+	
+	<span class="btn btn-file btn-block">Upload a file
+		<input type="file" nv-file-select uploader="uploader"/>
+	</span>
+	
+	<ul>
+		<li ng-repeat="item in uploader.queue">
+			Name: <span ng-bind="item.file.name"></span><br/>
+			<button type="button" class="btn btn-danger" ng-click="item.remove()">
+			<span class="glyphicon glyphicon-trash"></span> Remove
+			</button>
+		</li>
+	</ul>
+	<button ng-click="item.upload()">submit</button>
+</form>
