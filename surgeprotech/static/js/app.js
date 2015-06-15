@@ -30,14 +30,23 @@ var app = angular.module('spForums',['ngResource', 'ngRoute','angularFileUpload'
 		controller: abstController,
 		controllerAs: 'abst'
 	});
-	
 	$locationProvider.html5Mode(true);
 }]);
 
 app.controller('appController',['$scope', function($scope) {
 	$scope.currentUser = null;
 
-	$scope.setUser = function(user) {
-		$scope.currentUser = user;
+	$scope.setUser = function() {
+		$scope.currentUser = Session.User;
+	};
+}])
+.run(['LoginState',function(LoginState,Session) {
+	LoginState.then(function(res) {
+
+		if (res.length) {
+			Session.create(res);
+		}
+	}), function(err) {
+		// Handle this error.
 	};
 }]);

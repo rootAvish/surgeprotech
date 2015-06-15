@@ -4,16 +4,52 @@
 		"selected_items":
 		[
 			[
+				"tex",
+				"text-align"
+			],
+			[
+				"$loca",
+				"$locationProvider	AngularJS"
+			],
+			[
+				"templ",
+				"templateUrl"
+			],
+			[
+				"re",
+				"reviews"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"lo",
+				"log"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"marg",
+				"margin-left"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"font",
+				"font-family"
+			],
+			[
 				"cons",
 				"console"
 			],
 			[
 				"$rot",
 				"$routeParams	AngularJS"
-			],
-			[
-				"margin",
-				"margin-left"
 			],
 			[
 				"$root",
@@ -26,10 +62,6 @@
 			[
 				"make",
 				"make_response	Flask"
-			],
-			[
-				"lo",
-				"login"
 			],
 			[
 				"ng-v",
@@ -60,14 +92,6 @@
 				"$locationProvider	AngularJS"
 			],
 			[
-				"fun",
-				"fun	Function"
-			],
-			[
-				"$loca",
-				"$locationprovider"
-			],
-			[
 				"$rou",
 				"$routeprovider"
 			],
@@ -78,10 +102,6 @@
 			[
 				"CO",
 				"color"
-			],
-			[
-				"mar",
-				"margin-right"
 			],
 			[
 				"wid",
@@ -114,10 +134,6 @@
 			[
 				"wi",
 				"width"
-			],
-			[
-				"font",
-				"font-size"
 			],
 			[
 				"cip",
@@ -172,18 +188,10 @@
 	"buffers":
 	[
 		{
-			"file": "surgeprotech/static/js/app.js",
+			"file": "surgeprotech/controllers.py",
 			"settings":
 			{
-				"buffer_size": 1012,
-				"line_ending": "Unix"
-			}
-		},
-		{
-			"file": "surgeprotech/static/partials/paper.html",
-			"settings":
-			{
-				"buffer_size": 2215,
+				"buffer_size": 5145,
 				"line_ending": "Unix"
 			}
 		}
@@ -199,6 +207,18 @@
 				"HTMLBeautify"
 			],
 			[
+				"open sd",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"open",
+				"View: Toggle Open Files in Side Bar"
+			],
+			[
+				"pac",
+				"Package Control: Install Package"
+			],
+			[
 				"package",
 				"Package Control: Install Package"
 			],
@@ -208,10 +228,6 @@
 			],
 			[
 				"pa",
-				"Package Control: Install Package"
-			],
-			[
-				"pac",
 				"Package Control: Install Package"
 			],
 			[
@@ -225,10 +241,6 @@
 			[
 				"packa",
 				"Package Control: List Packages"
-			],
-			[
-				"open",
-				"View: Toggle Open Files in Side Bar"
 			]
 		],
 		"width": 575.0
@@ -254,28 +266,35 @@
 		"/home/rootavish/IEEMA",
 		"/home/rootavish/IEEMA/surgeprotech",
 		"/home/rootavish/IEEMA/surgeprotech/static",
+		"/home/rootavish/IEEMA/surgeprotech/static/css",
 		"/home/rootavish/IEEMA/surgeprotech/static/js",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials",
 		"/home/rootavish/IEEMA/surgeprotech/templates"
 	],
 	"file_history":
 	[
-		"/home/rootavish/IEEMA/surgeprotech/static/partials/paperlist.html",
-		"/home/rootavish/IEEMA/surgeprotech/static/partials/register.html",
-		"/home/rootavish/IEEMA/surgeprotech/static/partials/fuckme.html",
-		"/home/rootavish/IEEMA/surgeprotech/static/partials/paper.html",
-		"/home/rootavish/IEEMA/surgeprotech/static/js/controller.js",
-		"/home/rootavish/IEEMA/surgeprotech/static/partials/upload.html",
-		"/home/rootavish/IEEMA/surgeprotech/controllers.py",
-		"/home/rootavish/IEEMA/surgeprotech/static/js/app.js",
-		"/home/rootavish/IEEMA/surgeprotech/templates/index.html",
-		"/home/rootavish/IEEMA/surgeprotech/static/partials/login.html",
-		"/home/rootavish/IEEMA/surgeprotech/templates/forums.html",
-		"/home/rootavish/IEEMA/surgeprotech/static/css/style.css",
-		"/home/rootavish/IEEMA/surgeprotech/config.py",
-		"/home/rootavish/IEEMA/surgeprotech/__init__.py",
-		"/home/rootavish/IEEMA/surgeprotech/models.py",
 		"/home/rootavish/IEEMA/surgeprotech/static/js/service.js",
+		"/home/rootavish/IEEMA/surgeprotech/models.py",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/app.js",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/controller.js",
+		"/home/rootavish/IEEMA/surgeprotech/templates/index.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/lib/angular-resource.min.js",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/lib/angular-route.min.js",
+		"/home/rootavish/IEEMA/surgeprotech/static/bower_components/angular-file-upload/Gruntfile.coffee",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/upload.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/css/style.css",
+		"/home/rootavish/IEEMA/surgeprotech/__init__.py",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/paper.html",
+		"/home/rootavish/IEEMA/surgeprotech/controllers.py",
+		"/home/rootavish/IEEMA/surgeprotech/templates/404.html",
+		"/home/rootavish/github-bookmarks/github-bookmarks.js",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/register.html",
+		"/media/rootavish/New Volume1/CTR/read.py",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/login.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/paperlist.html",
+		"/home/rootavish/IEEMA/surgeprotech/config.py",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/fuckme.html",
+		"/home/rootavish/IEEMA/surgeprotech/templates/forums.html",
 		"/home/rootavish/angular-flask/data/db_items.json",
 		"/home/rootavish/.config/sublime-text-3/Packages/JSON Reindent/JSONReindent.sublime-settings",
 		"/home/rootavish/IEEMA/runserver.py",
@@ -356,6 +375,37 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"query",
+			"501",
+			"paper",
+			"/api/paper",
+			"paper",
+			"merge",
+			"query",
+			"db.query",
+			"g.user",
+			"user",
+			"uesr",
+			"/api/paper",
+			"setUser",
+			"body",
+			"html",
+			"footer",
+			"register",
+			"btn",
+			">\n",
+			"lm.",
+			"lm.user_loader",
+			".user",
+			"initiate",
+			"json.dumps",
+			"credentials",
+			">\n",
+			"{}",
+			"formData",
+			"login",
+			"json",
+			"font-family",
 			"    \n",
 			"  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
 			"this",
@@ -419,6 +469,9 @@
 		"regex": false,
 		"replace_history":
 		[
+			"jsonify",
+			"formData",
+			"credentials",
 			"",
 			"4F4F4F",
 			"sr-only",
@@ -440,63 +493,34 @@
 	"groups":
 	[
 		{
-			"selected": 1,
+			"selected": 0,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "surgeprotech/static/js/app.js",
+					"file": "surgeprotech/controllers.py",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1012,
+						"buffer_size": 5145,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								695,
-								695
+								3861,
+								3861
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
-							"translate_tabs_to_spaces": false
-						},
-						"translation.x": 0.0,
-						"translation.y": 0.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 1,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "surgeprotech/static/partials/paper.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 2215,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								2186,
-								2186
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"syntax": "Packages/Python/Python.tmLanguage",
 							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
-						"translation.x": 0.0,
-						"translation.y": 450.0,
+						"translation.x": 28.0,
+						"translation.y": 1872.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,

@@ -9,25 +9,24 @@ function loginController($scope, $location, AuthService) {
 		
 		AuthService.login(formData)
 		.then(function(user) {
-			$scope.setUser(user);
+			$scope.setUser();
 			$location.path('/user');
 		})
 	};
 };
 
-function registerController($scope,$http,$location) {
+function logoutcontroller($scope) {
+	$scope.currenUser = null;
+}
+
+function registerController($scope,$http,$location, RegisterService) {
 
 	$scope.formData = {};
 
 	this.Register = function () {
-		$http({
-			method: 'POST',
-			url: '/api/user/',
-			data: $scope.formData,
-			headers: {'Content-Type': 'application/json'}
-		})
+		
+		RegisterService.register($scope.formData)
 		.success (function(data) {
-			console.log(data);
 
 			if (data.success == true) {
 				$scope.login = true;
@@ -38,13 +37,21 @@ function registerController($scope,$http,$location) {
 			}
 		});
 	};
-};
+}
 
 function uploadController($scope, FileUploader,$http) {
-	this.formData = {};
+	$scope.formData = {};
 	$scope.uploader = new FileUploader();
 	$scope.uploader.url = "http://localhost:5000/api/paper/";
-	$scope.uploader.formData.push(this.formData);
+	
+	this.Qclear = function() {
+		$scope.uploader.clearQueue();
+	};
+		
+	$scope.uploader.onBeforeUploadItem = function(item) {
+		item.formData.push($scope.formData);
+		console.log(item);
+	};
 }
 
 function paperController($scope, $http) {
@@ -54,7 +61,7 @@ function paperController($scope, $http) {
 	$http({
 		method: 'GET',
 		url: '/api/paper/',
-		params: {'user': 'avishkar.gupta.delhi@gmail.com', 'page': 1}
+		params: {'page': 1}
 	})
 	.success(function (data) {
 		$scope.papers = data;
@@ -64,4 +71,16 @@ function paperController($scope, $http) {
 
 function abstController($scope,$http,$routeParams) {
 	console.log($routeParams.paperId);
+
+	$scope.review = {};
+
+	$scope.paper = {reviews:[]};
+
+	$scope.addReview = function(review) {
+		review.date = new Date();
+		review.author = $scope.currentUser.data.Name + "(Technical Committee Member)";
+		console.log(review.author);
+		$scope.paper.reviews.push(review);
+		$scope.review = {};
+	};
 }

@@ -32,5 +32,42 @@ angular.module('services',[])
 		});
 	};
 
+	auth.getUser = function() {
+		return Session.userId;
+	}
 	return auth;
+}])
+
+.factory('Resources', ['$resource', function($resource){
+	
+	return $resource('/api/paper/', {}, {
+		query: {
+			method: 'GET',
+			isArray: true
+		}
+	});
+
+}])
+
+.factory('LoginState', ['$http', function($http){
+		return $http({
+					url:'/api/user/',
+					method: 'GET',
+					params: {}
+				});
+}])
+
+.factory('RegisterService', ['$http', function(http){
+	var reg = {};
+
+	reg.register = function (formData){
+		$http({
+			method: 'POST',
+			url: '/api/user/',
+			data: formData,
+			headers: {'Content-Type': 'application/json'}
+		});
+	};
+
+	return reg;
 }]);

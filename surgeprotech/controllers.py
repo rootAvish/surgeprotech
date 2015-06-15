@@ -1,6 +1,7 @@
-#from surgeprotech.models import Paper, User, Comment
+from surgeprotech.models import Paper, User, Comment
 from surgeprotech import app, db, lm
-from flask import make_response, send_from_directory, request, jsonify, abort, url_for, session, g, redirect
+from flask import make_response, send_from_directory, request, jsonify, abort, url_for, session, g, redirect, render_template
+import flask.json
 import os, hashlib
 from models import Comment, User, Paper
 from werkzeug import secure_filename
@@ -73,6 +74,17 @@ def registerUser():
             # Return error since user was already in the database.
             return jsonify({"success": False, "error-email": "User with this e-mail id already exists"})
 
+    else:
+
+        if 'user' in g:
+            return jsonify({
+                                "u_id": g.user.id,
+                                "Name": g.user.name,
+                                "role": g.user.ac_type
+                           })
+        else:
+            return jsonify({})
+
 
 # The login handler.
 @app.route('/api/login', methods=['POST'])
@@ -96,6 +108,7 @@ def loginAPI():
                             "success": False
                        })
 
+
 @app.route('/api/paper/', methods=['GET','POST'])
 def paper():
     user = g.user
@@ -107,32 +120,58 @@ def paper():
             os.mkdir(app.config['UPLOAD_FOLDER'])
 
         file = request.files['file']
+
         if file:
-            filename = secure_filename('paper_avishkar.gupta.delhi@gmail.com'+'my paper title'+'.pdf')
-            file.save(os.path.join(app.config['UPLOAD_FOLDER'], filename))
-            return jsonify({"success":True})
+            try:
+                u_id = user.get_id()
+                name = User.query.filter_by(id=u_id).first()
+
+                filename = secure_filename(str(u_id)+'_'+name.name.split(' ')[0])
+
+                link = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                file.save(link)
+
+                print request.form.getlist('title'),request.form.getlist('abstract'),link
+
+                db.session.add(Paper(request.form.getlist('title')[0],request.form.getlist('abstract')[0],link, u_id))
+                db.session.commit()
+
+                return jsonify({"success":True}), 200
+            except:
+                 return abort(501)
     else:
 
-        print request.args['user']
+        admin = User.query('ac_type'),filter_by(id=user.get_id()).first()
         #authenticate that the user is an admin.
-        admin = True
 
         if admin == True:
             post = Paper.query.paginate(int(request.args['page']), int(app.config['POSTS_PER_PAGE']), False)
             return jsonify({"posts": post.items});
+        else:
+            paper = Paper.query.filter_by(author=user.get_id()).first()
+
+            if paper is not None:
+                
+                return json.jsonify(link=link,
+                                    abstract = paper.abstract,
+                                    title=paper.title)
+            else:
+                # return an empty json if no paper found
+                return json.jsonify({})
 
 
 @app.route('/api/comment/')
 def getReviews():
-    print request.args['paperid']
-    Comment.query.filter_by('p_id').all()
+    if request.method == "POST":
 
+        data = request.json()
 
 @app.route('/api/paper/download/<filename>/')
 def download(filename):
     return send_from_directory(os.path.join(app.root_path, 'static'),
                                'pdf/'+filename)
 
+
 @app.errorhandler(404)
 def page_not_found(e):
-        return make_response('404.html'), 404
+        return render_template('404.html'), 404

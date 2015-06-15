@@ -1,11 +1,13 @@
 from surgeprotech import db, app
 import hashlib
+from datetime import datetime
 
 # Table to store technical commitee's comments on papers.
 class Comment(db.Model):
 
     cmt_id = db.Column(db.Integer, primary_key=True)
     content = db.Column(db.Text)
+    rv_date = db.Column(db.DateTime)
     author = db.Column(db.Integer,db.ForeignKey('user.id'))
     p_id = db.Column(db.Integer, db.ForeignKey('paper.p_id'))
 
@@ -16,9 +18,18 @@ class Paper(db.Model):
     p_id = db.Column(db.Integer, primary_key=True)
     Title = db.Column(db.Unicode(300))
     Abstract = db.Column(db.Text)
+    up_date = db.Column(db.DateTime)
     Link = db.Column(db.Unicode(500))
+
     Author = db.Column(db.Integer, db.ForeignKey('user.id'))
     comment_rl = db.relationship(Comment, backref='paper', lazy='dynamic')
+
+    def __init__(self,title,abstract,link, Author):
+        self.Title = title
+        self.Abstract = abstract
+        self.up_date = datetime.utcnow()
+        self.Author = Author
+        self.Link = link
 
     def ___repr__(self):
         return '<Paper %r>' % self.p_id
