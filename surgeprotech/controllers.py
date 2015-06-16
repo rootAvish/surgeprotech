@@ -135,7 +135,7 @@ def paper(authorId=None):
 
                 print request.form.getlist('title'),request.form.getlist('abstract'),link
 
-                db.session.add(Paper(request.form.getlist('title')[0],request.form.getlist('abstract')[0],link, u_id))
+                db.session.add(Paper(request.form.getlist('title')[0],request.form.getlist('abstract')[0],filename, u_id))
                 db.session.commit()
 
                 return jsonify({"success":True}), 200
@@ -159,17 +159,30 @@ def paper(authorId=None):
                 
                 return jsonify(link=paper.Link,
                                 abstract = paper.Abstract,
-                                title=paper.Title)
+                                title=paper.Title,
+                                p_id=paper.p_id)
             else:
                 # return an empty json if no paper found
                 return jsonify({})
 
 
-@app.route('/api/comment/')
-def getReviews():
+@app.route('/api/comment/', methods=['GET','POST'])
+def Reviews():
     if request.method == "POST":
+        formData = request.json
+        print formData['content']
+        db.session.add(Comment(formData['content'],g.user.get_id(),formData['p_id']))
+        db.session.commit()
 
-        data = request.json()
+        return jsonify({"success": True}), 200
+
+    else:
+
+        retval = []
+
+        retval = Comment.query.filter_by(p_id=request.args[p_id]).all()
+        return jsonify({"reviews":retval});
+
 
 @app.route('/api/paper/download/<filename>/')
 def download(filename):

@@ -106,4 +106,20 @@ angular.module('services',[])
 	};
 
 	return logout;
+}])
+
+.factory('Review', ['$http', function($http){
+	
+	var review = {};
+
+	review.add = function(review) {
+		return $http({
+						method: 'POST',
+						url: '/api/comment/',
+						data: review,
+						headers: {"Content-Type":"application/json"}
+					});
+	};
+
+	return review;
 }]);

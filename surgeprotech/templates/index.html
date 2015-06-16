@@ -21,7 +21,7 @@
 
     <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/static/css/animate.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/static/css/font-awesome.min.css" media="all"/>
+    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/css/font-lineicons.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/static/css/jquery.fancybox.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/static/css/style.css" id="mainstyle" type="text/css" media="all" />
@@ -53,10 +53,11 @@
                     <span class="icon-bar"></span>
                 </button>
                 <ul class="navigation-bar navigation-bar-left">
-                    <li><a href="/">Home</a></li>
+                    <li><a target="_self" href="/">Home</a></li>
                     <!--<li><a href="#stat">Number Facts</a></li>-->
                     <li><a href="index.html#schedule">Schedule</a></li>
-                    <li><a href="/paper/1">View Submitted Papers</a></li>
+                    <li><a ng-href="/paper/{{currentUser.userId}}">View Your Submitted Papers</a></li>
+                    <li><a ng-href="/paper/" ng-show="currentUser.userRole">View Submitted Papers</a></li>
                     <li><a href="/contact">Contact Us</a></li>
                     <li><a href="/logout">Logout</a></li>
                 </ul>

@@ -11,6 +11,12 @@ class Comment(db.Model):
     author = db.Column(db.Integer,db.ForeignKey('user.id'))
     p_id = db.Column(db.Integer, db.ForeignKey('paper.p_id'))
 
+    def __init__(self,content, author, p_id):
+        self.content = content
+        self.rv_date = datetime.utcnow()
+        self.author = author
+        self.p_id = p_id
+
 
 # The table to store links to all submitted papers.
 class Paper(db.Model):

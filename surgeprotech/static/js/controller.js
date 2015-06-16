@@ -81,38 +81,43 @@ function uploadController($scope, FileUploader,$http) {
 function paperController($scope, $http) {
 
 	$scope.papers = [];
+	$scope.currentPage = 1;
 
 	$http({
 			method: 'GET',
 			url: '/api/paper/',
-			params: {'page': 1}
+			params: {'page': $scope.currentPage}
 		})
-		.success(function (data) {
+		.success(function(data) {
 			$scope.papers = data;
+			$scope.currentPage += 1;
 			console.log(data);
 		});
 	}
 	
-function abstController($scope, $routeParams, Resources) {
+function abstController($scope, $routeParams, Resources,Review) {
+	$scope.paper = {};
+	$scope.review = {};
 
 	Resources.get({},function(res) {
-		console.log(res);
+		$scope.paper = res;
+		$scope.paper.reviews = [];
 	}), function(res) {
 		// Avoid error.
 	};
 
-	$scope.review = {};
-
-	$scope.paper = {reviews:[]};
-
 	$scope.addReview = function(review) {
 		var date = new Date();
 		review.date = date.toUTCString();
+		review.p_id = $scope.paper.p_id;
 		$scope.setUser();
 		
-		review.author = $scope.currentUser.userName;
-		$scope.paper.reviews.push(review);
-		$scope.review = {};
+		review.author = $scope.currentUser.userId;
+		
+		Review.add(review).then(function() {
+			$scope.paper.reviews.push(review);
+			$scope.review = {};	
+		})
 	};
 }
 

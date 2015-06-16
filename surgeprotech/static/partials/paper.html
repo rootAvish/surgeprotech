@@ -1,18 +1,15 @@
 <div>
     <div class="thumbnail">
         <div class="caption-full">
-            <h5><a href="#">Product Name</a>
+            <h5><a href="#">{{ paper.title }}</a>
             </h5>
-            <p>See more snippets like these online store reviews at <a target="_blank" href="http://bootsnipp.com">Bootsnipp - http://bootsnipp.com</a>.</p>
-            <p>Want to make these reviews work? Check out
-                <strong><a href="http://maxoffsky.com/code-blog/laravel-shop-tutorial-1-building-a-review-system/">this building a review system tutorial</a>
-            </strong>over at maxoffsky.com!</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>
+            <strong>Abstract:</strong><br/>
+            {{paper.abstract}}
         </div>
         <div class="ratings">
-            <p class="pull-right">3 reviews</p>
+            <p class="pull-right">{{paper.reviews.length}} reviews</p>
             <p>
-                <a><i class="fa fa-file-pdf-o"></i> Read full text.</a>
+                <a target="_self" download="{{paper.link}}.pdf" href="/api/paper/download/{{paper.link}}"><i class="fa fa-file-pdf-o"></i> Read full text.</a>
             </p>
         </div>
     </div>
@@ -22,22 +19,22 @@
                 <div class="col-md-12">
                     {{ rvw.author }}
                     <span class="pull-right">{{ rvw.date }}</span>
-                    <p>{{ rvw.text }}</p>
+                    <p>{{ rvw.content }}</p>
                 </div>
             </div>
             <hr>
         </div>
  
-        <div class="row" ng-show="review.text">
+        <div class="row" ng-show="review.content">
             <div class="col-md-12">
                 {{currentUser.userName}}
                 <span class="pull-right">Just Now</span>
-                <p>{{review.text}}</p>
+                <p>{{review.content}}</p>
             </div>
         </div>
     </div>
 <form ng-submit="addReview(review)" name="reviewForm">
-    <textarea rows="3" cols="69" ng-model="review.text"></textarea>
+    <textarea rows="3" cols="69" ng-model="review.content"></textarea>
     <input type="submit" class="btn btn-default" value="submit review">
 </form>
 </div>
