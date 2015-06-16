@@ -29,23 +29,49 @@ var app = angular.module('spForums',['ngResource', 'ngRoute','angularFileUpload'
 		templateUrl: 'static/partials/paper.html',
 		controller: abstController,
 		controllerAs: 'abst'
+	})
+	.when('/logout', {
+		templateUrl: 'static/partials/logout.html',
+		controller: logoutController
 	});
+
 	$locationProvider.html5Mode(true);
 }]);
 
-app.controller('appController',['$scope', function($scope) {
+app.controller('appController',['$scope','Session', function($scope, Session) {
 	$scope.currentUser = null;
 
 	$scope.setUser = function() {
-		$scope.currentUser = Session.User;
+		$scope.currentUser = Session.getUser();
 	};
-}])
-.run(['LoginState',function(LoginState,Session) {
-	LoginState.then(function(res) {
 
-		if (res.length) {
-			Session.create(res);
+	$scope.$on('session:created',function (event,data) {
+		console.log('created',data);
+		$scope.setUser();
+	});
+
+	$scope.$on('session:destroyed',function (event,data) {
+		console.log('destroyed', data);
+		$scope.setUser();
+	});
+
+}])
+
+.run(['LoginState','Session',function(LoginState,Session) {
+
+	function isEmptyObject( obj ) {
+	    for ( var name in obj ) {
+	        return false;
+	    }
+	    return true;
+	};
+
+	LoginState.login().then(function(res) {
+
+		if (isEmptyObject(res.data) == false) {
+			Session.create(res.data);
 		}
+
 	}), function(err) {
 		// Handle this error.
 	};

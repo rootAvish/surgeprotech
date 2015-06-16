@@ -1,5 +1,12 @@
 'use strict';
 
+function isEmptyObject( obj ) {
+    for ( var name in obj ) {
+        return false;
+    }
+    return true;
+};
+
 function loginController($scope, $location, AuthService) {
 	$scope.formData = {
 		"remember": false
@@ -8,11 +15,27 @@ function loginController($scope, $location, AuthService) {
 	this.authenticate = function (formData) {
 		
 		AuthService.login(formData)
-		.then(function(user) {
-			$scope.setUser();
-			$location.path('/user');
-		})
+		.then(function(user) { /*
+			$scope.setUser();*/
+
+			if (!isEmptyObject(user.data)) {
+				$location.path('/user');
+			}
+			else
+			{
+				$scope.wrong = true;
+			}
+		}),
+
+		function(err) {
+			// Handle error	
+		}
 	};
+
+	$scope.$on('session:created',function (event,data) {
+		console.log('created',data);
+		$scope.setUser();
+	});
 };
 
 function logoutcontroller($scope) {
@@ -30,6 +53,7 @@ function registerController($scope,$http,$location, RegisterService) {
 
 			if (data.success == true) {
 				$scope.login = true;
+				$scope.setUser();
 				$location.path('/user');
 			}
 			else {
@@ -59,28 +83,42 @@ function paperController($scope, $http) {
 	$scope.papers = [];
 
 	$http({
-		method: 'GET',
-		url: '/api/paper/',
-		params: {'page': 1}
-	})
-	.success(function (data) {
-		$scope.papers = data;
-		console.log(data);
-	});
-}
+			method: 'GET',
+			url: '/api/paper/',
+			params: {'page': 1}
+		})
+		.success(function (data) {
+			$scope.papers = data;
+			console.log(data);
+		});
+	}
+	
+function abstController($scope, $routeParams, Resources) {
 
-function abstController($scope,$http,$routeParams) {
-	console.log($routeParams.paperId);
+	Resources.get({},function(res) {
+		console.log(res);
+	}), function(res) {
+		// Avoid error.
+	};
 
 	$scope.review = {};
 
 	$scope.paper = {reviews:[]};
 
 	$scope.addReview = function(review) {
-		review.date = new Date();
-		review.author = $scope.currentUser.data.Name + "(Technical Committee Member)";
-		console.log(review.author);
+		var date = new Date();
+		review.date = date.toUTCString();
+		$scope.setUser();
+		
+		review.author = $scope.currentUser.userName;
 		$scope.paper.reviews.push(review);
 		$scope.review = {};
 	};
+}
+
+function logoutController($scope,Logout,$location,Session) {
+	Logout.logout().then(function() {
+		$location.path('/login');
+		Session.destroy();
+	});
 }
