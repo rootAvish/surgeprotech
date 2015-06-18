@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"back",
+				"background-image"
+			],
+			[
+				"b",
+				"body	Tag"
+			],
+			[
+				"fade",
+				"fadeInUp"
+			],
+			[
+				"se",
+				"section	Tag"
+			],
+			[
 				"harmon",
 				"harmonicSuggestForm"
 			],
@@ -152,10 +168,6 @@
 				"max-width"
 			],
 			[
-				"back",
-				"background-color"
-			],
-			[
 				"wi",
 				"width"
 			],
@@ -212,14 +224,6 @@
 	"buffers":
 	[
 		{
-			"file": "surgeprotech/templates/main.html",
-			"settings":
-			{
-				"buffer_size": 44927,
-				"line_ending": "Unix"
-			}
-		},
-		{
 			"contents": "Organising Committee members\n \nName\nOrganisation\nMr. R.K.Tyagi, Chairman OC\nPOWERGRID\nMr. Ravi Roshan Kumar\nPOWERGRID\nMr. N.S.Sodha\nChairman ET 30\nMr. S.S.Yadav\nSecretariat,BIS ET 30\nMr. Janardhan Reddy\nAPTRANSCO\nMr. Milind Zodage\nCrompton Greaves\nMr. Padma Kumar\nLamco\nMr. Mukesh Mallik\nLamer Power\nMr. Anil Saboo\nElektrolites\nMSEDCL\nL & T\nERDA\n \n\nTechnical Committee members\n \nMr. O. Balagangadhar\nOblum\nMr. P.J.Thakkar\nREC\nMr. Sanjay Kulshrestha\nREC\nMr. Y.V.Joshi\nGETCO\nMr. Hirdesh Gupta\nNTPC\nMr. S.K.Mahapatra\nCEA\nMr. V.Sasikumar\nRaychem\nMr. S. Sumanth\nKPTCL\nMr. A.P.Gangadharan\nPOWERGRID\nMs. Kanyakumari\nCPRI",
 			"file": "/home/rootavish/Desktop/Organising Committee members",
 			"file_size": 614,
@@ -229,6 +233,22 @@
 				"buffer_size": 613,
 				"line_ending": "Unix",
 				"name": "Organising Committee members"
+			}
+		},
+		{
+			"file": "surgeprotech/templates/main.html",
+			"settings":
+			{
+				"buffer_size": 44030,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "surgeprotech/static/css/style.css",
+			"settings":
+			{
+				"buffer_size": 34029,
+				"line_ending": "CR"
 			}
 		}
 	],
@@ -323,7 +343,7 @@
 	},
 	"console":
 	{
-		"height": 0.0,
+		"height": 139.0,
 		"history":
 		[
 		]
@@ -342,6 +362,7 @@
 		"/home/rootavish/IEEMA",
 		"/home/rootavish/IEEMA/surgeprotech",
 		"/home/rootavish/IEEMA/surgeprotech/static",
+		"/home/rootavish/IEEMA/surgeprotech/static/css",
 		"/home/rootavish/IEEMA/surgeprotech/static/js",
 		"/home/rootavish/IEEMA/surgeprotech/static/js/lib",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials",
@@ -349,6 +370,11 @@
 	],
 	"file_history":
 	[
+		"/home/rootavish/test/test.html",
+		"/home/rootavish/IEEMA/surgeprotech/templates/main.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/css/style.css",
+		"/home/rootavish/test/style.css",
+		"/home/rootavish/IEEMA/surgeprotech/static/css/styles.css",
 		"/home/rootavish/inphase/harmonic.js",
 		"/home/rootavish/inphase/page.html",
 		"/home/rootavish/IEEMA/surgeprotech/static/js/lib/scripts.js",
@@ -361,13 +387,11 @@
 		"/home/rootavish/IEEMA/surgeprotech/static/js/controller.js",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/paper.html",
 		"/home/rootavish/inphase/purchase1.json",
-		"/home/rootavish/IEEMA/surgeprotech/templates/main.html",
 		"/home/rootavish/Downloads/parse-js-blank/index.html",
 		"/home/rootavish/rootavish.github.io/contents/articles/My-10-things-post-on-Angular.js/index.md",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/login.html",
 		"/home/rootavish/IEEMA/surgeprotech/static/js/app.js",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/logout.html",
-		"/home/rootavish/IEEMA/surgeprotech/static/css/style.css",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/register.html",
 		"/home/rootavish/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
 		"/home/rootavish/IEEMA/surgeprotech/static/js/lib/angular-resource.min.js",
@@ -461,6 +485,34 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"lamp.jpg",
+			"price",
+			"#price",
+			"hero",
+			"background",
+			"mask",
+			"background",
+			"thumb",
+			"background",
+			"index",
+			"#index",
+			"#in",
+			"#index",
+			".index",
+			"body",
+			"hero",
+			"		\n",
+			"../img/",
+			"pricing",
+			"sponsors",
+			"opacity",
+			"background",
+			"hero",
+			"jquery",
+			"());\n",
+			"../",
+			"hero",
+			"her",
 			"1 day",
 			"fontawesome",
 			"billingdetails",
@@ -560,22 +612,7 @@
 			"Archive",
 			">\n",
 			"companylogin",
-			"form",
-			"view",
-			"login",
-			"form",
-			"image",
-			"enc",
-			"form",
-			"...>",
-			"])})",
-			"print",
-			"freq",
-			"import",
-			"age",
-			"gender",
-			"extract_shebang",
-			"extract_tokens"
+			"form"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -608,41 +645,11 @@
 	"groups":
 	[
 		{
-			"selected": 0,
+			"selected": 1,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "surgeprotech/templates/main.html",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 44927,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								35082,
-								35082
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 11081.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
 					"file": "/home/rootavish/Desktop/Organising Committee members",
 					"semi_transient": false,
 					"settings":
@@ -654,8 +661,8 @@
 						"selection":
 						[
 							[
-								556,
-								556
+								593,
+								593
 							]
 						],
 						"settings":
@@ -664,7 +671,67 @@
 							"syntax": "Packages/Text/Plain text.tmLanguage"
 						},
 						"translation.x": 0.0,
-						"translation.y": 357.0,
+						"translation.y": 180.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "surgeprotech/templates/main.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 44030,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								2621,
+								2621
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 299.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "surgeprotech/static/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 34029,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								34029,
+								34029
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 14578.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
