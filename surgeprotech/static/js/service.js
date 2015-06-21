@@ -78,7 +78,7 @@ angular.module('services',[])
 		return login;
 }])
 
-.factory('RegisterService', ['$http', function(http){
+.factory('RegisterService', ['$http', function($http){
 	var reg = {};
 
 	reg.register = function (formData){

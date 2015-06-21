@@ -49,7 +49,7 @@ function registerController($scope,$http,$location, RegisterService) {
 	this.Register = function () {
 		
 		RegisterService.register($scope.formData)
-		.success (function(data) {
+		.then (function(data) {
 
 			if (data.success == true) {
 				$scope.login = true;
