@@ -14,44 +14,43 @@
     <link rel="apple-touch-icon" href="/static/img/apple-touch-icon.jpg">
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/apple-touch-icon-72x72.jpg">
     <link rel="apple-touch-icon" sizes="114x114" href="/static/img/apple-touch-icon-114x114.jpg">
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
+    <!-- <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,700' rel='stylesheet'   type='text/css'> -->
     
     <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/static/css/animate.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/css/font-lineicons.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/static/css/jquery.fancybox.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/static/css/style.css" id="mainstyle" type="text/css" media="all" />
     <link rel="stylesheet" href="/static/css/color-chooser.css" type="text/css" media="all" />
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+    <script type="text/javascript" src="/static/bower_components/angular/angular.min.js"></script>
     <!--[if lt IE 9]>
     <script src="/static/js/html5.js"></script>
     <script src="/static/js/respond.min.js"></script>
     <![endif]-->
-
     <script type="text/javascript" src="/static/js/lib/jquery-1.8.3.min.js"></script>
     <script>
     //Array of images which you want to show: Use path you want.
-      jQuery(document).ready(
-        function () {
-          var images=new Array('/static/img/lamp.jpg','/static/img/attendees.jpg');
-          var nextimage=1;
-          doSlideshow();
-          console.log($('#hero').css('background-image'));
-            function doSlideshow(){
-              if(nextimage >=images.length){
-                nextimage=0;
-              }
-
-              $('#hero').css('background-image','url("'+images[nextimage]+'")')
-              .fadeIn(5000, function() {
-                setTimeout(doSlideshow,6000);
-             });
-
-            nextimage += 1;
-          }
-        }
-      );
+    jQuery(document).ready(
+    function () {
+    var images=new Array('/static/img/lamp.jpg','/static/img/attendees.jpg');
+    var nextimage=1;
+    doSlideshow();
+    console.log($('#hero').css('background-image'));
+    function doSlideshow(){
+    if(nextimage >=images.length){
+    nextimage=0;
+    }
+    $('#hero').css('background-image','url("'+images[nextimage]+'")')
+    .fadeIn(5000, function() {
+    setTimeout(doSlideshow,6000);
+    });
+    nextimage += 1;
+    }
+    }
+    );
     </script>
   </head>
   <body id="index">
@@ -68,7 +67,7 @@
             <br>
             <br>
             <div class="hero-big">Surgeprotech</div>
-            <div class="hero-normal">India's largest conference on surge arresters.</div>
+            <div class="hero-normal">2nd International Conference cum Tutorials on Surge Arresters</div>
             <!-- <nav class="navigation navigation-social"> -->
             <ul class="navigation-bar" style="margin-top: -47px; margin-bottom: -21px;">
               <li><a href="#"><span class="fa fa-twitter"></span></a>
@@ -81,701 +80,565 @@
           </div>
         </div>
       </div>
-    </section>
-    <!-- End Hero Section -->
-    <!-- Header -->
-    <header id="header" class="navigation-bar-header light hidden-xs">
-      <div class="container">
-        <nav class="navigation">
-          <div class="navigation-txt visible-xs" data-toggle="dropdown">Home</div>
-          <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown">
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          <span class="icon-bar"></span>
-          </button>
-          <ul class="navigation-bar navigation-bar-left">
-            <li><a href="index.html#about">About</a></li>
-            <!--<li><a href="#stat">Number Facts</a></li>-->
-            <li><a href="index.html#schedule">Schedule</a></li>
-            <li><a href="index.html#speakers">Committee</a></li>
-            <!-- <li><a href="index.html#price">Prices</a></li> -->
-            <!-- <li><a href="index.html#elements">Shortcodes</a></li> -->
-            <li><a href="index.html#sponsors">Sponsors</a></li>
-            <li><a href="index.html#map">Contact Us</a></li>
-            <li class="featured"><a href="index.html#price"><i class="fa fa-ticket fa-1x"></i>Delegate Registration</a></li>
-          </ul>
-        </nav>
-      </div>
-    </header>
-    <!-- End Header -->
-    <!-- About Section -->
-    <section id="about" class="section dark">
-      <div class="container">
-        <div class="icon-wrap"><span class="icon icon-active icon-multimedia-12"></span></div>
-        <h3>Arresters for fail safe protection</h3>
-        <div class="sub-title"></div>
-        <br />
-        <br />
-        <section class="nav-tabs-simple">
-          <!-- Nav tabs -->
-          <ul class="nav nav-tabs nav-justified">
-            <li  class="active"><a href="index.html#php" data-toggle="tab">About IEEMA</a></li>
-            <li><a href="index.html#htmlcss" data-toggle="tab">Vision</a></li>
-            <li><a href="index.html#jquery" data-toggle="tab">About Surgeprotech</a></li>
-          </ul>
-          
-          <!-- Tab panes -->
-          <div class="tab-content">
-            <div class="tab-pane fade" id="htmlcss">
-              <article class="row">
-                <div class="col-md-4 col-sm-4 animated hiding" data-animation="fadeInLeft" data-delay="500">
-                  <img class="img-responsive" src="/static/img/390kVLA.jpg" alt="starbuck" />
-                </div>
-                <div class="col-md-8 col-sm-8 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
-                  <h6>Content-awaited.</h6>
-                </div>
-              </article>
-            </div>
-            <div class="tab-pane fade" id="jquery">
-              <article class="row">
-                <div class="col-md-8 col-sm-8 text-left animated hiding" data-animation="fadeInLeft" data-delay="500">
-                  <h6>Content awaited.</h6>
-                </div>
-                <div class="col-md-4 col-sm-4 animated hiding" data-animation="fadeInRight" data-delay="500">
-                  <img class="img-responsive" src="/static/img/624KV.jpg" alt="placeholder" />
-                </div>
-              </article>
-            </div>
-            <div class="tab-pane fade in active" id="php">
-              <article class="row">
-                <div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
-                  <img class="img-responsive" src="/static/img/Logo_IEEMA.jpg" alt="iphone" />
-                </div>
-                <div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
-                  <h6>About IEEMA</h6>
-                  <p>Indian Electrical &amp; Electronics Manufacturers’ Association (IEEMA) is the apex industry association of manufacturers of electrical, industrial electronics and allied equipment in India. Founded in 1948, IEEMA has a pan India presence with offices in New Delhi, Mumbai, Kolkata and Bangalore.</p>
-                  <a href="http://ieema.org/Contents/WeAre/WeAre_AboutAssociation.aspx">Continue reading ></a>
-                </div>
-              </article>
-            </div>
-          </div>
-        </section>
-      </div>
-    </section>
-    <!-- End About Section -->
-    <!-- Stat Section -->
-    <!-- End Stat Section -->
-    <!-- Schedule Section -->
-    <section id="schedule" class="section dark">
-      <div class="container">
-        <div class="icon-wrap"><span class="icon icon-active icon-text-hierarchy-07"></span></div>
-        <h3>AGENDA</h3>
-        <div class="sub-title">A short schedule of the conference</div>
-        <br />
-        <br />
-        <section class="nav-tabs-default hidden-xs">
-          <!-- Parent Nav Tabs -->
-          <!-- Parent Tab panes -->
-          <div class="tab-content">
-            <div class="tab-pane fade in active" id="DayOne">
-              
-              <!-- Child 1 Nav Tabs -->
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="index.html#DayOne-1" data-toggle="tab">27th of August</a></li>
-                <li><a href="index.html#DayOne-2" data-toggle="tab">28th of August</a></li>
-              </ul>
-              
-              <!-- Child 1 Tab panes -->
-              <div class="tab-content">
-                <div class="tab-pane fade in active" id="DayOne-1">
-                  <div class="panel-group timeline-schedule" id="panelTimelineOne">
-                    <div class="panel panel-default">
-                      <div class="speaker-wrapper">
-                        <img src="/static/img/registration.jpg" class="img-responsive img-circle" alt="speaker-1" />
-                      </div>
-                      <div class="panel-heading">
-                        <div class="panel-title">
-                          <div class="time"><i class="fa fa-clock-o"></i> 9:30 AM</div>
-                          <a data-toggle="collapse" data-parent="#panelTimelineOne" href="index.html#itemOne">
-                            Starting with registrations
-                            <div class="pull-right fa fa-angle-up"></div>
-                            <div class="pull-right fa fa-angle-down"></div>
-                          </a>
-                        </div>
-                      </div>
-                      <div id="itemOne" class="panel-collapse collapse in">
-                        <div class="panel-body">
-                          <article>
-                            <p>Make sure you've received your invite before coming. Bring a valid ID-card along with you</p>
-                            <!-- <p class="author"><a href="index.html#"><strong><i class="fa fa-user"></i> John Doeson</strong></a></p> -->
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="panel panel-default">
-                      <div class="speaker-wrapper">
-                        <img src="/static/img/Logo_IEEMA.jpg" class="img-responsive" alt="speaker-2" />
-                      </div>
-                      <div class="panel-heading">
-                        <div class="panel-title">
-                          <div class="time"><i class="fa fa-clock-o"></i> 10:00 AM - 10:30 AM</div>
-                          <a data-toggle="collapse" data-parent="#panelTimelineOne" href="index.html#itemTwo" class="collapsed">
-                            Keynote Speech
-                            <div class="pull-right fa fa-angle-up"></div>
-                            <div class="pull-right fa fa-angle-down"></div>
-                          </a>
-                        </div>
-                      </div>
-                      <div id="itemTwo" class="panel-collapse collapse ">
-                        <div class="panel-body">
-                          <article>
-                            <p>The Keynote Speech is given by Organizers.</p>
-                            <!-- <p><a href="http://goo.gl/dfbeFT">Submit a proposal</a> to get a slot here or vote for one of the selected ones</p> -->
-                            <!-- <p class="author"><a href="index.html#"><strong><i class="fa fa-user"></i> John Doeson</strong></a></p> -->
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="panel panel-default">
-                      <div class="speaker-wrapper">
-                        <img src="/static/img/man_talking.jpg" class="img-responsive" alt="speaker-1" />
-                      </div>
-                      <div class="panel-heading">
-                        <div class="panel-title">
-                          <div class="time"><i class="fa fa-clock-o"></i> 10:30 AM - 11:30 AM</div>
-                          <a data-toggle="collapse" data-parent="#panelTimelineOne" href="index.html#itemThree" class="collapsed">
-                            First talk.
-                            <div class="pull-right fa fa-angle-up"></div>
-                            <div class="pull-right fa fa-angle-down"></div>
-                          </a>
-                        </div>
-                      </div>
-                      <div id="itemThree" class="panel-collapse collapse ">
-                        <div class="panel-body">
-                          <article>
-                            <p>I will give a talk.</p>
-                            <!-- <p><a href="http://goo.gl/dfbeFT">Submit a proposal</a> to get a slot here or vote for one of the selected ones</p> -->
-                            <p class="author"><a href="index.html#"><strong><i class="fa fa-user"></i> Gaurav Saini</strong></a></p>
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="panel panel-default">
-                      <div class="speaker-wrapper">
-                        <img src="/static/img/surgearrester.jpg" class="img-responsive" alt="speaker-2" />
-                      </div>
-                      <div class="panel-heading">
-                        <div class="panel-title">
-                          <div class="time"><i class="fa fa-clock-o"></i> 11:30 AM - 12:30 PM</div>
-                          <a data-toggle="collapse" data-parent="#panelTimelineOne" href="index.html#itemFour" class="collapsed">
-                            Using surge arresters.
-                            <div class="pull-right fa fa-angle-up"></div>
-                            <div class="pull-right fa fa-angle-down"></div>
-                          </a>
-                        </div>
-                      </div>
-                      <div id="itemFour" class="panel-collapse collapse ">
-                        <div class="panel-body">
-                          <article>
-                            <p>I'll also give a talk.</p>
-                            <!-- <p><a href="http://goo.gl/dfbeFT">Submit a proposal</a> to get a slot here or vote for one of the selected ones</p> -->
-                            <p class="author"><a href="index.html#"><strong><i class="fa fa-user"></i> Rajat Goyal</strong></a></p>
-                          </article>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="panel panel-default">
-                      <div class="speaker-wrapper">
-                        <img src="/static/img/student_paper.jpg" class="img-responsive" alt="speaker-2" />
-                      </div>
-                      <div class="panel-heading">
-                        <div class="panel-title">
-                          <div class="time"><i class="fa fa-clock-o"></i> 12:30 PM - 1:30 PM</div>
-                          <a data-toggle="collapse" data-parent="#panelTimelineOne" href="index.html#itemFive" class="collapsed">
-                            student papers
-                            <div class="pull-right fa fa-angle-up"></div>
-                            <div class="pull-right fa fa-angle-down"></div>
-                          </a>
-                        </div>
-                      </div>
-                      <div id="itemFive" class="panel-collapse collapse ">
-                        <div class="panel-body">
-                          <article>
-                            <p>This session would cover:<ul>
-                              <li>How x is done.</li>
-                              <li> How Y is done.</li>
-                              <p class="author"><a href="index.html#"><strong><i class="fa fa-user"></i> Shaumik Daityari</strong></a></p>
-                            </article>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="panel panel-default">
-                        <div class="speaker-wrapper">
-                          <img src="/static/img/break.jpg" class="img-responsive" alt="speaker-2" />
-                        </div>
-                        <div class="panel-heading">
-                          <div class="panel-title">
-                            <div class="time"><i class="fa fa-clock-o"></i> 1:30 PM - 2:30 PM</div>
-                            <a data-toggle="collapse" data-parent="#panelTimelineOne" href="index.html#itemSix" class="collapsed">
-                              Break Time
-                              <div class="pull-right fa fa-angle-up"></div>
-                              <div class="pull-right fa fa-angle-down"></div>
-                            </a>
-                          </div>
-                        </div>
-                        <div id="itemSix" class="panel-collapse collapse ">
-                          <div class="panel-body">
-                            <article>
-                              Let's stretch our legs for a moment
-                            </article>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="panel panel-default">
-                        <div class="speaker-wrapper">
-                          <img src="/static/img/Logo_IEEMA.jpg" class="img-responsive" alt="gsocers" />
-                        </div>
-                        <div class="panel-heading">
-                          <div class="panel-title">
-                            <div class="time"><i class="fa fa-clock-o"></i>5:30 PM</div>
-                            <a data-toggle="collapse" data-parent="#panelTimelineOne" href="index.html#itemTen" class="collapsed">
-                              Closing Session
-                              <div class="pull-right fa fa-angle-up"></div>
-                              <div class="pull-right fa fa-angle-down"></div>
-                            </a>
-                          </div>
-                        </div>
-                        <div id="itemTen" class="panel-collapse collapse">
-                          <div class="panel-body">
-                            <article>
-                              <p>End of Day Sessions. Distribution of kits.</p>
-                              <!-- <p class="author"><a href="index.html#"><strong><i class="fa fa-user"></i> John Doeson</strong></a></p> -->
-                            </article>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="clearfix"></div>
-                    
-                  </div>
-                  <div class="tab-pane fade" id="DayTwo">
-                    
-                    <!-- Child 2 Nav Tabs -->
-                    <ul class="nav nav-tabs">
-                      <li class="active"><a href="index.html#DayTwo-1" data-toggle="tab">Auditorium 1</a></li>
-                      <li><a href="index.html#DayTwo-2" data-toggle="tab">Auditorium 2</a></li>
-                      <li><a href="index.html#DayTwo-3" data-toggle="tab">Auditorium 3</a></li>
-                      <li><a href="index.html#DayTwo-4" data-toggle="tab">Conference Room #2</a></li>
-                    </ul>
-                    
-                    <!-- Child 2 Tab panes -->
-                    <div class="tab-content">
-                      <div class="tab-pane fade in active" id="DayTwo-1">
-                        <article>
-                          <p>No schedule yet.</p>
-                        </article>
-                      </div>
-                      <div class="tab-pane fade" id="DayTwo-2">
-                        <article>
-                          <p>No schedule yet.</p>
-                        </article>
-                      </div>
-                      <div class="tab-pane fade" id="DayTwo-3">
-                        <article>
-                          <p>No schedule yet.</p>
-                        </article>
-                      </div>
-                      <div class="tab-pane fade" id="DayTwo-4">
-                        <article>
-                          <p>No schedule yet.</p>
-                        </article>
-                      </div>
-                    </div>
-                    
-                  </div>
-                  <div class="tab-pane fade" id="DayThree">
-                    
-                    <!-- Child 3 Nav Tabs -->
-                    <ul class="nav nav-tabs">
-                      <li class="active"><a href="index.html#DayThree-1" data-toggle="tab">Auditorium 1</a></li>
-                      <li><a href="index.html#DayThree-2" data-toggle="tab">Auditorium 2</a></li>
-                      <li><a href="index.html#DayThree-3" data-toggle="tab">Auditorium 3</a></li>
-                      <li><a href="index.html#DayThree-4" data-toggle="tab">Class 2</a></li>
-                    </ul>
-                    
-                    <!-- Child 3 Tab panes -->
-                    <div class="tab-content">
-                      <div class="tab-pane fade in active" id="DayThree-1">
-                        <article>
-                          <p>No schedule yet.</p>
-                        </article>
-                      </div>
-                      <div class="tab-pane fade" id="DayThree-2">
-                        <article>
-                          <p>No schedule yet.</p>
-                        </article>
-                      </div>
-                      <div class="tab-pane fade" id="DayThree-3">
-                        <article>
-                          <p>No schedule yet.</p>
-                        </article>
-                      </div>
-                      <div class="tab-pane fade" id="DayThree-4">
-                        <article>
-                          <p>No schedule yet.</p>
-                        </article>
-                      </div>
-                    </div>
-                    
-                  </div>
-                </div>
-              </section>
-              
-              <div class="btn-wrapper">
+    </div>
+  </section>
+  <!-- End Hero Section -->
+  <!-- Header -->
+  <header id="header" class="navigation-ba-header light hidden-xs">
+    <div class="container">
+      <nav class="navigation">
+        <div class="navigation-txt visible-xs" data-toggle="dropdown">Home</div>
+        <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <ul class="navigation-bar navigation-bar-left">
+          <li><a href="index.html#about">About</a></li>
+          <!--<li><a href="#stat">Number Facts</a></li>-->
+          <li><a href="index.html#schedule">Schedule</a></li>
+          <li><a href="index.html#speakers">Committee</a></li>
+          <!-- <li><a href="index.html#price">Prices</a></li> -->
+          <!-- <li><a href="index.html#elements">Shortcodes</a></li> -->
+          <li><a href="index.html#sponsors">Sponsors</a></li>
+          <li><a href="index.html#map">Contact Us</a></li>
+          <li class="featured"><a href="index.html#price"><i class="fa fa-ticket fa-1x"></i>Delegate Registration</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <!-- End Header -->
+  <!-- About Section -->
+  <section id="about" class="section dark">
+    <div class="container">
+      <div class="icon-wrap"><span class="icon icon-active icon-multimedia-12"></span></div>
+      <h3>Arresters for fail safe protection</h3>
+      <div class="sub-title"></div>
+      <br />
+      <br />
+      <section class="nav-tabs-simple">
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs nav-justified">
+          <li  class="active"><a href="index.html#php" data-toggle="tab">About IEEMA</a></li>
+          <li><a href="index.html#htmlcss" data-toggle="tab">Preamble</a></li>
+          <li><a href="index.html#jquery" data-toggle="tab">About Surgeprotech</a></li>
+        </ul>
+        
+        <!-- Tab panes -->
+        <div class="tab-content">
+          <div class="tab-pane fade" id="htmlcss">
+            <article class="row">
+              <div class="col-md-4 col-sm-4 animated hiding" data-animation="fadeInLeft" data-delay="500">
+                <img class="img-responsive" src="/static/img/390kVLA.jpg" alt="starbuck" />
               </div>
-            </div>
-          </section>
-          <!-- End Schedule Section -->
-          <!-- Speakers Section -->
-          <section id="speakers" class="section light">
-            <div class="overlay"></div>
-            <div class="container " >
-              <h4>Technical Committee Members</h4>
-              <br />
-              <br />
-              <section class="row">
-                <section class="row">
-                  <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
-                  <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
-                      <!-- <div class="img-wrapper">
-                        <img src="assets/img/speaker/speaker-1.jpg" width="200px" class="img-responsive img-circle" alt="speaker-1" />
-                      </div> -->
-                      <div class="name">Mr. O. Balagangadhar</div>
-                      <div class="sub">Oblum</div>
-                      <!-- <div class="social-link"> -->
-                      <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                      <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                      <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                      <!-- </div> -->
-                    </div>
-                  </div>
-                  <div class="clearfix visible-xs"></div>
-                  <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                      
-                      <div class="name">Mr. P.J.Thakkar</div>
-                      <div class="sub">REC</div>
-                      <!-- <div class="social-link"> -->
-                      <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                      <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                      <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                      <!-- </div> -->
-                    </div>
-                  </div>
-                  
-                  
-                  <!-- <div class="col-md-3 col-sm-3 col-xs-6"> -->
-                  <!--   <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="500"> -->
-                  <!--     <div class="img-wrapper"> -->
-                  <!--       <img src="/static/img/speaker/speaker-2.jpg" class="img-responsive img-circle" alt="speaker-2" /> -->
-                  <!--     </div> -->
-                  <!--     <div class="name">Eric Doeson</div> -->
-                  <!--     <div class="sub">CTO Tinterest</div> -->
-                  <!--     <p class="small">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> -->
-                  <!--     <div class="social-link"> -->
-                  <!--       <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                  <!--       <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                  <!--       <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                  <!--     </div> -->
-                  <!--   </div> -->
-                  <!-- </div> -->
-                  <div class="clearfix visible-xs"></div>
-                  <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                      
-                      <div class="name">Mr. Sanjay Kulshrestha</div>
-                      <div class="sub">REC</div>
-                      <!-- <div class="social-link"> -->
-                      <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                      <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                      <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                      <!-- </div> -->
-                    </div>
-                  </div>
-                  <div class="clearfix visible-xs"></div>
-                  <div class="col-md-3 col-sm-3 col-xs-3">
-                    <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                      
-                      <div class="name">Mr. Y.V.Joshi</div>
-                      <div class="sub">GETCO</div>
-                      <!-- <div class="social-link"> -->
-                      <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                      <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                      <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                      <!-- </div> -->
-                    </div>
-                  </div>
-                </section>
-                <div class="clearfix visible-xs"></div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                  <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                    
-                    <div class="name">Mr. S.K.Mahapatra</div>
-                    <div class="sub">CEA</div>
-                    <!-- <div class="social-link"> -->
-                    <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                    <!-- </div> -->
-                  </div>
-                </div>
-                <div class="clearfix visible-xs"></div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                  <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                    
-                    <div class="name">Mr. Hirdesh Gupta</div>
-                    <div class="sub">NTPC</div>
-                    <!-- <div class="social-link"> -->
-                    <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                    <!-- </div> -->
-                  </div>
-                </div>
-                <div class="clearfix visible-xs"></div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                  <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                    
-                    <div class="name">Mr. V.Sasikumar</div>
-                    <div class="sub">RAYCHEM</div>
-                    <!-- <div class="social-link"> -->
-                    <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                    <!-- </div> -->
-                  </div>
-                </div>
-                <div class="clearfix visible-xs"></div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                  <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                    
-                    <div class="name">Mr. S. Sumanth</div>
-                    <div class="sub">KPTCL</div>
-                    <!-- <div class="social-link"> -->
-                    <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                    <!-- </div> -->
-                  </div>
-                </div>
-                <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div>
-                <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
-                <!-- <div class="col-md-3 col-sm-3 col-xs-6"> -->
-                <!--   <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1500"> -->
-                <!--     <div class="img-wrapper"> -->
-                <!--       <img src="/static/img/speaker/speaker-4.jpg" class="img-responsive img-circle" alt="speaker-4" /> -->
-                <!--     </div> -->
-                <!--     <div class="name">Martin Branson</div> -->
-                <!--     <div class="sub">CFO Doogle</div> -->
-                <!--     <p class="small">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p> -->
-                <!--     <div class="social-link"> -->
-                <!--       <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                <!--       <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                <!--       <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                <!--     </div> -->
-                <!--   </div> -->
-                <!-- </div> -->
-              </section>
-              <section class="row">
-              <section class="row">
-              <div class="clearfix visible-xs"></div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                  <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                    
-                    <div class="name"></div>
-                    <div class="sub"></div>
-                    <!-- <div class="social-link"> -->
-                    <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                    <!-- </div> -->
-                  </div>
-                </div>
-                <div class="clearfix visible-xs"></div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                  <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                    
-                    <div class="name">Mr. A.P.Gangadharan</div>
-                    <div class="sub">POWERGRID</div>
-                    <!-- <div class="social-link"> -->
-                    <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                    <!-- </div> -->
-                  </div>
-                </div>
-                <div class="clearfix visible-xs"></div>
-                <div class="col-md-3 col-sm-3 col-xs-3">
-                  <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                    
-                    <div class="name">Ms. Kanyakumari</div>
-                    <div class="sub">CPRI</div>
-                    <!-- <div class="social-link"> -->
-                    <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
-                    <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
-                    <!-- </div> -->
-                  </div>
-                </div>
-              </section>
-              </section>
-              <div class="sub-title"><strong></strong></div><br/>
-              
-            </div>
-          </section>
-          <!-- End Speakers Section -->
-          <!-- Price Section -->
-          <section id="price" class="section dark">
-            <div class="container">
-              <div class="icon-wrap"><span class="icon icon-active icon-shopping-02"></span></div>
-              <h3>Delegate Registration</h3>
-              <div class="sub-title">The pricing categories are:</div>
-              <br/>
-              <br/>
-              <div class="pricing-cols pricing-3-cols">
-                <div class="pricing-col animated hiding" data-animation="fadeInLeft" data-delay="0">
-                  <div class="pricing-col-header">
-                    <h3 class="pricing-col-header-title">Utility Participation</h3>
-<!--                     <h4 class="pricing-col-header-amount">
-                    <span class="pricing-col-amount">$100</span></h4>
- -->                  </div>
-                  <div class="pricing-col-content">
-                    <ul>
-                      <li>Rs. 6,000/- (combined participation in Conference and Tutorials for two days)<br/><br/></li>
-                      <li>Rs. 4,000/-(participating in either Tutorial or Conference)<br/><br/></li>
-                      <li><br/><br/><br/></li>
-                    </ul>
-                  </div>
-                </div>
-                <div class="pricing-col animated hiding" data-animation="fadeInLeft" data-delay="0">
-                  <!-- <div class="pricing-col pricing-col-featured"> -->
-                  <!-- <div class="pricing-ribbon">-20%</div> -->
-                  <div class="pricing-col-header">
-                    <h3 class="pricing-col-header-title">Industry participation</h3>
-                    <!-- <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">$150</span></h4> -->
-                  </div>
-                  <div class="pricing-col-content">
-                    <ul>
-                      <li>Rs. 10,000/- for IEEMA members (combined participation in Conference and Tutorials for two days)</li>
-                      <li>Rs. 12,000/-for Non IEEMA members (combined participation in Conference and Tutorials for two days)</li>
-                      <li>Rs. 6,000/- for IEEMA /Non IEEMA members (participating in either Tutorial or Conference)</li>
-                    </ul><!--
-                    <a class="pricing-col-button" href="https://docs.google.com/forms/d/1yg-sod1yCEnyCZL7lLkJuLTv6Njc06b_oNnccrN2S1g/viewform">Buy Now</a> -->
-                  </div>
-                </div>
-                <div class="pricing-col animated hiding" data-animation="fadeInRight" data-delay="0">
-                  <div class="pricing-col-header">
-                    <h3 class="pricing-col-header-title">Student Participation</h3>
-                    <!-- <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">$200</span></h4> -->
-                  </div>
-                  <div class="pricing-col-content">
-                    <ul>
-                      <li>Rs. 2,000/- for bonafied students (for two days)<br/><br/></li>
-                      <li><br/><br/><br/></li>
-                      <li><br/><br/><br/></li>
-                    </ul>
-                    <!-- <a class="pricing-col-button" href="https://docs.google.com/forms/d/1yg-sod1yCEnyCZL7lLkJuLTv6Njc06b_oNnccrN2S1g/viewform">Buy Now</a> -->
-                  </div>
-                </div>
-              </div>
-            </div>
-          </section>
-          <!-- End Price Section -->
-          <!-- Newsletter Section -->
-          <!-- <section id="newsletter" class="section light"> -->
-          <!--   <div class="overlay"></div> -->
-          <!--   <div class="container"> -->
-          <!--     <article class="article-big animated hiding" data-animation="fadeInDown" data-delay="0"> -->
-          <!--       <h5>Newsletter <span class="highlight">Signup</span></h5> -->
-          <!--       <p>No Spam - only <span class="highlight">latest news</span>, price and activity updates!</p> -->
-          <!--       <form id="subscribe" class="form" action="index.html" method="post"> -->
-          <!--         <div class="form-group form-inline"> -->
-          <!--           <input type="email" class="form-control required" id="NewsletterEmail" name="NewsletterEmail" placeholder="your@email.com" />  -->
-          <!--        <input type="submit" class="btn btn-xs btn-default" value="Submit" /> -->
-          <!--        <span id="response"> -->
-          <!--                </span> -->
-          <!--         </div> -->
-          
-          <!--       </form> -->
-          <!--     </article> -->
-          <!--   </div> -->
-          <!-- </section> -->
-          <!-- End Newsletter Section -->
-          <!-- Register Section  -->
-          <!-- <section id="register" class="section light"> -->
-          <!-- <div class="overlay"></div> -->
-          <!-- <div class="container"> -->
-          <!-- <article class="article-big animated hiding" data-animation="fadeInUp" data-delay="0"> -->
-          <!--       <h5>Register and Propose an event right now!</h5> -- >
-          <!--       <p>Register for the awesomeness and Propose / Vote for you favorite talk.</p> -->
-          
-          <!--    <p><strong>Note:</strong>Voting option is for the present and previous GSoCer's only</p> -->
-          <!--    <a href="https://docs.google.com/forms/d/1yg-sod1yCEnyCZL7lLkJuLTv6Njc06b_oNnccrN2S1g/viewform" class="btn btn-sm btn-tertiary">Register</a>&nbsp;&nbsp; -->
-          <!--    <a href="http://goo.gl/84VG4n" class="btn btn-sm btn-tertiary">Vote for an Event</a> -->
-          <!--     </article> -->
-          <!--   </div> -->
-          <!-- </section> -->
-          <!-- End Register Section -->
-          <!-- Sponsors Section -->
-          <section id="sponsors" class="section dark">
-            <div class="container">
-              <div class="icon-wrap"><span class="icon icon-active icon-documents-bookmarks-12"></span></div>
-              <h3>Sponsors</h3>
-              <br/>
-              <div class="row">
-                <ul class="list-inline">
-                  <li><a href="http://www.bhel.com" target="_blank"><img src="/static/img/bhel.png" alt="sponsor-1" /></a></li>
+              <div class="col-md-8 col-sm-8 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
+                <p>
+                  The Tutorials cum International Conference is being organised with the objective to benefit all stakeholders of the Power sector.
+                This twin event will be of interest to participants from:</p>
+                <ul>
+                  <li>Utilities</li>
+                  <li>   Testing Institutes</li>
+                  <li> Manufacturers</li>
+                  <li>   Utility Service Providers</li>
+                  <li>Government bodies / Regulators </li>
+                  <li>   Consultants </li>
+                  <li>   Academic and Research Institutes</li>
+                  <li>   Building Sector</li>
+                  <li>   Industrial Sector</li>
+                  <li>   Renewable Energy Equipment manufacturers/developers</li>
+                  <li>   Captive Power generators</li>
+                  <li>      Power Traders</li>
                 </ul>
               </div>
-            </section>
-            <!-- End Price Section -->
-            <!-- Map Section -->
-            <section id="map" class="dark">
-              <div id="canvas-map"></div>
-              <div class="container" style="margin-left: 100px;">
-                <div class="row" >
-                  <div class="col-md-5 col-sm-7 animated hiding location" data-animation="fadeInLeft" data-delay="0">
-                    <h3>Location</h3>
-                    <ul itemscope="" itemtype="http://schema.org/PostalAddress">
-                      <li itemprop="address"><i class="fa fa-map-marker highlight"></i>Hotel Le-Meridien, New delhi</li>
-                      <li itemprop="email"><i class="fa fa-envelope highlight"></i>anita.gupta@ieema.org</li>
-                      <li itemprop="telephone"><i class="fa fa-phone highlight"></i>+91-11-23363013 / 14 (Board) </li>
-                      <li itemprop="telephone"><i class="fa fa-fax highlight"></i>+91-11-23363015</li>
-                      <li itemscope="" itemtype="http://schema.org/Event"><i class="fa fa-clock-o highlight"></i><time itemprop="startDate" datetime="2014-08-23T09:30">9:00</time> - <time itemprop="endDate" datetime="2014-08-23T18:00">18:00</time></li>
-                    </ul>
-                  </div>
-                </div>
+            </article>
+          </div>
+          <div class="tab-pane fade" id="jquery">
+            <article class="row">
+              <div class="col-md-8 col-sm-8 text-left animated hiding" data-animation="fadeInLeft" data-delay="500">
+                <h6>Content awaited.</h6>
               </div>
-            </section>
-            <!-- End Map Section -->
+              <div class="col-md-4 col-sm-4 animated hiding" data-animation="fadeInRight" data-delay="500">
+                <img class="img-responsive" src="/static/img/624KV.jpg" alt="placeholder" />
+              </div>
+            </article>
+          </div>
+          <div class="tab-pane fade in active" id="php">
+            <article class="row">
+              <div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
+                <img class="img-responsive" src="/static/img/Logo_IEEMA.jpg" alt="iphone" />
+              </div>
+              <div class="col-md-6 col-sm-6 text-left animated hiding" data-animation="fadeInRight" data-delay="500">
+                <h6>About IEEMA</h6>
+                <p>Indian Electrical &amp; Electronics Manufacturers’ Association (IEEMA) is the apex industry association of manufacturers of electrical, industrial electronics and allied equipment in India. Founded in 1948, IEEMA has a pan India presence with offices in New Delhi, Mumbai, Kolkata and Bangalore.</p>
+                <a href="http://ieema.org/Contents/WeAre/WeAre_AboutAssociation.aspx">Continue reading ></a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+    </div>
+  </section>
+  <!-- End About Section -->
+  <!-- Stat Section -->
+  <!-- End Stat Section -->
+  <!-- Schedule Section -->
+  <section id="schedule" class="section dark" ng-app="tabControls">
+    
+    <div class="container" ng-controller="tabController as tabc">
+      <div class="icon-wrap"><span class="icon icon-active icon-text-hierarchy-07"></span></div>
+      <h3>OVERVIEW</h3>
+      <div class="sub-title">A brief overview of the two days.</div>
+      <br />
+      <br />
+      <section class="nav-tabs-default hidden-xs">
+        <div class="tab-content">
+          <div class="tab-pane fade in active" id="DayOne">
+            <ul class="nav nav-tabs">
+              <li class="active"  data-toggle="tab"><a href ng-click="tabc.setTab(1)">27th of August</a></li>
+              <li data-toggle="tab"><a href ng-click="tabc.setTab(2)">28th of August</a></li>
+            </ul>
             
-            <div class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></div>
-            <!--[if lt IE 9]>
-            <script type="text/javascript" src="/static/js/jquery-1.11.0.min.js?ver=1"></script>
-            <![endif]-->
-            <!--[if (gte IE 9) | (!IE)]><!-->
-            <!--<![endif]-->
-            <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
-            <script type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
-            <script type="text/javascript" src="/static/js/lib/jquery.nav.js"></script>
-            <script type="text/javascript" src="/static/js/lib/jquery.appear.js"></script>
-            <script type="text/javascript" src="/static/js/lib/jquery.countTo.js"></script>
-            <script type="text/javascript" src="/static/js/lib/waypoints.min.js"></script>
-            <script type="text/javascript" src="/static/js/lib/waypoints-sticky.min.js"></script>
-            <script type="text/javascript" src="/static/js/lib/jquery.fancybox.js"></script>
-            <!--  <script type="text/javascript" src="/static/mailchimp/js/mailing-list.js"></script>-->
-            <script type="text/javascript" src="/static/js/lib/scripts.js"></script>
-            <script type="text/javascript" src="/static/js/lib/color-chooser.js"></script>
-          </body>
-        </html>
+            <div class="tab-content">
+              <div class="tab-pane fade in active" id="DayOne-1" ng-show="tabc.isSelected(1)">
+                <article>
+                  <h6>Tutorials</h6>
+                  Following key speakers will deliver the session in the tutorials:
+                  <ul>
+                    
+                  </ul>
+                  <li>1. Prof.Dr. ING Volker Hinrichsen</li>
+                  <li>2. Prof.Bengt Johnnerfelt ,TE Energy</li>
+                  <li>3. Mr. O. Balagangadhar, Oblum</li>
+                  <li>4. Dr.N. Vasudev, CPRI</li>
+                </article>
+              </div>
+              <div class="tab-pane fade in active" id="DayOne-2" ng-show="tabc.isSelected(2)">
+                <article><p>
+                  <h6>International Conference</h6>
+                  <strong>The following major topics will be touched upon:</strong>
+                  <ul>
+                    <li>Technical &amp; Design Aspects of Surge Arresters</li>
+                    <li>Selection &amp; Application of Surge Arresters</li>
+                    <li>Performance Assessment- Case Studies and operational experiences</li>
+                    <li>Condition Assessment</li>
+                    <li>Transmission line Arresters</li>
+                    <li> Polymer Arresters</li>
+                    <li>Surge Arresters for Distribution system</li>
+                    <li>Testing</li>
+                    <li>Installation &amp; Commissioning including Earthing</li>
+                  </ul>
+                </p></article>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      
+      <div class="btn-wrapper">
+      </div>
+    </div>
+  </section>
+  <!-- End Schedule Section -->
+  <!-- Speakers Section -->
+  <section id="speakers" class="section light">
+    <div class="overlay"></div>
+    <div class="container " >
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <h6>Technical Committee Members</h6>
+        <br />
+        <br />
+        <section class="row">
+          <section class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
+                <div class="name"></div>
+                <div class="sub"></div>
+              </div>
+            </div>
+            <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
+                <div class="name">Mr. O. Balagangadhar</div>
+                <div class="sub">Oblum</div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
+                <div class="name"></div>
+                <div class="sub"></div>
+              </div>
+            </div>
+          </section>
+          <section class="row">
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                
+                <div class="name">Mr. S.K.Mahapatra</div>
+                <div class="sub">CEA</div>
+                <!-- <div class="social-link"> -->
+                <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                
+                <div class="name">Ms. Kanyakumari</div>
+                <div class="sub">CPRI</div>
+                <!-- <div class="social-link"> -->
+                <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                
+                <div class="name">Mr. Y.V.Joshi</div>
+                <div class="sub">GETCO</div>
+                <!-- <div class="social-link"> -->
+                <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                
+                <div class="name">Mr. S. Sumanth</div>
+                <div class="sub">KPTCL</div>
+                <!-- <div class="social-link"> -->
+                <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
+                <!-- </div> -->
+              </div>
+            </div>
+          </section>
+          
+          <div class="clearfix visible-xs"></div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+              
+              <div class="name">Mr. Hirdesh Gupta</div>
+              <div class="sub">NTPC</div>
+              <!-- <div class="social-link"> -->
+              <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
+              <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
+              <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
+              <!-- </div> -->
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+              
+              <div class="name">Mr. A.P.Gangadharan</div>
+              <div class="sub">POWERGRID</div>
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+              
+              <div class="name">Mr.  V. Sasikumar</div>
+              <div class="sub">RAYCHEM</div>
+              <!-- <div class="social-link"> -->
+              <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
+              <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
+              <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
+              <!-- </div> -->
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+              
+              <div class="name">Mr. P.J.Thakkar</div>
+              <div class="sub">REC</div>
+            </div>
+          </div>
+          
+          <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+        </section>
+        <section class="row">
+          <section class="row">
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                
+                <div class="name">Mr. Sanjay Kulshrestha</div>
+                <div class="sub">REC</div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <div class="sub-title"><strong></strong></div><br/>
+        
+      </div>
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <h6>Organising Committee Members</h6>
+        <br />
+        <br />
+        <section class="row">
+          <section class="row">
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
+                <div class="name"></div>
+                <div class="sub"></div>
+              </div>
+            </div>
+            <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
+                <div class="name">Mr. O. Balagangadhar</div>
+                <div class="sub">Oblum</div>
+              </div>
+            </div>
+            <div class="col-md-4 col-sm-4 col-xs-4">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
+                <div class="name"></div>
+                <div class="sub"></div>
+              </div>
+            </div>
+          </section>
+          <section class="row">
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                
+                <div class="name">Mr. S.K.Mahapatra</div>
+                <div class="sub">CEA</div>
+                <!-- <div class="social-link"> -->
+                <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                
+                <div class="name">Ms. Kanyakumari</div>
+                <div class="sub">CPRI</div>
+                <!-- <div class="social-link"> -->
+                <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                
+                <div class="name">Mr. Y.V.Joshi</div>
+                <div class="sub">GETCO</div>
+                <!-- <div class="social-link"> -->
+                <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
+                <!-- </div> -->
+              </div>
+            </div>
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                
+                <div class="name">Mr. S. Sumanth</div>
+                <div class="sub">KPTCL</div>
+                <!-- <div class="social-link"> -->
+                <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
+                <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
+                <!-- </div> -->
+              </div>
+            </div>
+          </section>
+          
+          <div class="clearfix visible-xs"></div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+              
+              <div class="name">Mr. Hirdesh Gupta</div>
+              <div class="sub">NTPC</div>
+              <!-- <div class="social-link"> -->
+              <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
+              <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
+              <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
+              <!-- </div> -->
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+              
+              <div class="name">Mr. A.P.Gangadharan</div>
+              <div class="sub">POWERGRID</div>
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+              
+              <div class="name">Mr.  V. Sasikumar</div>
+              <div class="sub">RAYCHEM</div>
+              <!-- <div class="social-link"> -->
+              <!--   <a href="index.html#"><span class="fa fa-facebook"></span></a> -->
+              <!--   <a href="index.html#"><span class="fa fa-twitter"></span></a> -->
+              <!--   <a href="index.html#"><span class="fa fa-google-plus"></span></a> -->
+              <!-- </div> -->
+            </div>
+          </div>
+          <div class="clearfix visible-xs"></div>
+          <div class="col-md-3 col-sm-3 col-xs-3">
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+              
+              <div class="name">Mr. P.J.Thakkar</div>
+              <div class="sub">REC</div>
+            </div>
+          </div>
+          
+          <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+        </section>
+        <section class="row">
+          <section class="row">
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                
+                <div class="name">Mr. Sanjay Kulshrestha</div>
+                <div class="sub">REC</div>
+              </div>
+            </div>
+          </section>
+        </section>
+        <div class="sub-title"><strong></strong></div><br/>
+      </div>
+    </div>
+  </section>
+  <!-- End Speakers Section -->
+  <!-- Price Section -->
+  <section id="price" class="section dark">
+    <div class="container">
+      <div class="icon-wrap"><span class="icon icon-active icon-shopping-02"></span></div>
+      <h3>Delegate Registration</h3>
+      <div class="sub-title">The pricing categories are:</div>
+      <br/>
+      <br/>
+      <div class="pricing-cols pricing-3-cols">
+        <div class="pricing-col animated hiding" data-animation="fadeInLeft" data-delay="0">
+          <div class="pricing-col-header">
+            <h3 class="pricing-col-header-title">Utility Participation</h3>
+            <!--                     <h4 class="pricing-col-header-amount">
+            <span class="pricing-col-amount">$100</span></h4>
+          -->                  </div>
+          <div class="pricing-col-content">
+            <ul>
+              <li>Rs. 6,000/- (combined participation in Conference and Tutorials for two days)<br/><br/></li>
+              <li>Rs. 4,000/-(participating in either Tutorial or Conference)<br/><br/></li>
+              <li><br/><br/><br/></li>
+            </ul>
+          </div>
+        </div>
+        <div class="pricing-col animated hiding" data-animation="fadeInLeft" data-delay="0">
+          <!-- <div class="pricing-col pricing-col-featured"> -->
+          <!-- <div class="pricing-ribbon">-20%</div> -->
+          <div class="pricing-col-header">
+            <h3 class="pricing-col-header-title">Industry participation</h3>
+            <!-- <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">$150</span></h4> -->
+          </div>
+          <div class="pricing-col-content">
+            <ul>
+              <li>Rs. 10,000/- for IEEMA members (combined participation in Conference and Tutorials for two days)</li>
+              <li>Rs. 12,000/-for Non IEEMA members (combined participation in Conference and Tutorials for two days)</li>
+              <li>Rs. 6,000/- for IEEMA /Non IEEMA members (participating in either Tutorial or Conference)</li>
+            </ul><!--
+            <a class="pricing-col-button" href="https://docs.google.com/forms/d/1yg-sod1yCEnyCZL7lLkJuLTv6Njc06b_oNnccrN2S1g/viewform">Buy Now</a> -->
+          </div>
+        </div>
+        <div class="pricing-col animated hiding" data-animation="fadeInRight" data-delay="0">
+          <div class="pricing-col-header">
+            <h3 class="pricing-col-header-title">Student Participation</h3>
+            <!-- <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">$200</span></h4> -->
+          </div>
+          <div class="pricing-col-content">
+            <ul>
+              <li>Rs. 2,000/- for bonafied students (for two days)<br/><br/></li>
+              <li><br/><br/><br/></li>
+              <li><br/><br/><br/></li>
+            </ul>
+            <!-- <a class="pricing-col-button" href="https://docs.google.com/forms/d/1yg-sod1yCEnyCZL7lLkJuLTv6Njc06b_oNnccrN2S1g/viewform">Buy Now</a> -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section id="sponsors" class="section dark">
+    <div class="container">
+      <div class="icon-wrap"><span class="icon icon-active icon-documents-bookmarks-12"></span></div>
+      <h3>Sponsors</h3>
+      <br/>
+      <div class="row">
+        <ul class="list-inline">
+          <li><a href="http://www.bhel.com" target="_blank"><img src="/static/img/bhel.png" alt="sponsor-1" /></a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
+  <!-- End Price Section -->
+  <!-- Map Section -->
+  <section id="map" class="dark">
+    <div id="canvas-map"></div>
+    <div class="container" style="margin-left: 100px;">
+      <div class="row" >
+        <div class="col-md-5 col-sm-7 animated hiding location" data-animation="fadeInLeft" data-delay="0">
+          <h3>Location</h3>
+          <ul itemscope="" itemtype="http://schema.org/PostalAddress">
+            <li itemprop="address"><i class="fa fa-map-marker highlight"></i>Hotel Le-Meridien, New delhi</li>
+            <li itemprop="email"><i class="fa fa-envelope highlight"></i>anita.gupta@ieema.org</li>
+            <li itemprop="telephone"><i class="fa fa-phone highlight"></i>+91-11-23363013 / 14 (Board) </li>
+            <li itemprop="telephone"><i class="fa fa-fax highlight"></i>+91-11-23363015</li>
+            <li itemscope="" itemtype="http://schema.org/Event"><i class="fa fa-clock-o highlight"></i><time itemprop="startDate" datetime="2014-08-23T09:30">9:00</time> - <time itemprop="endDate" datetime="2014-08-23T18:00">18:00</time></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- End Map Section -->
+  
+  <!-- <div class="back-to-top"><i class="fa fa-angle-up fa-3x"></i></div> -->
+  
+  <div class="footer-main">
+    <div class="footer-text">
+      Copyright IEEMA 2015-16.
+    </div>
+  </div>
+  <!--[if lt IE 9]>
+  <script type="text/javascript" src="/static/js/jquery-1.11.0.min.js?ver=1"></script>
+  <![endif]-->
+  <!--[if (gte IE 9) | (!IE)]><!-->
+  <!--<![endif]-->
+  <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
+  <script type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
+  <script type="text/javascript" src="/static/js/lib/jquery.nav.js"></script>
+  <script type="text/javascript" src="/static/js/lib/jquery.appear.js"></script>
+  <script type="text/javascript" src="/static/js/lib/jquery.countTo.js"></script>
+  <script type="text/javascript" src="/static/js/lib/waypoints.min.js"></script>
+  <script type="text/javascript" src="/static/js/lib/waypoints-sticky.min.js"></script>
+  <script type="text/javascript" src="/static/js/lib/jquery.fancybox.js"></script>
+  <!--  <script type="text/javascript" src="/static/mailchimp/js/mailing-list.js"></script>-->
+  <script type="text/javascript" src="/static/js/lib/scripts.js"></script>
+  <script type="text/javascript" src="/static/js/lib/color-chooser.js"></script>
+  <script type="text/javascript" src="/static/js/appmain.js"></script>
+</body>
+</html>

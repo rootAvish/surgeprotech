@@ -127,3 +127,10 @@ function logoutController($scope,Logout,$location,Session) {
 		Session.destroy();
 	});
 }
+
+
+function tabController() {
+
+	Logout.logout();
+	
+}
