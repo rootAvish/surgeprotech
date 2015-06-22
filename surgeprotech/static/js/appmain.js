@@ -18,3 +18,37 @@ angular.module('tabControls', [])
 		}
 	}
 });
+
+angular.module('CommitteeList',[])
+
+.controller('tcMemberController', function(){
+	
+	this.members = {
+		"CEA": ['Mr. S.K.Mahapatra'],
+		"CPRI":		['Ms. Kanyakumari'],
+		"GETCO": ['Mr. Y.V.Joshi'],
+		"KPTCL": ['Mr. S. Sumanth'],
+		"NTPC": ['Mr. Hirdesh Gupta'],
+		"POWERGRID": ['Mr. A.P.Gangadharan'],
+		'Raychem': ['Mr. V.Sasikumar'],
+		'REC':['Mr. P.J.Thakkar','Mr. Sanjay Kulshrestha']
+	};
+
+})
+
+.controller('ocMemberController', function(){
+	
+	this.members = {
+	// 'APTRANSCO' : ['Mr. Janardhan Reddy'],
+	// 'Chairman,BIS- ET 30': ['Mr. N.S.Sodha'],
+	// 'Secretariat,BIS ET 30': ['Mr. S.S.Yadav'],
+	// 'Crompton Greaves' : ['Mr. Milind Zodage'],
+	// 'Elektrolites' : ['Mr. Anil Saboo'],
+	// 'ERDA': [''],
+	// 'Lamco': ['Mr. Padma Kumar'],
+	// 'L & T': [''],
+	// 'Lamer Power': ['Mr. Mukesh Mallik'],
+	// 'MSEDCL': [''],
+	// 'POWERGRID': ['Mr. Ravi Roshan Kumar']
+	};
+});

@@ -110,17 +110,17 @@
   <!-- About Section -->
   <section id="about" class="section dark">
     <div class="container">
-      <div class="icon-wrap"><span class="icon icon-active icon-multimedia-12"></span></div>
-      <h3>Arresters for fail safe protection</h3>
+      <div class="icon-wrap"><!-- <span class="icon icon-active icon-multimedia-12"></span> --></div>
+      <!-- <h3>Arresters for fail safe protection</h3> -->
       <div class="sub-title"></div>
       <br />
       <br />
       <section class="nav-tabs-simple">
         <!-- Nav tabs -->
         <ul class="nav nav-tabs nav-justified">
-          <li  class="active"><a href="index.html#php" data-toggle="tab">About IEEMA</a></li>
+          <li><a href="index.html#php" data-toggle="tab">About IEEMA</a></li>
+          <li class="active"><a href="index.html#jquery" data-toggle="tab">Theme</a></li>
           <li><a href="index.html#htmlcss" data-toggle="tab">Preamble</a></li>
-          <li><a href="index.html#jquery" data-toggle="tab">About Surgeprotech</a></li>
         </ul>
         
         <!-- Tab panes -->
@@ -151,17 +151,19 @@
               </div>
             </article>
           </div>
-          <div class="tab-pane fade" id="jquery">
+          <div class="tab-pane fade in active" id="jquery">
             <article class="row">
               <div class="col-md-8 col-sm-8 text-left animated hiding" data-animation="fadeInLeft" data-delay="500">
-                <h6>Content awaited.</h6>
+                <h6>Arresters for fail safe protection</h6>
+                <p>Surge Arrester -  The most critical equipment for safe &amp; reliable operation of Electrical Power System play an important role in limiting Transient over voltages, Switching &amp;lightning surges on Main Equipment like Transformers, Reactors &amp; Circuit Breakers etc. The Indian Surge Arrester Industry has designed, tested and successfully commissioned Polymer housed Surge Arresters upto 1200kV at National Test station, Bina(India).
+                  The 1st Conference was held in November 2012, with theme_____________. The Second Conference cum Tutorials is being organised to understand the latest technological developments in the field of Surge Arresters for the benefit of Power sector.</p> 
               </div>
               <div class="col-md-4 col-sm-4 animated hiding" data-animation="fadeInRight" data-delay="500">
                 <img class="img-responsive" src="/static/img/624KV.jpg" alt="placeholder" />
               </div>
             </article>
           </div>
-          <div class="tab-pane fade in active" id="php">
+          <div class="tab-pane fade" id="php">
             <article class="row">
               <div class="col-md-5 col-sm-5 animated hiding" data-animation="fadeInLeft" data-delay="500">
                 <img class="img-responsive" src="/static/img/Logo_IEEMA.jpg" alt="iphone" />
@@ -239,7 +241,75 @@
   </section>
   <!-- End Schedule Section -->
   <!-- Speakers Section -->
-  <section id="speakers" class="section light" ng-app="CommitteeList"></section>
+  <section id="speakers" class="section light" ng-app="CommitteeList">
+    
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <h6>Technical Committee</h6>
+        <br />
+        <br />
+        <section class="row">
+          <section class="row">
+            <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+            
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
+              <div class="name">Mr. O. Balagangadhar</div>
+              <div class="sub">Oblum</div>
+              <div class="sub">Chairman, TC</div>
+            </div>
+          </section>
+
+        <div ng-controller="tcMemberController as tcMember">  
+          <div ng-repeat="(company,memberList) in tcMembers.members">
+          <section class="row" ng-repeat="member in memberList">
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                <div class="name">{{member}}</div>
+                <div class="sub">{{company}}</div>
+              </div>
+            </div>
+            
+          </section>
+        </div>
+        </div>
+        </section>
+      </div>
+
+    <!-- Begin OC members -->
+        <div class="col-md-6 col-sm-6 col-xs-6">
+        <h6>Organising Committee</h6>
+        <br />
+        <br />
+        <section class="row">
+          <section class="row">
+            <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+            
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
+            <div class="name">Mr. R.K.Tyagi</div>
+              <div class="sub">POWERGRID</div>
+              <div class="sub">Chairman, OC</div>
+            </div>
+          </section>
+          <div  ng-controller="ocMemberController as ocMember">
+          <div ng-repeat="(company,memberList) in members">
+          <section class="row" ng-repeat="member in memberList">
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                <div class="name">{{member}}</div>
+                <div class="sub">{{company}}</div>
+              </div>
+            </div>
+            
+          </section>
+        </div>
+        </div>
+        </section>
+      </div>
+    </div>
+  </section>
   <!-- End Speakers Section -->
   <!-- Price Section -->
   <section id="price" class="section dark">
@@ -303,9 +373,13 @@
       <h3>Sponsors</h3>
       <br/>
       <div class="row">
-        <ul class="list-inline">
-          <li><a href="http://www.bhel.com" target="_blank"><img src="/static/img/bhel.png" alt="sponsor-1" /></a></li>
-        </ul>
+          <!-- <li><a href="http://www.bhel.com" target="_blank"><img src="/static/img/bhel.png" alt="sponsor-1" /></a></li> -->
+          <h6>Sponsorship Opportunities:</h6><br/><br/>
+<ul style="text-align:left; margin:0 auto;">
+  <li>Platinum Sponsor  : Rs. 5,00,000/-</li>
+  <li>Gold Sponsor    : Rs. 4,00,000/-</li>
+  <li>Silver Sponsor    : Rs. 3,00,000/-</li>
+  </ul>
       </div>
     </div>
   </section>
