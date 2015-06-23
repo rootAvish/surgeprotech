@@ -19,7 +19,7 @@ def before_request():
 
 @app.route('/')
 def home():
-	return render_template('main.html')
+    return make_response(open('surgeprotech/templates/main.html').read())
 
 
 @app.route('/login')
@@ -68,7 +68,7 @@ def registerUser():
             db.session.add(user)
             db.session.commit()
             login_user(user, remember=False)
-            return jsonify({"success": True})
+            return jsonify({"success": True, "userId":user.get_id(),"userRole":'false'})
 
         else:
             # Return error since user was already in the database.

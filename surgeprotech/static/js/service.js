@@ -81,13 +81,24 @@ angular.module('services',[])
 .factory('RegisterService', ['$http', function($http){
 	var reg = {};
 
-	reg.register = function (formData){
-		$http({
-			method: 'POST',
-			url: '/api/user/',
-			data: formData,
-			headers: {'Content-Type': 'application/json'}
-		});
+	reg.register = function (formData)	{
+		return $http({
+						method: 'POST',
+						url: '/api/user/',
+						data: formData,
+						headers: {'Content-Type': 'application/json'}
+				})
+				.success(function(res) {
+			
+					if(res['success'] == true) {
+
+						Session.create({Name: formData['name'],u_id: res['userId'],role: res['userRole']});
+					}
+
+					else {
+						return false;
+					}
+				});
 	};
 
 	return reg;

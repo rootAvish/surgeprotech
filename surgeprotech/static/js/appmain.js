@@ -21,9 +21,9 @@ angular.module('tabControls', [])
 
 angular.module('CommitteeList',[])
 
-.controller('tcMemberController', function(){
+.controller('tcMemberController',['$scope', function($scope){
 	
-	this.members = {
+	$scope.tcmembers = {
 		"CEA": ['Mr. S.K.Mahapatra'],
 		"CPRI":		['Ms. Kanyakumari'],
 		"GETCO": ['Mr. Y.V.Joshi'],
@@ -34,21 +34,25 @@ angular.module('CommitteeList',[])
 		'REC':['Mr. P.J.Thakkar','Mr. Sanjay Kulshrestha']
 	};
 
-})
+}])
 
-.controller('ocMemberController', function(){
-	
-	this.members = {
-	// 'APTRANSCO' : ['Mr. Janardhan Reddy'],
-	// 'Chairman,BIS- ET 30': ['Mr. N.S.Sodha'],
-	// 'Secretariat,BIS ET 30': ['Mr. S.S.Yadav'],
-	// 'Crompton Greaves' : ['Mr. Milind Zodage'],
-	// 'Elektrolites' : ['Mr. Anil Saboo'],
-	// 'ERDA': [''],
-	// 'Lamco': ['Mr. Padma Kumar'],
-	// 'L & T': [''],
-	// 'Lamer Power': ['Mr. Mukesh Mallik'],
-	// 'MSEDCL': [''],
-	// 'POWERGRID': ['Mr. Ravi Roshan Kumar']
+.controller('ocMemberController',['$scope', function($scope){
+	$scope.ocmembers = {
+	'APTRANSCO' : ['Mr. Janardhan Reddy'],
+	'Chairman,BIS- ET 30': ['Mr. N.S.Sodha'],
+	'Secretariat,BIS ET 30': ['Mr. S.S.Yadav'],
+	'Crompton Greaves' : ['Mr. Milind Zodage'],
+	'Elektrolites' : ['Mr. Anil Saboo'],
+	'ERDA': [''],
+	'Lamco': ['Mr. Padma Kumar'],
+	'L & T': [''],
+	'Lamer Power': ['Mr. Mukesh Mallik'],
+	'MSEDCL': [''],
+	'POWERGRID': ['Mr. Ravi Roshan Kumar']
 	};
-});
+
+	console.log($scope.ocmembers);
+}]);
+
+
+angular.bootstrap(document.getElementById("speakers"),['CommitteeList']);

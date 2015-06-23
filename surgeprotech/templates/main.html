@@ -79,33 +79,34 @@
             <a href="/download/brochure" class="btn btn-lg btn-3d">Download Brochure</a>
           </div>
         </div>
-      </div>  
+      </div>
+    </div>
   </section>
   <!-- End Hero Section -->
   <!-- Header -->
   <header id="header" class="navigation-bar-header light hidden-xs">
-      <div class="container">
-        <nav class="navigation">
-          <div class="navigation-txt visible-xs" data-toggle="dropdown">Home</div>
-          <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <ul class="navigation-bar navigation-bar-left">
-            <li><a href="index.html#about">About</a></li>
-            <!--<li><a href="#stat">Number Facts</a></li>-->
-            <li><a href="index.html#schedule">Overview</a></li>
-            <li><a href="index.html#speakers">Committee</a></li>
-            <li><a href="index.html#price">Prices</a></li>
-            <!-- <li><a href="index.html#elements">Shortcodes</a></li> -->
-            <li><a href="index.html#sponsors">Sponsors</a></li>
-            <li><a href="index.html#map">Contact Us</a></li>
-            <li class="featured"><a href="http://goo.gl/dfbeFT"><i class="fa fa-ticket fa-1x"></i>Delegate Registration</a></li>
-          </ul>
-        </nav>
-      </div>      
-    </header>
+    <div class="container">
+      <nav class="navigation">
+        <div class="navigation-txt visible-xs" data-toggle="dropdown">Home</div>
+        <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        </button>
+        <ul class="navigation-bar navigation-bar-left">
+          <li><a href="index.html#about">About</a></li>
+          <!--<li><a href="#stat">Number Facts</a></li>-->
+          <li><a href="index.html#schedule">Overview</a></li>
+          <li><a href="index.html#speakers">Committee</a></li>
+          <li><a href="index.html#price">Prices</a></li>
+          <!-- <li><a href="index.html#elements">Shortcodes</a></li> -->
+          <li><a href="index.html#sponsors">Sponsors</a></li>
+          <li><a href="index.html#map">Contact Us</a></li>
+          <li class="featured"><a href="http://goo.gl/dfbeFT"><i class="fa fa-ticket fa-1x"></i>Delegate Registration</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
   <!-- End Header -->
   <!-- About Section -->
   <section id="about" class="section dark">
@@ -156,7 +157,7 @@
               <div class="col-md-8 col-sm-8 text-left animated hiding" data-animation="fadeInLeft" data-delay="500">
                 <h6>Arresters for fail safe protection</h6>
                 <p>Surge Arrester -  The most critical equipment for safe &amp; reliable operation of Electrical Power System play an important role in limiting Transient over voltages, Switching &amp;lightning surges on Main Equipment like Transformers, Reactors &amp; Circuit Breakers etc. The Indian Surge Arrester Industry has designed, tested and successfully commissioned Polymer housed Surge Arresters upto 1200kV at National Test station, Bina(India).
-                  The 1st Conference was held in November 2012, with theme_____________. The Second Conference cum Tutorials is being organised to understand the latest technological developments in the field of Surge Arresters for the benefit of Power sector.</p> 
+                The 1st Conference was held in November 2012, with theme_____________. The Second Conference cum Tutorials is being organised to understand the latest technological developments in the field of Surge Arresters for the benefit of Power sector.</p>
               </div>
               <div class="col-md-4 col-sm-4 animated hiding" data-animation="fadeInRight" data-delay="500">
                 <img class="img-responsive" src="/static/img/624KV.jpg" alt="placeholder" />
@@ -259,26 +260,24 @@
               <div class="sub">Chairman, TC</div>
             </div>
           </section>
-
-        <div ng-controller="tcMemberController as tcMember">  
-          <div ng-repeat="(company,memberList) in tcMembers.members">
-          <section class="row" ng-repeat="member in memberList">
-            <div class="clearfix visible-xs"></div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                <div class="name">{{member}}</div>
-                <div class="sub">{{company}}</div>
-              </div>
+          <div ng-controller="tcMemberController">
+            <div ng-repeat="(company,memberList) in tcmembers">
+              <section class="row" ng-repeat="member in memberList">
+                <div class="clearfix visible-xs"></div>
+                
+                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                  <div class="name">{{member}}</div>
+                  <div class="sub">{{company}}</div>
+                </div>
+                
+                
+              </section>
             </div>
-            
-          </section>
-        </div>
-        </div>
+          </div>
         </section>
       </div>
-
-    <!-- Begin OC members -->
-        <div class="col-md-6 col-sm-6 col-xs-6">
+      <!-- Begin OC members -->
+      <div class="col-md-6 col-sm-6 col-xs-6">
         <h6>Organising Committee</h6>
         <br />
         <br />
@@ -287,25 +286,25 @@
             <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
             
             <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
-            <div class="name">Mr. R.K.Tyagi</div>
+              <div class="name">Mr. R.K.Tyagi</div>
               <div class="sub">POWERGRID</div>
               <div class="sub">Chairman, OC</div>
             </div>
           </section>
-          <div  ng-controller="ocMemberController as ocMember">
-          <div ng-repeat="(company,memberList) in members">
-          <section class="row" ng-repeat="member in memberList">
-            <div class="clearfix visible-xs"></div>
-            <div class="col-md-3 col-sm-3 col-xs-3">
-              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
-                <div class="name">{{member}}</div>
-                <div class="sub">{{company}}</div>
-              </div>
+          <div  ng-controller="ocMemberController">
+            <div ng-repeat="(company,memberList) in ocmembers">
+              <section class="row" ng-repeat="member in memberList">
+                <div class="clearfix visible-xs"></div>
+                
+                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                  <div class="name">{{member}}</div>
+                  <div class="sub">{{company}}</div>
+                </div>
+                
+                
+              </section>
             </div>
-            
-          </section>
-        </div>
-        </div>
+          </div>
         </section>
       </div>
     </div>
@@ -373,13 +372,13 @@
       <h3>Sponsors</h3>
       <br/>
       <div class="row">
-          <!-- <li><a href="http://www.bhel.com" target="_blank"><img src="/static/img/bhel.png" alt="sponsor-1" /></a></li> -->
-          <h6>Sponsorship Opportunities:</h6><br/><br/>
-<ul style="text-align:left; margin:0 auto;">
-  <li>Platinum Sponsor  : Rs. 5,00,000/-</li>
-  <li>Gold Sponsor    : Rs. 4,00,000/-</li>
-  <li>Silver Sponsor    : Rs. 3,00,000/-</li>
-  </ul>
+        <!-- <li><a href="http://www.bhel.com" target="_blank"><img src="/static/img/bhel.png" alt="sponsor-1" /></a></li> -->
+        <h6>Sponsorship Opportunities:</h6><br/><br/>
+        <ul style="text-align:left; margin:0 auto;">
+          <li>Platinum Sponsor  : Rs. 5,00,000/-</li>
+          <li>Gold Sponsor    : Rs. 4,00,000/-</li>
+          <li>Silver Sponsor    : Rs. 3,00,000/-</li>
+        </ul>
       </div>
     </div>
   </section>
