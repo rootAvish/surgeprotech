@@ -49,8 +49,10 @@ function registerController($scope,$http,$location, RegisterService) {
 	this.Register = function () {
 		
 		RegisterService.register($scope.formData)
-		.then (function(data) {
+		.then (function(res) {
 
+			var data = res.data;
+			
 			if (data.success == true) {
 				$scope.login = true;
 				$scope.setUser();

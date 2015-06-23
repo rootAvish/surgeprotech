@@ -78,7 +78,7 @@ angular.module('services',[])
 		return login;
 }])
 
-.factory('RegisterService', ['$http', function($http){
+.factory('RegisterService', ['$http','Session', function($http,Session){
 	var reg = {};
 
 	reg.register = function (formData)	{
@@ -89,7 +89,8 @@ angular.module('services',[])
 						headers: {'Content-Type': 'application/json'}
 				})
 				.success(function(res) {
-			
+					console.log(res);
+					
 					if(res['success'] == true) {
 
 						Session.create({Name: formData['name'],u_id: res['userId'],role: res['userRole']});
