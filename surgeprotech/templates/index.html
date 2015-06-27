@@ -16,17 +16,16 @@
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/apple-touch-icon-72x72.jpg">
     <link rel="apple-touch-icon" sizes="114x114" href="/static/img/apple-touch-icon-114x114.jpg">
 
-    <link href='http://fonts.googleapis.com/css?family=Ubuntu:700' rel='stylesheet' type='text/css'>
-    <link href='http://fonts.googleapis.com/css?family=Roboto:100,300,700' rel='stylesheet' type='text/css'>
-
+    <link href='http://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        
     <link rel="stylesheet" href="/static/css/bootstrap.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/static/css/animate.css" type="text/css" media="all" />
     <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="/static/css/font-lineicons.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/static/css/jquery.fancybox.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/static/css/style.css" id="mainstyle" type="text/css" media="all" />
     <link rel="stylesheet" href="/static/css/color-chooser.css" type="text/css" media="all" />
-
+    <link rel="stylesheet" type="text/css" href="/static/css/forum-style.css">
     <!--[if lt IE 9]>
         <script src="/static/js/html5.js"></script>
         <script src="/static/js/respond.min.js"></script>
@@ -44,38 +43,38 @@
 
 <body ng-controller="appController">
     <header id="header" ng-show='currentUser.userId' class="navigation-bar-header light hidden-xs">
-        <div class="container">
-            <nav class="navigation">
-                <div class="navigation-txt visible-xs" data-toggle="dropdown">Home</div>
-                <button class="navigation-toggle visible-xs" type="button" data-toggle="dropdown">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <ul class="navigation-bar navigation-bar-left">
-                    <li><a target="_self" href="/">Home</a></li>
-                    <!--<li><a href="#stat">Number Facts</a></li>-->
-                    <li><a href="index.html#schedule">Schedule</a></li>
-                    <li><a ng-href="/paper/{{currentUser.userId}}">View Your Submitted Papers</a></li>
-                    <li><a ng-href="/paper/" ng-show="currentUser.userRole">View Submitted Papers</a></li>
-                    <li><a href="/contact">Contact Us</a></li>
-                    <li><a href="/logout">Logout</a></li>
-                </ul>
-            </nav>
-        </div>      
+        <nav class="navbar navbar-default navbar-static-top" role="navigation">
+            <a class="navbar-brand navbar-text" href="#">IEEMA</a>
+            <div class="container col-md-6 col-md-offset-2">
+            <ul class="nav navbar-nav">
+                  <li><a  class="navbar-text" href="index.html#schedule">Schedule</a></li>
+                    <li><a class="navbar-text"  ng-href="/paper/{{currentUser.userId}}" ng-hide="currentUser.userRole">View Your Submitted Paper</a></li>
+                    <li><a class="navbar-text"  ng-href="/paper/" ng-show="currentUser.userRole">View all Submitted Papers</a></li>
+                    <li><a  class="navbar-text" href="/contact">Contact Us</a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+                <li><a  class="navbar-text" href="/logout">Logout</a></li>
+            </ul>
+        </div>
+        </nav>
     </header>   
-
-    <div class="container" id="forumcontainer" ng-view>
-    </div> <!-- /container -->
+    
+    <div class="container">
+        <div class="row" flex>
+            <div class="col-md-6 col-md-offset-3" ng-view>
+            </div>
+        </div> <!-- /container -->        
+    </div>
 
     <script type="text/javascript" src="/static/js/service.js"></script>
     <script type="text/javascript" src="/static/js/app.js"></script>
     <script type="text/javascript" src="/static/js/controller.js"></script>
 
-    <footer class="footer">
-      <div class="footer-container">
-        <p class="text-muted">Copyright 2015-16, IEEMA</p>
+     <footer class="footer">
+      <div class="container">
+        <p class="text-muted">Copyright © IEEMA 2015-2016</p>
       </div>
     </footer>
+
 </body>
 </html>

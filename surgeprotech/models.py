@@ -49,7 +49,7 @@ class User(db.Model):
     name = db.Column(db.Text)
     picture = db.Column(db.String(256))
     password = db.Column(db.String(512))
-    paper_rl = db.relationship(Paper, backref='user',lazy='joined',uselist=False)
+    paper_rl = db.relationship(Paper, backref='user',lazy='joined')
     comment_rl = db.relationship(Comment,backref='user',lazy='dynamic')
 
     def __init__(self, name, email, password):

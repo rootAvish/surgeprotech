@@ -14,7 +14,6 @@ def load_user(id):
 @app.before_request
 def before_request():
     g.user = current_user
-    #print "id: ",g.user.get_id()
 
 
 @app.route('/')
@@ -47,6 +46,9 @@ def rest_pages(model_name, item_id=None):
 @app.route('/logout')
 def logout():
     return make_response(open('surgeprotech/templates/index.html').read())
+
+
+
 # =====================The API endpoints begin here=================
 
 # endpoint to create and get users.
@@ -145,12 +147,28 @@ def paper(authorId=None):
 
         admin = User.query.filter_by(id=user.get_id()).first()
         #authenticate that the user is an admin.
+        print admin.ac_type
+        posts = []
 
         if admin.ac_type == True:
 
-            if authorId == None:
+            if 'authorId' not in request.args:
                 post = Paper.query.paginate(int(request.args['page']), int(app.config['POSTS_PER_PAGE']), False)
-                return jsonify({"posts": post.items});
+                
+                for item in post.items:
+                    posts.append({"title":item.Title, "abstract": item.Abstract, "p_id": item.p_id, "author": item.Author})
+
+                return jsonify({"papers": posts})
+
+            else:
+
+                print request.args
+
+                paper = Paper.query.filter_by(Author=request.args['authorId']).first()
+                return jsonify(link=paper.Link,
+                                abstract = paper.Abstract,
+                                title=paper.Title,
+                                p_id=paper.p_id)
         else:
             print g.user
             paper = Paper.query.filter_by(Author=user.get_id()).first()
@@ -170,18 +188,26 @@ def paper(authorId=None):
 def Reviews():
     if request.method == "POST":
         formData = request.json
-        print formData['content']
-        db.session.add(Comment(formData['content'],g.user.get_id(),formData['p_id']))
+        print formData
+        db.session.add(Comment(formData['content'],g.user.get_id(), int(formData['p_id'])))
         db.session.commit()
 
         return jsonify({"success": True}), 200
 
     else:
 
+        print request.args
+
         retval = []
 
-        retval = Comment.query.filter_by(p_id=request.args[p_id]).all()
-        return jsonify({"reviews":retval});
+        comments = Comment.query.filter_by(p_id=request.args['paperId']).all()
+
+        for comment in comments:
+
+            author = User.query.filter_by(id=comment.author).first()
+
+            retval.append({"content": comment.content, "rv_date": comment.rv_date, "author": author.name})
+        return jsonify({"reviews": retval});
 
 
 @app.route('/api/paper/download/<filename>/')

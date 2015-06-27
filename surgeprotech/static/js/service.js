@@ -30,6 +30,17 @@ angular.module('services',[])
 
 })
 
+// .service('PaperList', function() {
+
+// 	var paperList = this;
+
+// 	paperList.paper = {};
+	
+// 	paperList.set(paper) = function() {
+// 		paperList.paper = paper;
+// 	}
+// })
+
 .factory('AuthService', ['$http', 'Session',function($http, Session){	
 
 	var auth = {};
@@ -38,7 +49,7 @@ angular.module('services',[])
 
 		return $http({
 			method: 'POST',
-			url: "/api/login",
+				url: "/api/login",
 			data: credentials,
 			headers: {"Content-type": "application/json"}
 		}).then(function(data) {
@@ -53,16 +64,39 @@ angular.module('services',[])
 	return auth;
 }])
 
-.factory('Resources', ['$resource', function($resource){
-	return $resource('/api/paper/:AuthorId', {}, {
-		query: {
+// Service to get a list of all papers. Admin only.
+.factory('Papers', ['$http', function($http)	{
+
+	var paper = {};
+
+	paper.getPaper = function(AuthorId) {
+		return $http({
 			method: 'GET',
-			params: {AuthorId: ''},
-			isArray: true
-		}
-	});
+			url: '/api/paper',
+			params: {authorId: AuthorId}
+		});
+	};
+
+	return paper;
 }])
 
+// A service to get comments for the paper.
+.factory('Comments', ['$http', function($http){
+	
+	var comments = {};
+
+	comments.getComments = function(paperId) {
+		return $http({
+			method: 'GET',
+			url: '/api/comment',
+			params: {'paperId': paperId}
+		});
+	}
+
+	return comments;
+}])
+
+// A service to login to the portal
 .factory('LoginState', ['$http', function($http){
 
 		var login = {};

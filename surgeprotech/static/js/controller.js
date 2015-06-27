@@ -52,7 +52,7 @@ function registerController($scope,$http,$location, RegisterService) {
 		.then (function(res) {
 
 			var data = res.data;
-			
+
 			if (data.success == true) {
 				$scope.login = true;
 				$scope.setUser();
@@ -87,25 +87,33 @@ function paperController($scope, $http) {
 
 	$http({
 			method: 'GET',
-			url: '/api/paper/',
-			params: {'page': $scope.currentPage}
+			url: '/api/paper/', params: {'page': $scope.currentPage}
 		})
-		.success(function(data) {
-			$scope.papers = data;
+		.success(function(data) {	
+			$scope.papers = data.papers;
 			$scope.currentPage += 1;
-			console.log(data);
+			console.log($scope.papers.length);
 		});
-	}
+}
 	
-function abstController($scope, $routeParams, Resources,Review) {
+function abstController($scope, $routeParams, Papers,Review,Comments) {
 	$scope.paper = {};
 	$scope.review = {};
 
-	Resources.get({},function(res) {
+	console.log($routeParams);
+
+	Papers.getPaper($routeParams.paperId).success(function(res) {
+		console.log(res);
 		$scope.paper = res;
 		$scope.paper.reviews = [];
+		//console.log($scope.paper);
+		Comments.getComments($scope.paper.p_id).success(function(data) {
+			// console.log(data);
+			$scope.paper.reviews = data;
+		});
 	}), function(res) {
 		// Avoid error.
+		console.log(error);
 	};
 
 	$scope.addReview = function(review) {
@@ -117,7 +125,7 @@ function abstController($scope, $routeParams, Resources,Review) {
 		review.author = $scope.currentUser.userId;
 		
 		Review.add(review).then(function() {
-			$scope.paper.reviews.push(review);
+			$scope.paper.reviews.reviews.push(review);
 			$scope.review = {};	
 		})
 	};

@@ -7,18 +7,18 @@
             {{paper.abstract}}
         </div>
         <div class="ratings">
-            <p class="pull-right">{{paper.reviews.length}} reviews</p>
+            <p class="pull-right">{{paper.reviews.reviews.length}} reviews</p>
             <p>
                 <a target="_self" download="{{paper.link}}.pdf" href="/api/paper/download/{{paper.link}}"><i class="fa fa-file-pdf-o"></i> Read full text.</a>
             </p>
         </div>
     </div>
     <div class="well">
-        <div ng-repeat="rvw in paper.reviews">
+        <div ng-repeat="rvw in paper.reviews.reviews">
             <div class="row">
                 <div class="col-md-12">
                     {{ rvw.author }}
-                    <span class="pull-right">{{ rvw.date }}</span>
+                    <span class="pull-right">{{ rvw.rv_date }}</span>
                     <p>{{ rvw.content }}</p>
                 </div>
             </div>

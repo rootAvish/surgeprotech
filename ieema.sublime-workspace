@@ -4,6 +4,162 @@
 		"selected_items":
 		[
 			[
+				"pap",
+				"paperId"
+			],
+			[
+				"me",
+				"method"
+			],
+			[
+				"ocmem",
+				"ocmembers"
+			],
+			[
+				"$scope",
+				"$scope	AngularJS"
+			],
+			[
+				"valid",
+				"validate"
+			],
+			[
+				"har",
+				"harmonic"
+			],
+			[
+				"val",
+				"validate"
+			],
+			[
+				"bac",
+				"background"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"baclk",
+				"background-color"
+			],
+			[
+				"ng-",
+				"ng-click	AngularJS"
+			],
+			[
+				"tr",
+				"trim	$.trim()"
+			],
+			[
+				"cos",
+				"console"
+			],
+			[
+				"choi",
+				"choice"
+			],
+			[
+				"reco",
+				"recommended"
+			],
+			[
+				"se",
+				"select	Tag"
+			],
+			[
+				"mod",
+				"Model"
+			],
+			[
+				"txet-",
+				"text-align"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"ex",
+				"extras"
+			],
+			[
+				"sc",
+				"script"
+			],
+			[
+				"mar",
+				"margin"
+			],
+			[
+				"margin",
+				"margin-right"
+			],
+			[
+				"inline",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"marg",
+				"margin-right"
+			],
+			[
+				"field",
+				"fieldnum"
+			],
+			[
+				"FIEL",
+				"fieldnum"
+			],
+			[
+				"s",
+				"span	Tag"
+			],
+			[
+				"ret",
+				"retval"
+			],
+			[
+				"FIE",
+				"field"
+			],
+			[
+				"su",
+				"sub	Tag"
+			],
+			[
+				"fa",
+				"fadeIn	.fadeIn()"
+			],
+			[
+				"par",
+				"parse	$.parseJSON()"
+			],
+			[
+				"text-",
+				"text-align"
+			],
+			[
+				"bo",
+				"bottom"
+			],
+			[
+				"fo",
+				"footer	Tag"
+			],
+			[
+				"array",
+				"array	$… = array (…)"
+			],
+			[
+				"prin",
+				"print_r"
+			],
+			[
 				"back",
 				"background-image"
 			],
@@ -16,20 +172,12 @@
 				"fadeInUp"
 			],
 			[
-				"se",
-				"section	Tag"
-			],
-			[
 				"harmon",
 				"harmonicSuggestForm"
 			],
 			[
 				"o",
 				"ol	Tag"
-			],
-			[
-				"su",
-				"sup	Tag"
 			],
 			[
 				"rev",
@@ -66,18 +214,6 @@
 			[
 				"fun",
 				"function"
-			],
-			[
-				"mar",
-				"margin-top"
-			],
-			[
-				"marg",
-				"margin-left"
-			],
-			[
-				"margin",
-				"margin-top"
 			],
 			[
 				"font",
@@ -214,48 +350,48 @@
 			[
 				"file",
 				"filenames"
-			],
-			[
-				"fo",
-				"foldername"
 			]
 		]
 	},
 	"buffers":
 	[
 		{
-			"contents": "Organising Committee members\n \nName\nOrganisation\nMr. R.K.Tyagi, Chairman OC\nPOWERGRID\nMr. Ravi Roshan Kumar\nPOWERGRID\nMr. N.S.Sodha\nChairman ET 30\nMr. S.S.Yadav\nSecretariat,BIS ET 30\nMr. Janardhan Reddy\nAPTRANSCO\nMr. Milind Zodage\nCrompton Greaves\nMr. Padma Kumar\nLamco\nMr. Mukesh Mallik\nLamer Power\nMr. Anil Saboo\nElektrolites\nMSEDCL\nL & T\nERDA\n \n\nTechnical Committee members\n \nMr. O. Balagangadhar\nOblum\nMr. P.J.Thakkar\nREC\nMr. Sanjay Kulshrestha\nREC\nMr. Y.V.Joshi\nGETCO\nMr. Hirdesh Gupta\nNTPC\nMr. S.K.Mahapatra\nCEA\nMr. V.Sasikumar\nRaychem\nMr. S. Sumanth\nKPTCL\nMr. A.P.Gangadharan\nPOWERGRID\nMs. Kanyakumari\nCPRI",
-			"file": "/home/rootavish/Desktop/Organising Committee members",
-			"file_size": 614,
-			"file_write_time": 130789982445914060,
+			"file": "surgeprotech/static/js/service.js",
 			"settings":
 			{
-				"buffer_size": 613,
-				"line_ending": "Unix",
-				"name": "Organising Committee members"
-			}
-		},
-		{
-			"file": "surgeprotech/templates/main.html",
-			"settings":
-			{
-				"buffer_size": 44030,
+				"buffer_size": 2646,
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "surgeprotech/static/css/style.css",
+			"file": "surgeprotech/static/partials/paperlist.html",
 			"settings":
 			{
-				"buffer_size": 34029,
-				"line_ending": "CR"
+				"buffer_size": 451,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "surgeprotech/static/js/controller.js",
+			"settings":
+			{
+				"buffer_size": 2687,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "surgeprotech/controllers.py",
+			"settings":
+			{
+				"buffer_size": 6609,
+				"line_ending": "Unix"
 			}
 		}
 	],
 	"build_system": "",
 	"command_palette":
 	{
-		"height": 327.0,
+		"height": 348.0,
 		"selected_items":
 		[
 			[
@@ -263,16 +399,52 @@
 				"HTMLBeautify"
 			],
 			[
-				"reinden",
+				"json",
+				"JSON Reindent: reindent file or selection"
+			],
+			[
+				"rein",
 				"Indentation: Reindent Lines"
 			],
 			[
-				"reindn",
+				"rei",
 				"Indentation: Reindent Lines"
+			],
+			[
+				"packa",
+				"Package Control: Install Package"
+			],
+			[
+				"htmlbe",
+				"HTMLBeautify"
 			],
 			[
 				"htmlb",
 				"HTMLBeautify"
+			],
+			[
+				"reindent",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reinden",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"reinde",
+				"Indentation: Reindent Lines"
+			],
+			[
+				"jquer",
+				"Snippet: jQuery.ajax"
+			],
+			[
+				"package ",
+				"Package Control: Install Package"
+			],
+			[
+				"reindn",
+				"Indentation: Reindent Lines"
 			],
 			[
 				"htm",
@@ -319,10 +491,6 @@
 				"Package Control: Install Package"
 			],
 			[
-				"json",
-				"JSON Reindent: reindent file or selection"
-			],
-			[
 				"pa",
 				"Package Control: Install Package"
 			],
@@ -333,10 +501,6 @@
 			[
 				"package control: insta",
 				"Package Control: Install Package"
-			],
-			[
-				"packa",
-				"Package Control: List Packages"
 			]
 		],
 		"width": 575.0
@@ -370,40 +534,86 @@
 	],
 	"file_history":
 	[
-		"/home/rootavish/test/test.html",
-		"/home/rootavish/IEEMA/surgeprotech/templates/main.html",
-		"/home/rootavish/IEEMA/surgeprotech/static/css/style.css",
-		"/home/rootavish/test/style.css",
-		"/home/rootavish/IEEMA/surgeprotech/static/css/styles.css",
-		"/home/rootavish/inphase/harmonic.js",
-		"/home/rootavish/inphase/page.html",
-		"/home/rootavish/IEEMA/surgeprotech/static/js/lib/scripts.js",
-		"/home/rootavish/Desktop/requirements.txt",
-		"/home/rootavish/IEEMA/surgeprotech/controllers.py",
-		"/home/rootavish/IEEMA/surgeprotech/static/js/service.js",
-		"/home/rootavish/IEEMA/surgeprotech/templates/index.html",
-		"/home/rootavish/IEEMA/surgeprotech/models.py",
-		"/home/rootavish/inphase/solutions.markdown",
-		"/home/rootavish/IEEMA/surgeprotech/static/js/controller.js",
+		"/home/rootavish/mean-stack-tutorial/index.html",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/paper.html",
-		"/home/rootavish/inphase/purchase1.json",
-		"/home/rootavish/Downloads/parse-js-blank/index.html",
-		"/home/rootavish/rootavish.github.io/contents/articles/My-10-things-post-on-Angular.js/index.md",
-		"/home/rootavish/IEEMA/surgeprotech/static/partials/login.html",
-		"/home/rootavish/IEEMA/surgeprotech/static/js/app.js",
-		"/home/rootavish/IEEMA/surgeprotech/static/partials/logout.html",
+		"/home/rootavish/IEEMA/surgeprotech/controllers.py",
+		"/home/rootavish/IEEMA/surgeprotech/models.py",
+		"/home/rootavish/IEEMA/surgeprotech/templates/index.html",
+		"/home/rootavish/IEEMA/surgeprotech/gsoc-meetup/index.html",
+		"/home/rootavish/IEEMA/ieema.sublime-project",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/controller.js",
+		"/home/rootavish/IEEMA/surgeprotech/templates/prices.html",
+		"/home/rootavish/IEEMA/manage.py",
+		"/home/rootavish/IEEMA/surgeprotech/static/bower_components/es5-shim/component.json",
+		"/home/rootavish/IEEMA/surgeprotech/static/bower_components/es5-shim/Makefile",
+		"/home/rootavish/IEEMA/surgeprotech/static/bower_components/es5-shim/es5-sham.min.js",
+		"/home/rootavish/IEEMA/surgeprotech/config.py",
+		"/home/rootavish/IEEMA/surgeprotech/static/bower_components/angular-file-upload/Gruntfile.coffee",
+		"/home/rootavish/IEEMA/surgeprotech/templates/schedule.html",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/register.html",
 		"/home/rootavish/.config/sublime-text-3/Packages/User/Preferences.sublime-settings",
+		"/home/rootavish/inphase/index.html",
+		"/home/rootavish/inphase/backup.js",
+		"/home/rootavish/inphase/master.php",
+		"/home/rootavish/inphase/backup.php",
+		"/home/rootavish/inphase/code.js",
+		"/home/rootavish/rootavish.github.io/contents/articles/getting-mean-with-event-data/index.md",
+		"/home/rootavish/sample-angular/index.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/css/style.css",
+		"/home/rootavish/IEEMA/surgeprotech/templates/main.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/appmain.js",
+		"/home/rootavish/rootavish.github.io/contents/articles/My-10-things-post-on-Angular.js/index.md",
+		"/home/rootavish/sample-angular/appmain.js",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/app.js",
+		"/home/rootavish/Desktop/IPC150_AHF_900_V415.js",
+		"/home/rootavish/Desktop/IPC150_AHF_450_V415.js",
+		"/home/rootavish/Desktop/IPC150_AHF_150_V415.js",
+		"/home/rootavish/IEEMA/surgeprotech/templates/speakers.html",
+		"/home/rootavish/Desktop/Organising Committee members",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/service.js",
+		"/home/rootavish/inphase/pdf.js",
+		"/home/rootavish/Desktop/logo.txt",
+		"/home/rootavish/Desktop/pdfmaker.js",
+		"/home/rootavish/Desktop/logo.js",
+		"/home/rootavish/Desktop/IPC150_AHF_150_V415.txt",
+		"/home/rootavish/Desktop/logo.url",
+		"/home/rootavish/Desktop/IPC150_AHF_450_V415.txt",
+		"/home/rootavish/Desktop/IPC150_AHF_900_V415.txt",
+		"/home/rootavish/inphase/dfd/code.js",
+		"/home/rootavish/Downloads/NVIDIA-Linux-x86_64-346.47.run",
+		"/home/rootavish/inphase/ahfsuggestion.html",
+		"/home/rootavish/inphase/html2.html",
+		"/home/rootavish/inphase/sample.php",
+		"/tmp/fz3temp-1/functions.php",
+		"/home/rootavish/inphase/dfd/sample.js",
+		"/home/rootavish/inphase/dfd/style.css",
+		"/home/rootavish/inphase/dfd/index.html",
+		"/home/rootavish/inphase/dfd/sample.html",
+		"/home/rootavish/inphase/dfd/code.php",
+		"/home/rootavish/inphase/info.txt",
+		"/home/rootavish/inphase/fn.php",
+		"/home/rootavish/inphase/harmonic.js",
+		"/home/rootavish/inphase/page.html",
+		"/home/rootavish/inphase/db.csv",
+		"/home/rootavish/IEEMA/surgeprotech/templates/temp.html",
+		"/home/rootavish/test/test.html",
+		"/home/rootavish/test/style.css",
+		"/home/rootavish/IEEMA/surgeprotech/static/css/styles.css",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/lib/scripts.js",
+		"/home/rootavish/Desktop/requirements.txt",
+		"/home/rootavish/inphase/solutions.markdown",
+		"/home/rootavish/inphase/purchase1.json",
+		"/home/rootavish/Downloads/parse-js-blank/index.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/login.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/logout.html",
 		"/home/rootavish/IEEMA/surgeprotech/static/js/lib/angular-resource.min.js",
 		"/home/rootavish/IEEMA/surgeprotech/static/js/lib/angular-route.min.js",
-		"/home/rootavish/IEEMA/surgeprotech/static/bower_components/angular-file-upload/Gruntfile.coffee",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/upload.html",
 		"/home/rootavish/IEEMA/surgeprotech/__init__.py",
 		"/home/rootavish/IEEMA/surgeprotech/templates/404.html",
 		"/home/rootavish/github-bookmarks/github-bookmarks.js",
 		"/media/rootavish/New Volume1/CTR/read.py",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/paperlist.html",
-		"/home/rootavish/IEEMA/surgeprotech/config.py",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/fuckme.html",
 		"/home/rootavish/IEEMA/surgeprotech/templates/forums.html",
 		"/home/rootavish/angular-flask/data/db_items.json",
@@ -451,23 +661,7 @@
 		"/home/rootavish/nw/transposition.cpp",
 		"/home/rootavish/Downloads/eustace_labels/labels/testsyl/subjectf1/left-headed/f1lcapam.lab",
 		"/home/rootavish/Downloads/eustace_labels/labels/testsyl/subjectf1/left-headed/f1lcapae.lab",
-		"/home/rootavish/Downloads/eustace_labels/README",
-		"/home/rootavish/.cache/.fr-aim0JZ/TRN/SBC002.trn",
-		"/home/rootavish/project/classifier_pitch.py",
-		"/home/rootavish/project/pitch.py",
-		"/home/rootavish/project/classifier.py",
-		"/home/rootavish/project/test.py",
-		"/home/rootavish/pyaud.py",
-		"/home/rootavish/algorithms/mergesort.cpp",
-		"/home/rootavish/linguist/vendor/grammars/Vala-TMBundle/Syntaxes/Vala.tmLanguage",
-		"/home/rootavish/project/aubiocut",
-		"/home/rootavish/Downloads/eustace_labels/labels/othersyl/subjectm2/right-headed/m2rcomae.uns",
-		"/home/rootavish/Downloads/eustace_labels/labels/othersyl/subjectf1/left-headed/f1lcapae.uns",
-		"/home/rootavish/zsh/Test/A01grammar.ztst",
-		"/home/rootavish/Desktop/Tokenization Using Grammar Bundles in Linguist.txt",
-		"/home/rootavish/linguist/lib/linguist/tokenizer.rb",
-		"/home/rootavish/.config/sublime-text-3/Packages/User/Default (Linux).sublime-keymap",
-		"/home/rootavish/.config/sublime-text-3/Packages/Default/Preferences.sublime-settings"
+		"/home/rootavish/Downloads/eustace_labels/README"
 	],
 	"find":
 	{
@@ -485,6 +679,103 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"dumps",
+			"comment",
+			"comments",
+			"papercontroller",
+			"Resources",
+			"6",
+			"9",
+			"String",
+			"options",
+			"Model NO",
+			"console.log",
+			"Model No",
+			"console.log",
+			"$",
+			"disable",
+			"$",
+			"options",
+			"select",
+			"/api/user",
+			"register",
+			"get",
+			"<i>",
+			"opacity",
+			"hero",
+			"pre",
+			"speakers",
+			"nac",
+			"change",
+			"click",
+			"PdfgetTableBody",
+			"specifications",
+			"attr('src'",
+			"$",
+			">\n",
+			"speaker",
+			"schedule",
+			"section",
+			"speakers",
+			"committee",
+			"ng-app",
+			"speaker",
+			"price",
+			"pricing",
+			"waypoint",
+			"registratio",
+			"regestraitor",
+			"navigation-bar",
+			"nav",
+			"VISION",
+			"Ubuntu",
+			"font",
+			"font-style",
+			"light",
+			"sans-serif",
+			"Roboto",
+			"body",
+			"@media",
+			"footer-main",
+			"box",
+			"footer",
+			"schedule",
+			"nav",
+			"div",
+			"nav-pills",
+			".nav",
+			"nav",
+			"schedule",
+			"navigation-bar-header",
+			"angular.js",
+			"<div class=\"time\"><i class=\"fa fa-clock-o\"></i>(.*?)</div>",
+			"time",
+			" <div class=\"time\"><i class=\"fa fa-clock-o\"></i> 9:30 AM</div>",
+			" <div class=\"time\"><i class=\"fa fa-clock-o\"></i> \\d:\\d\\d AM</div>",
+			"img",
+			"<img \\w",
+			"img",
+			"Dayone-1",
+			"DayOne-1",
+			"DayOne-2",
+			"28th",
+			"recommendation",
+			"recommended",
+			"=>",
+			"$",
+			"config",
+			"for=\"\\w+\"",
+			"A",
+			"l",
+			"safe",
+			"SURGEPROTECH",
+			"Noto Serif",
+			"Noto Sans",
+			"Arimo",
+			"Helvetica",
+			"Roboto",
+			"speaker",
+			"font-size",
 			"lamp.jpg",
 			"price",
 			"#price",
@@ -515,104 +806,7 @@
 			"her",
 			"1 day",
 			"fontawesome",
-			"billingdetails",
-			"><",
-			"font-awesome.webfont.woff",
-			"font-awesom",
-			"\"/\"",
-			"/api/login",
-			"$http",
-			"/api/login",
-			"624KV",
-			"Vision",
-			"Attend",
-			"orchestrate",
-			"logout",
-			"before_request",
-			"/api/login",
-			"user",
-			"before_re",
-			"before_Request",
-			"login",
-			"/api/login",
-			"POST",
-			"/user",
-			"g.user",
-			"angular-route.min.js.map",
-			"$scopeProvider",
-			"/api/user",
-			"query",
-			"501",
-			"paper",
-			"/api/paper",
-			"paper",
-			"merge",
-			"query",
-			"db.query",
-			"g.user",
-			"user",
-			"uesr",
-			"/api/paper",
-			"setUser",
-			"body",
-			"html",
-			"footer",
-			"register",
-			"btn",
-			">\n",
-			"lm.",
-			"lm.user_loader",
-			".user",
-			"initiate",
-			"json.dumps",
-			"credentials",
-			">\n",
-			"{}",
-			"formData",
-			"login",
-			"json",
-			"font-family",
-			"    \n",
-			"  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum</p>",
-			"this",
-			"'\n",
-			"paper",
-			"12",
-			"vivaco",
-			"24.99",
-			"q",
-			"form-register",
-			"formata",
-			"EBEBEB",
-			"placeholder",
-			"control-label",
-			"input-xlarge",
-			"footer",
-			"('",
-			"routeprovider",
-			"hero",
-			"footer",
-			".footer",
-			"footer",
-			"overlay",
-			"footer",
-			"nav",
-			"form",
-			"container",
-			"Logo_IEEMA",
-			"js/",
-			"js",
-			"assets",
-			"DEBUG",
-			"ng-view",
-			"welcome",
-			"before",
-			"					#",
-			"re",
-			"Archive",
-			">\n",
-			"companylogin",
-			"form"
+			"billingdetails"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -620,6 +814,23 @@
 		"regex": false,
 		"replace_history":
 		[
+			"Papers",
+			"jQuery",
+			"Raleway",
+			"serif",
+			"Lato",
+			"",
+			"current",
+			"recommendation",
+			":",
+			"jQuery",
+			"",
+			"/*",
+			"Roboto",
+			"Noto Serif",
+			"Noto Sans",
+			"Arimo",
+			"Helvetica",
 			"productsuggestion",
 			"jsonify",
 			"formData",
@@ -650,58 +861,59 @@
 			[
 				{
 					"buffer": 0,
-					"file": "/home/rootavish/Desktop/Organising Committee members",
+					"file": "surgeprotech/static/js/service.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 613,
+						"buffer_size": 2646,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								593,
-								593
+								592,
+								592
 							]
 						],
 						"settings":
 						{
-							"auto_name": "Organising Committee members",
-							"syntax": "Packages/Text/Plain text.tmLanguage"
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
 						},
 						"translation.x": 0.0,
-						"translation.y": 180.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 2,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
 					"buffer": 1,
-					"file": "surgeprotech/templates/main.html",
+					"file": "surgeprotech/static/partials/paperlist.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 44030,
+						"buffer_size": 451,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								2621,
-								2621
+								286,
+								286
 							]
 						],
 						"settings":
 						{
+							"is_xml": false,
 							"syntax": "Packages/HTML/HTML.tmLanguage",
-							"tab_size": 2,
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 299.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 0,
@@ -709,29 +921,58 @@
 				},
 				{
 					"buffer": 2,
-					"file": "surgeprotech/static/css/style.css",
+					"file": "surgeprotech/static/js/controller.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 34029,
+						"buffer_size": 2687,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								34029,
-								34029
+								1763,
+								1763
 							]
 						],
 						"settings":
 						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 1397.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "surgeprotech/controllers.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6609,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								5033,
+								5033
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 14578.0,
+						"translation.y": 2496.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 1,
@@ -742,7 +983,7 @@
 	],
 	"incremental_find":
 	{
-		"height": 25.0
+		"height": 26.0
 	},
 	"input":
 	{
@@ -786,6 +1027,42 @@
 		"height": 0.0,
 		"selected_items":
 		[
+			[
+				"contro",
+				"surgeprotech/controllers.py"
+			],
+			[
+				"controller",
+				"surgeprotech/static/js/controller.js"
+			],
+			[
+				"paperli",
+				"surgeprotech/static/partials/paperlist.html"
+			],
+			[
+				"index.",
+				"surgeprotech/templates/index.html"
+			],
+			[
+				"paper",
+				"surgeprotech/static/partials/paper.html"
+			],
+			[
+				"model",
+				"surgeprotech/models.py"
+			],
+			[
+				"controll",
+				"surgeprotech/static/js/controller.js"
+			],
+			[
+				"control",
+				"surgeprotech/controllers.py"
+			],
+			[
+				"controller.",
+				"surgeprotech/controllers.py"
+			]
 		],
 		"width": 0.0
 	},
@@ -812,7 +1089,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": true,
+	"side_bar_visible": false,
 	"side_bar_width": 264.0,
 	"status_bar_visible": true,
 	"template_settings":
