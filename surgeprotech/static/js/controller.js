@@ -44,9 +44,14 @@ function logoutcontroller($scope) {
 
 function registerController($scope,$http,$location, RegisterService) {
 
-	$scope.formData = {};
+	$scope.formData = {password: ''};
+	$scope.cnfpass = '';
 
 	this.Register = function () {
+		if ($scope.formData.password !== $scope.cnfpass) {
+			$scope.error = "Passowords don't match";
+			return;
+		}
 		
 		RegisterService.register($scope.formData)
 		.then (function(res) {
@@ -59,7 +64,7 @@ function registerController($scope,$http,$location, RegisterService) {
 				$location.path('/user');
 			}
 			else {
-				$scope.exists = true;
+				$scope.exists = true;	
 			}
 		});
 	};

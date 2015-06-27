@@ -9,9 +9,13 @@
     <label for="passwd" >Password: </label>
     <input type="password" id="passwd" class="form-control" ng-model="formData.password" placeholder="Password" required>
     <label for="cnfpasswd">Confirm Password:</label>
-    <input type="password" id="cnfpasswd" class="form-control" placeholder="Confirm Password" required>
+    <input type="password" id="cnfpasswd" class="form-control" ng-model="cnfpass" placeholder="Confirm Password" ng-class="{'ng-invalid': cnfpass !== formData.password}">
+    <span ng-show="cnfpass !== formData.password" class="help-block">passwords have to match!</span>
   </div>
   <div class="control-group">
     <button type="submit" class="btn btn-primary">Submit</button>
   </div>
+
+  <span class="help-block" ng-show="error">{{error}}</span>
+  <span class="row">Already have an account? <a ng-href="/login">Login</a></span>
 </form>
