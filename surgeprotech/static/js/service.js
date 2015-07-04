@@ -49,7 +49,7 @@ angular.module('services',[])
 
 		return $http({
 			method: 'POST',
-				url: "/api/login",
+			url: "/api/login",
 			data: credentials,
 			headers: {"Content-type": "application/json"}
 		}).then(function(data) {

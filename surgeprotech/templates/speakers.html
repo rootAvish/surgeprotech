@@ -1,0 +1,66 @@
+
+    <div class="overlay"></div>
+    <div class="container">
+      <div class="col-md-6 col-sm-6 col-xs-6">
+        <h6>Technical Committee</h6>
+        <br />
+        <br />
+        <section class="row">
+          <section class="row">
+            <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+            
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
+              <div class="name">Mr. O. Balagangadhar</div>
+              <div class="sub">Oblum</div>
+              <div class="sub">Chairman, TC</div>
+            </div>
+          </section>
+
+        <div ng-controller="tcMemberController as tcMember">
+          <div ng-repeat="(company,memberList) in members">
+          <pre>{{members}}</pre>  
+          <section class="row" ng-repeat="member in memberList">
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                <div class="name">{{member}}</div>
+                <div class="sub">{{company}}</div>
+              </div>
+            </div>
+            
+          </section>
+        </div>
+        </div>
+        </section>
+      </div>
+
+    <!-- Begin OC members -->
+        <div class="col-md-6 col-sm-6 col-xs-6">
+        <h6>Organising Committee</h6>
+        <br />
+        <br />
+        <section class="row">
+          <section class="row">
+            <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
+            
+            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="0">
+            <div class="name"><a href ng-click="log()">Mr. R.K.Tyagi</a></div>
+              <div class="sub">POWERGRID</div>
+              <div class="sub">Chairman, OC</div>
+            </div>
+          </section>
+          <div  ng-controller="ocMemberController as ocMember" ng-repeat="(company,memberList) in members">
+          <section class="row" ng-repeat="member in memberList">
+            <div class="clearfix visible-xs"></div>
+            <div class="col-md-3 col-sm-3 col-xs-3">
+              <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="1000">
+                <div class="name">{{member}}</div>
+                <div class="sub">{{company}}</div>
+              </div>
+            </div>
+            
+          </section>
+        </div>
+        </section>
+      </div>
+    </div>
