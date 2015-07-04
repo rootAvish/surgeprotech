@@ -4,10 +4,6 @@
 		"selected_items":
 		[
 			[
-				"text",
-				"text-transform"
-			],
-			[
 				"st",
 				"style	Tag"
 			],
@@ -379,14 +375,6 @@
 	},
 	"buffers":
 	[
-		{
-			"file": "surgeprotech/static/css/style.css",
-			"settings":
-			{
-				"buffer_size": 34050,
-				"line_ending": "CR"
-			}
-		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"command_palette":
@@ -719,12 +707,6 @@
 		"case_sensitive": false,
 		"find_history":
 		[
-			"footer-tex",
-			"featured",
-			"black",
-			"#speakers",
-			"navigation-bar-header",
-			"n",
 			"width",
 			"footer",
 			"featured",
@@ -846,7 +828,13 @@
 			"DayOne-1",
 			"DayOne-2",
 			"28th",
-			"recommendation"
+			"recommendation",
+			"recommended",
+			"=>",
+			"$",
+			"config",
+			"for=\"\\w+\"",
+			"A"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -898,39 +886,8 @@
 	"groups":
 	[
 		{
-			"selected": 0,
 			"sheets":
 			[
-				{
-					"buffer": 0,
-					"file": "surgeprotech/static/css/style.css",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 34050,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								32327,
-								32327
-							]
-						],
-						"settings":
-						{
-							"syntax": "Packages/CSS/CSS.tmLanguage",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 13770.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 0,
-					"type": "text"
-				}
 			]
 		}
 	],
@@ -984,14 +941,6 @@
 		"height": 0.0,
 		"selected_items":
 		[
-			[
-				"stly.",
-				"surgeprotech/static/css/style.css"
-			],
-			[
-				"main.",
-				"surgeprotech/templates/main.html"
-			],
 			[
 				"main",
 				"surgeprotech/templates/main.html"
