@@ -74,11 +74,11 @@ function uploadController($scope, FileUploader,$http) {
 	$scope.formData = {};
 	$scope.uploader = new FileUploader();
 	$scope.uploader.url = "http://localhost:5000/api/paper/";
-	
-	this.Qclear = function() {
+
+	$scope.resetUpload = function() {
+		console.log('clicked');
 		$scope.uploader.clearQueue();
-	};
-		
+	}
 	$scope.uploader.onBeforeUploadItem = function(item) {
 		item.formData.push($scope.formData);
 		console.log(item);

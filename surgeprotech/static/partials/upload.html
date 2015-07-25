@@ -6,9 +6,7 @@
 	<textarea rows="4" id="pabs" class="form-control" ng-model="formData.abstract" required></textarea>
 	<span class="help-block">Enter a short abstract of your paper.</span>
 	
-	<span class="btn btn-file btn-block">Upload a file
-		<input type="file" nv-file-select uploader="uploader" ng-click="Qclear()"/>
-	</span>
+	<input type="file" nv-file-select uploader="uploader" ng-click="resetUpload()"/>
 	
 	<ul>
 		<li ng-repeat="item in uploader.queue">
