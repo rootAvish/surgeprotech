@@ -1,40 +1,53 @@
-<div>
-    <div class="thumbnail">
-        <div class="caption-full">
-            <h5><a href="#">{{ paper.title }}</a>
-            </h5>
-            <strong>Abstract:</strong><br/>
-            {{paper.abstract}}
+<div class="col-xs-8 col-xs-offset-2">
+    <div class="row">
+        <div ng-hide="paper">
+            <h3>You have not submitted any paper/abstract yet.</h3>
         </div>
-        <div class="ratings">
-            <p class="pull-right">{{paper.reviews.reviews.length}} reviews</p>
-            <p>
-                <a target="_self" download="{{paper.link}}.pdf" href="/api/paper/download/{{paper.link}}"><i class="fa fa-file-pdf-o"></i> Read full text.</a>
-            </p>
-        </div>
-    </div>
-    <div class="well">
-        <div ng-repeat="rvw in paper.reviews.reviews">
-            <div class="row">
-                <div class="col-md-12">
-                    {{ rvw.author }}
-                    <span class="pull-right">{{ rvw.rv_date }}</span>
-                    <p>{{ rvw.content }}</p>
+        <div ng-show="paper">
+            <div class="thumbnail">
+                <div class="caption-full">
+                    <h5><a href="#">{{ paper.title }}</a>
+                    </h5>
+                    <strong>Abstract:</strong><br/>
+                    {{paper.abstract}}
+                </div>
+                <div class="ratings">
+                    <p class="pull-right">{{paper.reviews.reviews.length}} reviews</p>
+                    <p>
+                        <a target="_self" download="{{paper.link}}.pdf" href="/api/paper/download/{{paper.link}}"><i class="fa fa-file-pdf-o"></i> Read full text.</a>
+                    </p>
                 </div>
             </div>
-            <hr>
-        </div>
- 
-        <div class="row" ng-show="review.content">
-            <div class="col-md-12">
-                {{currentUser.userName}}
-                <span class="pull-right">Just Now</span>
-                <p>{{review.content}}</p>
+            <div class="well">
+                <div ng-repeat="rvw in paper.reviews.reviews">
+                    <div class="row">
+                        <div class="col-md-12">
+                            {{ rvw.author }}
+                            <span class="pull-right">{{ rvw.rv_date }}</span>
+                            <p>{{ rvw.content }}</p>
+                        </div>
+                    </div>
+                    <hr>
+                </div>
+                
+                <div class="row" ng-show="review.content">
+                    <div class="col-md-12">
+                        {{currentUser.userName}}
+                        <span class="pull-right">Just Now</span>
+                        <p>{{review.content}}</p>
+                    </div>
+                </div>
             </div>
         </div>
+
+    <div class="row">
+        
     </div>
-<form ng-submit="addReview(review)" name="reviewForm">
-    <textarea rows="3" cols="69" ng-model="review.content"></textarea>
-    <input type="submit" class="btn btn-default" value="submit review">
-</form>
+    <form ng-submit="addReview(review)" name="reviewForm">
+    <div class="form-group">
+        <textarea rows="3" cols="" ng-model="review.content"></textarea>
+    </div>
+    <button type="submit" class="btn btn-default">submit review</button>
+    </form>
+    </div>
 </div>
