@@ -45,11 +45,12 @@
     <header id="header" class="navigation-bar-header light hidden-xs">
         <nav class="navbar navbar-default navbar-static-top" role="navigation">
             <a class="navbar-brand navbar-text" href="#">IEEMA</a>
-            <div class="container col-md-6 col-md-offset-2">
+            <div class="container">
             <ul ng-show='currentUser.userId' class="nav navbar-nav">
                   <li><a  class="navbar-text" href="index.html#schedule">Schedule</a></li>
                     <li><a class="navbar-text"  ng-href="/paper/{{currentUser.userId}}" ng-hide="currentUser.userRole">View Your Submitted Paper</a></li>
                     <li><a class="navbar-text"  ng-href="/paper/" ng-show="currentUser.userRole">View all Submitted Papers</a></li>
+                    <li><a class="navbar-text"  ng-href="/user/" ng-hide="currentUser.userRole">Submit a paper</a></li>
                     <li><a  class="navbar-text" href="/contact">Contact Us</a></li>
             </ul>
             <ul ng-show='currentUser.userId' class="nav navbar-nav navbar-right">
@@ -59,11 +60,7 @@
         </nav>
     </header>   
     
-    <div class="container">
-        <div class="row" flex>
-            <div class="col-md-6 col-md-offset-3" ng-view>
-            </div>
-        </div> <!-- /container -->        
+    <div class="container" ng-view>
     </div>
 
     <script type="text/javascript" src="/static/js/service.js"></script>
