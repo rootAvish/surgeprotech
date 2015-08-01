@@ -4,6 +4,10 @@
 		"selected_items":
 		[
 			[
+				"text",
+				"text-transform"
+			],
+			[
 				"st",
 				"style	Tag"
 			],
@@ -375,13 +379,65 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "surgeprotech/controllers.py",
+			"settings":
+			{
+				"buffer_size": 7443,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "surgeprotech/static/js/app.js",
+			"settings":
+			{
+				"buffer_size": 1838,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "surgeprotech/templates/index.html",
+			"settings":
+			{
+				"buffer_size": 4343,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "surgeprotech/static/css/style.css",
+			"settings":
+			{
+				"buffer_size": 34323,
+				"line_ending": "CR"
+			}
+		},
+		{
+			"file": "surgeprotech/static/partials/upload.html",
+			"settings":
+			{
+				"buffer_size": 892,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "surgeprotech/static/css/forum-style.css",
+			"settings":
+			{
+				"buffer_size": 1028,
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "Packages/Python/Python.sublime-build",
 	"command_palette":
 	{
-		"height": 222.0,
+		"height": 348.0,
 		"selected_items":
 		[
+			[
+				"html",
+				"HTMLBeautify"
+			],
 			[
 				"git diff",
 				"Git: Diff Current File"
@@ -397,10 +453,6 @@
 			[
 				"git dif",
 				"Git: Diff Current File"
-			],
-			[
-				"html",
-				"HTMLBeautify"
 			],
 			[
 				"htmlbe",
@@ -519,7 +571,7 @@
 				"Package Control: Install Package"
 			]
 		],
-		"width": 530.0
+		"width": 575.0
 	},
 	"console":
 	{
@@ -556,30 +608,39 @@
 		"/home/rootavish/IEEMA/surgeprotech/static",
 		"/home/rootavish/IEEMA/surgeprotech/static/css",
 		"/home/rootavish/IEEMA/surgeprotech/static/js",
-		"/home/rootavish/IEEMA/surgeprotech/static/js/lib",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials",
 		"/home/rootavish/IEEMA/surgeprotech/templates"
 	],
 	"file_history":
 	[
-		"/home/rootavish/IEEMA/surgeprotech/templates/main.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/controller.js",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/paper.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/app.js",
 		"/home/rootavish/IEEMA/surgeprotech/templates/index.html",
+		"/home/rootavish/IEEMA/surgeprotech/templates/main.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/css/style.css",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/service.js",
+		"/home/rootavish/IEEMA/surgeprotech/static/css/animate.css",
+		"/home/rootavish/IEEMA/surgeprotech/static/bower_components/angular/angular.js",
+		"/home/rootavish/IEEMA/surgeprotech/static/bower_components/angular/angular-csp.css",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/upload.html",
+		"/home/rootavish/IEEMA/surgeprotech/controllers.py",
+		"/home/rootavish/IEEMA/surgeprotech/static/fonts/line-icons.woff",
+		"/home/rootavish/IEEMA/surgeprotech/static/fonts/line-icons.svg",
+		"/home/rootavish/IEEMA/surgeprotech/static/js/lib/jquery.nav.js",
+		"/home/rootavish/IEEMA/surgeprotech/templates/404.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/css/color-chooser.css",
+		"/home/rootavish/IEEMA/surgeprotech/models.py",
+		"/home/rootavish/IEEMA/surgeprotech/static/css/font-awesome.min.css",
+		"/home/rootavish/IEEMA/surgeprotech/static/partials/paperlist.html",
+		"/home/rootavish/IEEMA/surgeprotech/static/bower_components/angular-file-upload/angular-file-upload.js",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/register.html",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/login.html",
-		"/home/rootavish/IEEMA/surgeprotech/static/js/controller.js",
-		"/home/rootavish/IEEMA/surgeprotech/controllers.py",
-		"/home/rootavish/IEEMA/surgeprotech/static/partials/paper.html",
-		"/home/rootavish/IEEMA/surgeprotech/models.py",
-		"/home/rootavish/IEEMA/surgeprotech/static/js/service.js",
-		"/home/rootavish/IEEMA/surgeprotech/static/partials/paperlist.html",
-		"/home/rootavish/IEEMA/surgeprotech/static/js/app.js",
 		"/home/rootavish/IEEMA/surgeprotech/static/css/forum-style.css",
-		"/home/rootavish/IEEMA/surgeprotech/static/css/style.css",
 		"/home/rootavish/IEEMA/bower_components/pleasejs/dist/index.html",
 		"/home/rootavish/IEEMA/manage.py",
 		"/home/rootavish/IEEMA/bower_components/pleasejs/gulpfile.js",
 		"/home/rootavish/IEEMA/.gitignore",
-		"/home/rootavish/IEEMA/surgeprotech/static/css/animate.css",
 		"/home/rootavish/IEEMA/surgeprotech/static/fonts/styles.css",
 		"/home/rootavish/IEEMA/surgeprotech/config.py",
 		"/home/rootavish/IEEMA/README.md",
@@ -650,9 +711,7 @@
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/logout.html",
 		"/home/rootavish/IEEMA/surgeprotech/static/js/lib/angular-resource.min.js",
 		"/home/rootavish/IEEMA/surgeprotech/static/js/lib/angular-route.min.js",
-		"/home/rootavish/IEEMA/surgeprotech/static/partials/upload.html",
 		"/home/rootavish/IEEMA/surgeprotech/__init__.py",
-		"/home/rootavish/IEEMA/surgeprotech/templates/404.html",
 		"/home/rootavish/github-bookmarks/github-bookmarks.js",
 		"/media/rootavish/New Volume1/CTR/read.py",
 		"/home/rootavish/IEEMA/surgeprotech/static/partials/fuckme.html",
@@ -681,15 +740,7 @@
 		"/home/rootavish/.cache/.fr-r4Affo/beck-s/australia/1",
 		"/home/rootavish/.cache/.fr-mEjXol/beck-s/aec/1",
 		"/home/rootavish/.cache/.fr-qR0fIL/beck-s/2001_plan/1",
-		"/home/rootavish/ceas08-1/create_mbox.py",
-		"/home/rootavish/Downloads/mongodb-linux-x86_64-ubuntu1404-3.0.2/README",
-		"/home/rootavish/random-web/untitled.html",
-		"/home/rootavish/random-web/jquery.min.js",
-		"/home/rootavish/Documents/transposition.py",
-		"/home/rootavish/policyhack/RIG/templates/index.html",
-		"/home/rootavish/policyhack/RIG/app.py",
-		"/home/rootavish/mushme/src/mushme.py",
-		"/home/rootavish/policyhack/adminapp.py"
+		"/home/rootavish/ceas08-1/create_mbox.py"
 	],
 	"find":
 	{
@@ -707,6 +758,63 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"Remove",
+			"font-awesome",
+			"/paper",
+			"paper",
+			"findOne",
+			"find",
+			"findOne",
+			"table",
+			"talbe",
+			"main",
+			"table",
+			"condensed",
+			"hover",
+			"table",
+			"hover",
+			"Mr",
+			"Balagangadhar",
+			". ",
+			"bal",
+			"6",
+			"paper",
+			"show",
+			"=\"\"",
+			"cols",
+			"3",
+			"69",
+			"value",
+			"input",
+			"view",
+			"show",
+			"uploadfile",
+			".btn",
+			"disabled",
+			"haveupload",
+			"newupload",
+			"model",
+			"newupload",
+			"model",
+			"form",
+			"input",
+			" [...])",
+			"\", ",
+			"Qclear",
+			"this",
+			"Qclear",
+			"click",
+			".session",
+			".save",
+			"@",
+			"btn-3d",
+			"featured",
+			"footer-tex",
+			"featured",
+			"black",
+			"#speakers",
+			"navigation-bar-header",
+			"n",
 			"width",
 			"footer",
 			"featured",
@@ -777,64 +885,7 @@
 			"nac",
 			"change",
 			"click",
-			"PdfgetTableBody",
-			"specifications",
-			"attr('src'",
-			"$",
-			">\n",
-			"speaker",
-			"schedule",
-			"section",
-			"speakers",
-			"committee",
-			"ng-app",
-			"speaker",
-			"price",
-			"pricing",
-			"waypoint",
-			"registratio",
-			"regestraitor",
-			"navigation-bar",
-			"nav",
-			"VISION",
-			"Ubuntu",
-			"font",
-			"font-style",
-			"light",
-			"sans-serif",
-			"Roboto",
-			"body",
-			"@media",
-			"footer-main",
-			"box",
-			"footer",
-			"schedule",
-			"nav",
-			"div",
-			"nav-pills",
-			".nav",
-			"nav",
-			"schedule",
-			"navigation-bar-header",
-			"angular.js",
-			"<div class=\"time\"><i class=\"fa fa-clock-o\"></i>(.*?)</div>",
-			"time",
-			" <div class=\"time\"><i class=\"fa fa-clock-o\"></i> 9:30 AM</div>",
-			" <div class=\"time\"><i class=\"fa fa-clock-o\"></i> \\d:\\d\\d AM</div>",
-			"img",
-			"<img \\w",
-			"img",
-			"Dayone-1",
-			"DayOne-1",
-			"DayOne-2",
-			"28th",
-			"recommendation",
-			"recommended",
-			"=>",
-			"$",
-			"config",
-			"for=\"\\w+\"",
-			"A"
+			"PdfgetTableBody"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -886,8 +937,202 @@
 	"groups":
 	[
 		{
+			"selected": 5,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "surgeprotech/controllers.py",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 7443,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								4417,
+								4417
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Python/Python.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 2293.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "surgeprotech/static/js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1838,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1833,
+								1833
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 863.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "surgeprotech/templates/index.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 4343,
+						"regions":
+						{
+							"TagLint":
+							{
+								"flags": 2356,
+								"icon": "dot",
+								"regions":
+								[
+									[
+										2022,
+										2026
+									]
+								],
+								"scope": "variable.parameter"
+							}
+						},
+						"selection":
+						[
+							[
+								1165,
+								1165
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 179.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "surgeprotech/static/css/style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 34323,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								34323,
+								34323
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 15567.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "surgeprotech/static/partials/upload.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 892,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								743,
+								743
+							]
+						],
+						"settings":
+						{
+							"is_xml": false,
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "surgeprotech/static/css/forum-style.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1028,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1026,
+								1026
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 755.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
@@ -942,16 +1187,64 @@
 		"selected_items":
 		[
 			[
+				"foru",
+				"surgeprotech/static/css/forum-style.css"
+			],
+			[
+				"sty",
+				"surgeprotech/static/css/style.css"
+			],
+			[
+				"up",
+				"surgeprotech/static/partials/upload.html"
+			],
+			[
+				"index",
+				"surgeprotech/templates/index.html"
+			],
+			[
+				"app",
+				"surgeprotech/static/js/app.js"
+			],
+			[
 				"main",
+				"surgeprotech/templates/main.html"
+			],
+			[
+				"st",
+				"surgeprotech/static/css/style.css"
+			],
+			[
+				"serv",
+				"surgeprotech/static/js/service.js"
+			],
+			[
+				"inde",
+				"surgeprotech/templates/index.html"
+			],
+			[
+				"conr",
+				"surgeprotech/controllers.py"
+			],
+			[
+				"controll",
+				"surgeprotech/static/js/controller.js"
+			],
+			[
+				"contro",
+				"surgeprotech/controllers.py"
+			],
+			[
+				"stly.",
+				"surgeprotech/static/css/style.css"
+			],
+			[
+				"main.",
 				"surgeprotech/templates/main.html"
 			],
 			[
 				"style",
 				"surgeprotech/static/css/style.css"
-			],
-			[
-				"index",
-				"surgeprotech/templates/index.html"
 			],
 			[
 				"style.css",
@@ -982,16 +1275,8 @@
 				"surgeprotech/static/js/service.js"
 			],
 			[
-				"controll",
-				"surgeprotech/static/js/controller.js"
-			],
-			[
 				"paperlist",
 				"surgeprotech/static/partials/paperlist.html"
-			],
-			[
-				"app",
-				"surgeprotech/static/js/app.js"
 			],
 			[
 				"paper",
@@ -1006,16 +1291,8 @@
 				"surgeprotech/static/css/style.css"
 			],
 			[
-				"contro",
-				"surgeprotech/controllers.py"
-			],
-			[
 				"servies",
 				"surgeprotech/static/js/service.js"
-			],
-			[
-				"foru",
-				"surgeprotech/static/css/forum-style.css"
 			],
 			[
 				"index.html",
@@ -1053,6 +1330,10 @@
 		"height": 500.0,
 		"selected_items":
 		[
+			[
+				"",
+				"~/inphaseIOT/public/js/inphaseiot.sublime-project"
+			]
 		],
 		"width": 380.0
 	},
@@ -1071,7 +1352,7 @@
 	"show_minimap": true,
 	"show_open_files": true,
 	"show_tabs": true,
-	"side_bar_visible": false,
+	"side_bar_visible": true,
 	"side_bar_width": 264.0,
 	"status_bar_visible": true,
 	"template_settings":

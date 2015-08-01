@@ -75,4 +75,7 @@ app.controller('appController',['$scope','Session', function($scope, Session) {
 	}), function(err) {
 		// Handle this error.
 	};
+
+
+	// if (sessionid in Session.user)
 }]);

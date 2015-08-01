@@ -71,3 +71,7 @@ body {
 .ng-dirty.ng-valid {
   border-color: green;
 }
+
+p.text-muted {
+  text-align: center;
+}

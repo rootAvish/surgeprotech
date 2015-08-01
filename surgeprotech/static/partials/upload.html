@@ -1,21 +1,34 @@
-<form name="uploadform" novalidate>
-	<label for="ptitle">Title:</label>
-	<input type="text" id="ptitle" class="form-control" ng-model="formData.title" required>
-	<span class="help-block">Enter the title of your paper.</span>
-	<label for="pabs">Paper Abstract:</label>
-	<textarea rows="4" id="pabs" class="form-control" ng-model="formData.abstract" required></textarea>
-	<span class="help-block">Enter a short abstract of your paper.</span>
-	
-	<input type="file" nv-file-select uploader="uploader" ng-click="resetUpload()"/>
-	
-	<ul>
-		<li ng-repeat="item in uploader.queue">
-			Name: <span ng-bind="item.file.name"></span>
-			<button type="button" name="remove" class="btn btn-danger" ng-click="item.remove()">
-			<span class="glyphicon glyphicon-trash"></span> Remove
-			</button>
-			<br/>
-			<button class="btn btn-default" ng-click="uploadform.$valid && item.upload()">submit</button>
-		</li>
-	</ul>
+<form name="uploadform" class="form-horizontal" novalidate>
+	<div class="form-group">
+		<label for="ptitle" class="col-sm-2 control-label hide-xs">Title</label>
+		<div class="col-sm-10">
+			<input type="text" id="ptitle" class="form-control" ng-model="formData.title" required>
+			<span class="help-block">Enter the title of your paper.</span>
+		</div>
+	</div>
+	<div class="form-group">
+		<label for="pabs" class="col-sm-2 control-label hide-xs">Paper Abstract</label>
+		<div class="col-sm-10">
+			<textarea rows="4" id="pabs" class="form-control" ng-model="formData.abstract" required></textarea>
+			<span class="help-block">Enter a short abstract of your paper.</span>
+		</div>
+	</div>
+
+	<div class="form-group">
+		<label for="fileup" class="col-sm-2 control-label hide-xs">Full Paper(PDF)</label>
+		<div class="col-sm-10">
+		<input type="file" name="fileup" nv-file-select uploader="uploader" ng-click="resetUpload()"/>
+		
+		<ul>
+			<li ng-repeat="item in uploader.queue">
+				Name: <span ng-bind="item.file.name"></span>
+				<button type="button" name="remove" class="btn btn-danger" ng-click="item.remove()">
+				<i class="fa fa-trash-o"></i> Remove
+				</button>
+				<br/>
+				<button class="btn btn-default" ng-click="uploadform.$valid && item.upload()">submit</button>
+			</li>
+		</ul>
+		</div>
+	</div>
 </form>

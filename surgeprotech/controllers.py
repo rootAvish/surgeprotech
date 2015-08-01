@@ -37,9 +37,11 @@ def register(**kwargs):
 @app.route('/<model_name>/<item_id>')
 @login_required
 def rest_pages(model_name, item_id=None):
+
+# if the model name is a valid API endpoint, then send.
     if model_name == 'user' or model_name == 'paper':
-        return make_response(open(
-            'surgeprotech/templates/index.html').read())
+        return make_response(open('surgeprotech/templates/index.html').read())
+# else abort this shit.
     abort(404)
 
 
@@ -62,7 +64,7 @@ def registerUser():
 
         # check if e-mail already exists in the database.
         u = User.query.filter_by(email=formData["email"]).first()
- 
+
         if u == None:
 
             # If not create the account and return success.
@@ -99,7 +101,7 @@ def loginAPI():
 
     user = User.query.filter_by(email=formData['email'], password=password).first()
     print "user is: ", user
-    if user != None:  
+    if user != None:
         login_user(user, remember = formData['remember'])
         print "g.user in login is ", g.user
         return jsonify({
@@ -113,7 +115,7 @@ def loginAPI():
 
 
 @app.route('/api/paper/', methods=['GET','POST'])
-@app.route('/api/paper/<authorId>', methods=['GET','POST'])
+@app.route('/api/paper/<authorId>', methods=['GET'])
 def paper(authorId=None):
     user = g.user
 
@@ -126,23 +128,34 @@ def paper(authorId=None):
         file = request.files['file']
 
         if file:
-            try:
-                u_id = user.get_id()
-                name = User.query.filter_by(id=u_id).first()
+            # try:
+            u_id = user.get_id()
+            name = User.query.filter_by(id=u_id).first()
 
-                filename = secure_filename(str(u_id)+'_'+name.name.split(' ')[0])
+            # Filename for the file: userid + firstname of user.
+            filename = secure_filename(str(u_id)+'_'+name.name.split(' ')[0])
 
-                link = os.path.join(app.config['UPLOAD_FOLDER'], filename)
-                file.save(link)
+            link = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
-                print request.form.getlist('title'),request.form.getlist('abstract'),link
+            #save the paper if there is one
+            file.save(link)
 
+            # Check if a paper already exists for this author, if it does, upload it.
+            paper = User.query.filter_by(author=user.get_id()).first()
+
+            if paper == None:
                 db.session.add(Paper(request.form.getlist('title')[0],request.form.getlist('abstract')[0],filename, u_id))
-                db.session.commit()
+            else:
+                paper.abstract = request.form.getlist('abstract')[0]
+                paper.title = request.form.getlist('title')[0]
+                paper.link = link
+                db.session.add(paper)
 
-                return jsonify({"success":True}), 200
-            except:
-                 return abort(501)
+            db.session.commit()
+
+            return jsonify({"success":True}), 200
+            # except:
+                 # return abort(500)
     else:
 
         admin = User.query.filter_by(id=user.get_id()).first()
@@ -154,7 +167,7 @@ def paper(authorId=None):
 
             if 'authorId' not in request.args:
                 post = Paper.query.paginate(int(request.args['page']), int(app.config['POSTS_PER_PAGE']), False)
-                
+
                 for item in post.items:
                     posts.append({"title":item.Title, "abstract": item.Abstract, "p_id": item.p_id, "author": item.Author})
 
@@ -174,7 +187,7 @@ def paper(authorId=None):
             paper = Paper.query.filter_by(Author=user.get_id()).first()
 
             if paper is not None:
-                
+
                 return jsonify(link=paper.Link,
                                 abstract = paper.Abstract,
                                 title=paper.Title,
