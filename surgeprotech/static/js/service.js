@@ -9,14 +9,14 @@ angular.module('services',[])
     this.userId = userinfo.u_id;
     this.userName = userinfo.Name;
     this.userRole = userinfo.role;
-
+    this.paper = userinfo.paper;
     $rootScope.$broadcast('session:created', this);
   };
   this.destroy = function () {
     this.userId = null;
     this.userName = null;
     this.userRole = null;
-
+    this.paper = null;
     $rootScope.$broadcast('session:destroyed');
   };
 
@@ -24,7 +24,8 @@ angular.module('services',[])
   	return {
   		userId: this.userId,
   		userName: this.userName,
-  		userRole: this.userRole
+  		userRole: this.userRole,
+  		paper: this.paper
   	};
   };
 

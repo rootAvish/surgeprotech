@@ -81,11 +81,23 @@ def registerUser():
     else:
         if g.user.get_id() != None:
             usr = User.query.filter_by(id=g.user.get_id()).first()
+            
+            # Also return the user's paper, for links.
+            pid = Paper.query.filter_by(Author=usr.id).first()
+            
+            # If no paper exists then create a new one.
+            if pid == None:
+                pid = 0
+            else:
+                pid = pid.id
+
+            print(pid)
 
             return jsonify({
                             "u_id": g.user.get_id(),
                             "Name": usr.name,
-                            "role": usr.ac_type
+                            "role": usr.ac_type,
+                            "paper": pid
                           })
 
         else:
@@ -103,12 +115,23 @@ def loginAPI():
     print "user is: ", user
     if user != None:
         login_user(user, remember = formData['remember'])
+
+        # Also return the user's paper, for links.
+        pid = Paper.query.filter_by(Author=user.id).first()
+        
+        # If no paper exists then create a new one.
+        if pid == None:
+            pid = 0
+        else:
+            pid = pid.id
+
         print "g.user in login is ", g.user
         return jsonify({
                             "success": True,
                             "u_id": user.id,
                             "Name": user.name,
-                            "role": user.ac_type
+                            "role": user.ac_type,
+                            "paper": pid
                        })
     else:
         return jsonify({})
@@ -125,37 +148,53 @@ def paper(authorId=None):
         except:
             os.mkdir(app.config['UPLOAD_FOLDER'])
 
-        file = request.files['file']
+        file = None
 
-        if file:
-            # try:
-            u_id = user.get_id()
-            name = User.query.filter_by(id=u_id).first()
+        if 'file' in file:
 
-            # Filename for the file: userid + firstname of user.
-            filename = secure_filename(str(u_id)+'_'+name.name.split(' ')[0])
+            file = request.files['file']
+            
+            try:
+                u_id = user.get_id()
+                name = User.query.filter_by(id=u_id).first()
 
-            link = os.path.join(app.config['UPLOAD_FOLDER'], filename)
+                # Filename for the file: userid + firstname of user.
+                filename = secure_filename(str(u_id)+'_'+name.name.split(' ')[0])
 
-            #save the paper if there is one
-            file.save(link)
+                link = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
-            # Check if a paper already exists for this author, if it does, upload it.
-            paper = User.query.filter_by(author=user.get_id()).first()
+                #save the paper if there is one
+                file.save(link)
 
-            if paper == None:
-                db.session.add(Paper(request.form.getlist('title')[0],request.form.getlist('abstract')[0],filename, u_id))
-            else:
+            except:
+                abort(500)
+
+
+        # Check if a paper already exists for this author, if it does, upload it.
+        paper = User.query.filter_by(author=user.get_id()).first()
+
+        if paper == None:
+            # If we do not have a paper, then create a new one.
+            db.session.add(Paper(request.form.getlist('title')[0],request.form.getlist('abstract')[0],filename, u_id))
+        else:
+
+            # if we do find a paper, update whichever field is present.
+            
+            if 'abstract' in request.form:
                 paper.abstract = request.form.getlist('abstract')[0]
+
+            if 'title' in request.form:
                 paper.title = request.form.getlist('title')[0]
+
+            if file != None: 
                 paper.link = link
-                db.session.add(paper)
 
-            db.session.commit()
+            db.session.add(paper)
 
-            return jsonify({"success":True}), 200
-            # except:
-                 # return abort(500)
+        # Commit the session and return success.
+        db.session.commit()
+        return jsonify({"success":True}), 200
+    
     else:
 
         admin = User.query.filter_by(id=user.get_id()).first()

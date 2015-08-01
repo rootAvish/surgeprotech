@@ -25,7 +25,7 @@ angular.module('CommitteeList',[])
 	
 	$scope.tcmembers = {
 		"CEA": ['Mr. S.K.Mahapatra'],
-		"CPRI":		['Ms. Kanyakumari'],
+		"CPRI":	['Ms. Kanyakumari'],
 		"GETCO": ['Mr. Y.V.Joshi'],
 		"KPTCL": ['Mr. S. Sumanth'],
 		"NTPC": ['Mr. Hirdesh Gupta'],
@@ -45,7 +45,6 @@ angular.module('CommitteeList',[])
 	'Elektrolites' : ['Mr. Anil Saboo'],
 	'ERDA': [''],
 	'Lamco': ['Mr. Padma Kumar'],
-	'L & T': [''],
 	'Lamer Power': ['Mr. Mukesh Mallik'],
 	'MSEDCL': [''],
 	'POWERGRID': ['Mr. Ravi Roshan Kumar']

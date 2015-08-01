@@ -30,7 +30,7 @@ class Paper(db.Model):
     Author = db.Column(db.Integer, db.ForeignKey('user.id'))
     comment_rl = db.relationship(Comment, backref='paper', lazy='dynamic')
 
-    def __init__(self,title,abstract,link, Author):
+    def __init__(self,title=None,abstract=None,link=None, Author=None):
         self.Title = title
         self.Abstract = abstract
         self.up_date = datetime.utcnow()

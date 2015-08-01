@@ -2,14 +2,14 @@
 	<div class="form-group">
 		<label for="ptitle" class="col-sm-2 control-label hide-xs">Title</label>
 		<div class="col-sm-10">
-			<input type="text" id="ptitle" class="form-control" ng-model="formData.title" required>
+			<input type="text" id="ptitle" class="form-control" ng-model="formData.title">
 			<span class="help-block">Enter the title of your paper.</span>
 		</div>
 	</div>
 	<div class="form-group">
 		<label for="pabs" class="col-sm-2 control-label hide-xs">Paper Abstract</label>
 		<div class="col-sm-10">
-			<textarea rows="4" id="pabs" class="form-control" ng-model="formData.abstract" required></textarea>
+			<textarea rows="4" id="pabs" class="form-control" ng-model="formData.abstract"></textarea>
 			<span class="help-block">Enter a short abstract of your paper.</span>
 		</div>
 	</div>
@@ -26,9 +26,9 @@
 				<i class="fa fa-trash-o"></i> Remove
 				</button>
 				<br/>
-				<button class="btn btn-default" ng-click="uploadform.$valid && item.upload()">submit</button>
 			</li>
 		</ul>
+		<button class="btn btn-primary btn-lg center-block" ng-click="uploadform.$valid && item.upload()">submit</button>
 		</div>
 	</div>
 </form>

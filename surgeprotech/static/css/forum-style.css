@@ -75,3 +75,9 @@ body {
 p.text-muted {
   text-align: center;
 }
+
+#header > nav > div > ul.nav.navbar-nav.hidden-xs > li .btn {
+  background:none;
+  border:none;
+  box-shadow:none;
+}
