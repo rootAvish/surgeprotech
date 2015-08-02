@@ -151,17 +151,25 @@ function abstController($scope, $routeParams, Papers,Review,Comments) {
 
 	$scope.review = {rv_date: date.toUTCString()};
 
-	Papers.getPaper().get({paperId: $routeParams.paperId}).$promise.then(function(res) {
-		$scope.success = true;
-		$scope.paper = JSON.parse(angular.toJson(res));
-		$scope.paper.reviews = [];
+	if ($routeParams.paperId != 0) {
 
-		Comments.getComments($scope.paper.p_id).success(function(data) {
-			$scope.paper.reviews = data;
+		Papers.getPaper().get({paperId: $routeParams.paperId}).$promise.then(function(res) {
+			$scope.success = true;
+			$scope.paper = JSON.parse(angular.toJson(res));
+			$scope.paper.reviews = [];
+
+			Comments.getComments($scope.paper.p_id).success(function(data) {
+				$scope.paper.reviews = data;
+			});
+		}, function(data, error, headers, status) {
+			$scope.failure = true;
 		});
-	}, function(data, error, headers, status) {
-		$scope.failure = true;
-	});
+	
+	}
+
+	else {
+		$scope.success = true;
+	}
 
 	$scope.addReview = function(review) {
 		review.rv_date = date.toUTCString();

@@ -5,22 +5,22 @@
     <div ng-show="success">
         <div class="row">
             <div ng-hide="paper">
-                <h3>You have not submitted any paper/abstract yet.</h3>
+            <p class="bg-primary"><i class="fa fa-info"></i> You have not submitted any paper/abstract yet.</p>
             </div>
         </div>
         <div ng-show="paper">
             <div class="row">
                 <div class="thumbnail">
                     <div class="caption-full">
-                        <h5><a href="#">{{ paper.title }}</a>
-                        </h5>
+                        <h4 class="text-center">{{ paper.title }}
+                        </h4>
                         <strong>Abstract:</strong><br/>
                         {{paper.abstract}}
                     </div>
                     <div class="ratings">
                         <p class="pull-right">{{paper.reviews.reviews.length}} reviews</p>
                         <p>
-                            <a target="_self" download="{{paper.link}}.pdf" href="/api/paper/download/{{paper.link}}"><i class="fa fa-file-pdf-o"></i> Read full text.</a>
+                            <a ng-show="paper.link" target="_self" download="{{paper.link}}.pdf" href="/api/paper/download/{{paper.link}}"><i class="fa fa-file-pdf-o"></i> Read full text</a>
                         </p>
                     </div>
                 </div>

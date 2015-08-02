@@ -147,7 +147,7 @@ def paper(paperId=None):
                 # Make sure the requested paper is returned, and only returned
                 # when the user is authorized to access it.
                 
-                if int(paper.p_id) != int(paperId):
+                if int(paper.p_id) != int(paperId) and paperId != 0:
                     abort(401)
 
                 return  jsonify(link=paper.Link,
