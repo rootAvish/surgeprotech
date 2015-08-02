@@ -131,7 +131,7 @@ function uploadController($scope, FileUploader,$http, UploadAbstract, Papers) {
 	};
 }
 
-function paperController($scope, $http) {
+function paperController($scope, $http, Papers) {
 
 	$scope.papers = [];
 	$scope.currentPage = 1;
@@ -142,9 +142,26 @@ function paperController($scope, $http) {
 		})
 		.success(function(data) {	
 			$scope.papers = data.papers;
-			$scope.currentPage += 1;
-			console.log($scope.papers.length);
 		});
+
+	$scope.next = function() {
+		$scope.currentPage += 1;
+
+		Papers.getPaper().get({page: $scope.currentPage})
+		.$promise.then(function(res) {
+			$scope.papers = res.papers;
+		});
+	}
+
+
+	$scope.previous = function() {
+		$scope.currentPage -= 1;
+
+		Papers.getPaper().get({page: $scope.currentPage})
+		.$promise.then(function(res) {
+			$scope.papers = res.papers;
+		});
+	}
 }
 	
 function abstController($scope, $routeParams, Papers,Review,Comments) {

@@ -1,17 +1,32 @@
 <div ng-show="papers.length" class="panel panel-default">
-    <div class="panel">
+    <div class="panel-heading">
+        <h3>List of Papers</h3>
+    </div>
+    <div class="panel-body">
+    <ul class="nav nav-pills">
+        <li class="pull-left">
+        <a ng-click="previous()">  <i class="fa fa-arrow-left"></i> Previous Page </a>
+        </li>
+
+        <li class="pull-right">
+            <a ng-click="next()">Next Page <i class="fa fa-arrow-right"></i></a>
+        </li>
+    </ul>
         <ul class="list-group">
             <li class="list-group-item"  ng-repeat="paper in papers">
+               <div class="row">
+                <span class="pull-left"><strong>{{paper.title}}</strong></span>
                 <p class="pull-right"><a ng-href="/paper/{{paper.p_id}}"><i class="fa fa-arrow-circle-right"></i>
- Read More</a></p>
+                Read More</a></p>
                 
-                <h5>{{paper.title}}</h5>
+            </div>
+            <div class="row">
                 <p>{{ paper.abstract }}</p>
+            </div>
             </li>
         </ul>
     </div>
 </div>
-
 <div ng-hide="papers.length" class="no-content">
     No papers to show at this time.
 </div>
