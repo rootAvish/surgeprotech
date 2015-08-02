@@ -169,4 +169,8 @@ angular.module('services',[])
 	};
 
 	return review;
-}]);
+}])
+
+.factory('UploadAbstract', ['$resource', function($resource){
+	return $resource('/api/paper', {}, {});
+}])

@@ -1,4 +1,5 @@
-<form name="uploadform" class="form-horizontal" novalidate>
+<form name="uploadform" class="form-horizontal">
+	<legend class="text-center">Update/Upload your Submission Here</legend>
 	<div class="form-group">
 		<label for="ptitle" class="col-sm-2 control-label hide-xs">Title</label>
 		<div class="col-sm-10">
@@ -9,7 +10,7 @@
 	<div class="form-group">
 		<label for="pabs" class="col-sm-2 control-label hide-xs">Paper Abstract</label>
 		<div class="col-sm-10">
-			<textarea rows="4" id="pabs" class="form-control" ng-model="formData.abstract"></textarea>
+			<textarea rows="10" id="pabs" class="form-control" ng-model="formData.abstract"></textarea>
 			<span class="help-block">Enter a short abstract of your paper.</span>
 		</div>
 	</div>
@@ -25,10 +26,16 @@
 				<button type="button" name="remove" class="btn btn-danger" ng-click="item.remove()">
 				<i class="fa fa-trash-o"></i> Remove
 				</button>
+				
 				<br/>
 			</li>
 		</ul>
-		<button class="btn btn-primary btn-lg center-block" ng-click="uploadform.$valid && item.upload()">submit</button>
 		</div>
+	</div>
+	<div class="form-group">
+		<p class="bg-success"  style="padding: 15px;" ng-show="success"> Your changes have been successfully commited, you may continue editing and re-submit at any time.</p>
+		<p class="bg-danger"  style="padding: 15px;" ng-show="error"> An error occured and your changes were not saved. Please try again in a few moments.</p>
+	
+		<button class="btn btn-default btn-lg center-block" onclick="waitingDialog.show('Please wait while the request is processed', {dialogSize: 'sm', progressType: 'success'})" ng-click="uploadAbstract()">submit</button>
 	</div>
 </form>

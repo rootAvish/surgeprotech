@@ -70,10 +70,34 @@ function registerController($scope,$http,$location, RegisterService) {
 	};
 }
 
-function uploadController($scope, FileUploader,$http) {
+function uploadController($scope, FileUploader,$http, UploadAbstract) {
 	$scope.formData = {};
 	$scope.uploader = new FileUploader();
-	$scope.uploader.url = "http://localhost:5000/api/paper/";
+	$scope.uploader.url = "http://localhost:5000/api/paper";
+
+	$scope.uploadAbstract = function() {
+
+		console.log($scope.uploader.queue.length);
+
+		if ($scope.uploader.queue.length) {
+			var item = $scope.uploader.queue[0];
+			item.upload();
+		}
+
+		else {
+			UploadAbstract.save($scope.formData).$promise.then(function(res) {
+
+				if(res.success == true) {
+					$scope.success = true;
+					waitingDialog.hide();
+				}
+			},
+			function(data, error, headers, status) {
+				waitingDialog.hide();
+				$scope.error = true;
+			});
+		}
+	}
 
 	$scope.resetUpload = function() {
 		console.log('clicked');
@@ -82,6 +106,12 @@ function uploadController($scope, FileUploader,$http) {
 	$scope.uploader.onBeforeUploadItem = function(item) {
 		item.formData.push($scope.formData);
 		console.log(item);
+
+	};
+
+	$scope.uploader.onSuccessItem = function(item, response, status, headers) {
+		waitingDialog.hide();
+		$scope.success = true;
 	};
 }
 
@@ -103,7 +133,9 @@ function paperController($scope, $http) {
 	
 function abstController($scope, $routeParams, Papers,Review,Comments) {
 	$scope.paper = {};
-	$scope.review = {};
+	var date = new Date();
+
+	$scope.review = {date: date.toUTCString()};
 
 	console.log($routeParams);
 
@@ -122,7 +154,7 @@ function abstController($scope, $routeParams, Papers,Review,Comments) {
 	};
 
 	$scope.addReview = function(review) {
-		var date = new Date();
+		date = new Date();
 		review.date = date.toUTCString();
 		review.p_id = $scope.paper.p_id;
 		$scope.setUser();
@@ -130,6 +162,7 @@ function abstController($scope, $routeParams, Papers,Review,Comments) {
 		review.author = $scope.currentUser.userId;
 		
 		Review.add(review).then(function() {
+			review.author = $scope.currentUser.userName;
 			$scope.paper.reviews.reviews.push(review);
 			$scope.review = {};	
 		})

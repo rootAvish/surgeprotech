@@ -26,6 +26,7 @@ body {
 .btn {
   background-color: white;
   color: black;
+  padding: 0.4em;
 }
 
 .btn:hover {

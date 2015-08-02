@@ -49,8 +49,6 @@ angular.module('CommitteeList',[])
 	'MSEDCL': [''],
 	'POWERGRID': ['Mr. Ravi Roshan Kumar']
 	};
-
-	console.log($scope.ocmembers);
 }]);
 
 
