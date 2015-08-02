@@ -82,3 +82,12 @@ p.text-muted {
   border:none;
   box-shadow:none;
 }
+
+p[class^="bg-"], p[class*=" bg-"] {
+  padding: 15px;
+}
+
+.vertical-align {
+    display: flex;
+    align-items: center;
+}

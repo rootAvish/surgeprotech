@@ -66,16 +66,18 @@ angular.module('services',[])
 }])
 
 // Service to get a list of all papers. Admin only.
-.factory('Papers', ['$http', function($http)	{
+.factory('Papers', ['$resource', function($resource) {
 
 	var paper = {};
 
-	paper.getPaper = function(AuthorId) {
-		return $http({
-			method: 'GET',
-			url: '/api/paper',
-			params: {authorId: AuthorId}
-		});
+	paper.getPaper = function() {
+		return $resource('/api/paper', {}, 
+            {
+                "get": {
+                    url: '/api/paper/:paperId',
+                    params: {"paperId": "@paperId"}
+                }
+            });
 	};
 
 	return paper;

@@ -16,6 +16,9 @@ paper_api = Blueprint('paper_api', __name__)
 @paper_api.route('/api/paper/<paperId>', methods=['GET'])
 def paper(paperId=None):
 
+    # First get the user from the session.
+    user = g.user
+
     if request.method == "POST":
         filename = None
 
@@ -101,6 +104,7 @@ def paper(paperId=None):
 
             if paperId == None:
 
+                # Return all papers on the requested page
                 post = Paper.query.paginate(int(request.args['page']), 
                                             int(app.config['POSTS_PER_PAGE']), 
                                             False)
@@ -119,6 +123,7 @@ def paper(paperId=None):
 
             else:
 
+                # Return the requested paper only
                 paper = Paper.query.get(paperId)
 
                 return  jsonify(link=paper.Link,
@@ -127,17 +132,33 @@ def paper(paperId=None):
                                 p_id=paper.p_id)
 
         else:
-            print g.user
+
+            # if paperId == None, return a 401
+
+            if paperId == None:
+                abort(401)
+
+            # else return the user's paper.
             paper = Paper.query.filter_by(Author=user.get_id()).first()
 
-            if paper is not None:
+
+            if paper != None:
+
+                # Make sure the requested paper is returned, and only returned
+                # when the user is authorized to access it.
+                
+                if int(paper.p_id) != int(paperId):
+                    abort(401)
 
                 return  jsonify(link=paper.Link,
                                 abstract = paper.Abstract,
                                 title=paper.Title,
                                 p_id=paper.p_id)
+
             else:
-                # return an empty json if no paper found
+
+                # return an empty json if no paper found, because god knows
+                # what shit was requested.
                 return jsonify({})
 
 

@@ -49,7 +49,7 @@
             <div class="container">
             <ul ng-show='currentUser.userId' class="nav navbar-nav hidden-xs">
                   <li><a  class="navbar-text" href="index.html#schedule">Schedule</a></li>
-                    <li><a class="navbar-text btn"  ng-href="/paper/{{currentUser.paper}}" ng-disabled="currentUser.paper == 0" ng-hide="currentUser.userRole">View Your Submitted Paper</a></li>
+                    <li><a class="navbar-text"  ng-href="/paper/{{currentUser.paper}}" ng-hide="currentUser.userRole">View Your Submitted Paper</a></li>
                     <li><a class="navbar-text"  ng-href="/paper/" ng-show="currentUser.userRole">View all Submitted Papers</a></li>
                     <li><a class="navbar-text"  ng-href="/user/" ng-hide="currentUser.userRole">Submit/Update Paper</a></li>
                     <li><a  class="navbar-text" href="/contact">Contact Us</a></li>

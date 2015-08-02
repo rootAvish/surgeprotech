@@ -132,26 +132,21 @@ function paperController($scope, $http) {
 }
 	
 function abstController($scope, $routeParams, Papers,Review,Comments) {
-	$scope.paper = {};
 	var date = new Date();
 
 	$scope.review = {rv_date: date.toUTCString()};
 
-	console.log($routeParams);
-
-	Papers.getPaper($routeParams.paperId).success(function(res) {
-		console.log(res);
-		$scope.paper = res;
+	Papers.getPaper().get({paperId: $routeParams.paperId}).$promise.then(function(res) {
+		$scope.success = true;
+		$scope.paper = JSON.parse(angular.toJson(res));
 		$scope.paper.reviews = [];
-		//console.log($scope.paper);
+
 		Comments.getComments($scope.paper.p_id).success(function(data) {
-			// console.log(data);
 			$scope.paper.reviews = data;
 		});
-	}), function(res) {
-		// Avoid error.
-		console.log(error);
-	};
+	}, function(data, error, headers, status) {
+		$scope.failure = true;
+	});
 
 	$scope.addReview = function(review) {
 		review.rv_date = date.toUTCString();
