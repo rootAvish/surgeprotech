@@ -1,13 +1,14 @@
-<div ng-show="papers.length">
-    <div class="thumbnail" ng-repeat="paper in papers">
-        <div class="caption-full">
-            <p class="pull-right"><a ng-href="/paper/{{paper.author}}">Full summary</a></p>
-            
-            <h5>{{paper.title}}</h5>
-            <p>{{ paper.abstract }}</p>
-            
-        </div>
-        <hr>
+<div ng-show="papers.length" class="panel panel-default">
+    <div class="panel">
+        <ul class="list-group">
+            <li class="list-group-item"  ng-repeat="paper in papers">
+                <p class="pull-right"><a ng-href="/paper/{{paper.p_id}}"><i class="fa fa-arrow-circle-right"></i>
+ Read More</a></p>
+                
+                <h5>{{paper.title}}</h5>
+                <p>{{ paper.abstract }}</p>
+            </li>
+        </ul>
     </div>
 </div>
 

@@ -74,7 +74,8 @@ function uploadController($scope, FileUploader,$http, UploadAbstract, Papers) {
 	$scope.formData = {};
 	
 	if ($scope.currentUser.paper != 0) {
-		Papers.getPaper().get({paperId: $scope.currentUser.paper}).$promise.then(function(res) {
+		Papers.getPaper().get({paperId: $scope.currentUser.paper})
+		.$promise.then(function(res) {
 			
 			var formData = JSON.parse(angular.toJson(res));
 			
@@ -137,7 +138,7 @@ function paperController($scope, $http) {
 
 	$http({
 			method: 'GET',
-			url: '/api/paper/', params: {'page': $scope.currentPage}
+			url: '/api/paper', params: {'page': $scope.currentPage}
 		})
 		.success(function(data) {	
 			$scope.papers = data.papers;
