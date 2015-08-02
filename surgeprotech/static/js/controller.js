@@ -135,7 +135,7 @@ function abstController($scope, $routeParams, Papers,Review,Comments) {
 	$scope.paper = {};
 	var date = new Date();
 
-	$scope.review = {date: date.toUTCString()};
+	$scope.review = {rv_date: date.toUTCString()};
 
 	console.log($routeParams);
 
@@ -154,8 +154,7 @@ function abstController($scope, $routeParams, Papers,Review,Comments) {
 	};
 
 	$scope.addReview = function(review) {
-		date = new Date();
-		review.date = date.toUTCString();
+		review.rv_date = date.toUTCString();
 		review.p_id = $scope.paper.p_id;
 		$scope.setUser();
 		
@@ -163,9 +162,13 @@ function abstController($scope, $routeParams, Papers,Review,Comments) {
 		
 		Review.add(review).then(function() {
 			review.author = $scope.currentUser.userName;
+
+			console.log(review);
 			$scope.paper.reviews.reviews.push(review);
+			
+			console.log($scope.paper.reviews);
 			$scope.review = {};	
-		})
+		});
 	};
 }
 
