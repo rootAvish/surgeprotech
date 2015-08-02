@@ -70,8 +70,23 @@ function registerController($scope,$http,$location, RegisterService) {
 	};
 }
 
-function uploadController($scope, FileUploader,$http, UploadAbstract) {
+function uploadController($scope, FileUploader,$http, UploadAbstract, Papers) {
 	$scope.formData = {};
+	
+	if ($scope.currentUser.paper != 0) {
+		Papers.getPaper().get({paperId: $scope.currentUser.paper}).$promise.then(function(res) {
+			
+			var formData = JSON.parse(angular.toJson(res));
+			
+			$scope.formData.title = formData.title;
+			$scope.formData.abstract = formData.abstract;
+			
+			if('link' in formData) {
+				$scope.link = formData.link;
+			}
+		})
+	}
+
 	$scope.uploader = new FileUploader();
 	$scope.uploader.url = "http://localhost:5000/api/paper";
 

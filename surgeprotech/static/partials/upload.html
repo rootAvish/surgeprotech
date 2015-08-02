@@ -18,8 +18,8 @@
 	<div class="form-group">
 		<label for="fileup" class="col-sm-2 control-label hide-xs">Full Paper(PDF)</label>
 		<div class="col-sm-10">
+		<span ng-show="link"><a target="_self" download="{{link}}.pdf" href="/api/paper/download/{{link}}"><i class="fa fa-download"></i> Download Your Current submission</a></span>
 		<input type="file" name="fileup" nv-file-select uploader="uploader" ng-click="resetUpload()"/>
-		
 		<ul>
 			<li ng-repeat="item in uploader.queue">
 				Name: <span ng-bind="item.file.name"></span>
