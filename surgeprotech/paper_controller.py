@@ -1,19 +1,20 @@
 from surgeprotech.models import Paper, User, Comment
 from surgeprotech import app, db, lm
-from flask import make_response, send_from_directory, request, jsonify, abort, url_for, session, g, redirect, render_template, Blueprint
+from flask import make_response, send_from_directory, request, jsonify, abort
+from flask import url_for, session, g, redirect, render_template, Blueprint
 import flask.json
 import os, hashlib
 from models import Comment, User, Paper
 from werkzeug import secure_filename
-from flask.ext.login import login_user, logout_user, current_user, login_required
+from flask.ext.login import login_user,logout_user,current_user,login_required
 
 
 paper_api = Blueprint('paper_api', __name__)
 
+
 @paper_api.route('/api/paper', methods=['GET','POST'])
-@paper_api.route('/api/paper/<authorId>', methods=['GET'])
-def paper(authorId=None):
-    user = g.user
+@paper_api.route('/api/paper/<paperId>', methods=['GET'])
+def paper(paperId=None):
 
     if request.method == "POST":
         filename = None
@@ -31,7 +32,9 @@ def paper(authorId=None):
                 name = User.query.filter_by(id=u_id).first()
 
                 # Filename for the file: userid + firstname of user.
-                filename = secure_filename(str(u_id)+'_'+name.name.split(' ')[0])
+                filename =  secure_filename(
+                                str(u_id)+'_'+name.name.split(' ')[0]
+                            )
 
                 link = os.path.join(app.config['UPLOAD_FOLDER'], filename)
 
@@ -40,7 +43,6 @@ def paper(authorId=None):
 
             except:
                 abort(500)
-
 
             # Check if a paper already exists for this author, if it does, update it.
             paper = Paper.query.filter_by(Author=user.get_id()).first()
@@ -91,36 +93,46 @@ def paper(authorId=None):
     elif request.method == 'GET':
 
         admin = User.query.filter_by(id=user.get_id()).first()
-        #authenticate that the user is an admin.
-        print admin.ac_type
+
         posts = []
 
+        #authenticate that the user is an admin.
         if admin.ac_type == True:
 
-            if 'authorId' not in request.args:
-                post = Paper.query.paginate(int(request.args['page']), int(app.config['POSTS_PER_PAGE']), False)
+            if paperId == None:
+
+                post = Paper.query.paginate(int(request.args['page']), 
+                                            int(app.config['POSTS_PER_PAGE']), 
+                                            False)
 
                 for item in post.items:
-                    posts.append({"title":item.Title, "abstract": item.Abstract, "p_id": item.p_id, "author": item.Author})
+                    posts.append(
+                        {  
+                            "title":item.Title, 
+                            "abstract": item.Abstract, 
+                            "p_id": item.p_id, 
+                            "author": item.Author
+                        }
+                    )
 
                 return jsonify({"papers": posts})
 
             else:
 
-                print request.args
+                paper = Paper.query.get(paperId)
 
-                paper = Paper.query.filter_by(Author=request.args['authorId']).first()
-                return jsonify(link=paper.Link,
+                return  jsonify(link=paper.Link,
                                 abstract = paper.Abstract,
                                 title=paper.Title,
                                 p_id=paper.p_id)
+
         else:
             print g.user
             paper = Paper.query.filter_by(Author=user.get_id()).first()
 
             if paper is not None:
 
-                return jsonify(link=paper.Link,
+                return  jsonify(link=paper.Link,
                                 abstract = paper.Abstract,
                                 title=paper.Title,
                                 p_id=paper.p_id)
@@ -134,10 +146,16 @@ def paper(authorId=None):
 # POST /api/comment - Post a new comment.
 @paper_api.route('/api/comment/', methods=['GET','POST'])
 def Reviews():
+
     if request.method == "POST":
+
         formData = request.json
-        print formData
-        db.session.add(Comment(formData['content'],g.user.get_id(), int(formData['p_id'])))
+        db.session.add(
+            Comment(formData['content'],
+                    g.user.get_id(), 
+                    int(formData['p_id']))
+            )
+
         db.session.commit()
 
         return jsonify({"success": True}), 200
@@ -154,8 +172,15 @@ def Reviews():
 
             author = User.query.filter_by(id=comment.author).first()
 
-            retval.append({"content": comment.content, "rv_date": comment.rv_date, "author": author.name})
-        return jsonify({"reviews": retval});
+            retval.append(
+                {
+                    "content": comment.content, 
+                    "rv_date": comment.rv_date, 
+                    "author": author.name
+                }
+            )
+        
+        return jsonify({"reviews": retval})
 
 
 # Endpoint to facilitate download of full paper texts.
