@@ -33,7 +33,7 @@ function loginController($scope, $location, AuthService) {
 	};
 
 	$scope.$on('session:created',function (event,data) {
-		console.log('created',data);
+		
 		$scope.setUser();
 	});
 };
@@ -93,7 +93,7 @@ function uploadController($scope, FileUploader,$http, UploadAbstract, Papers) {
 
 	$scope.uploadAbstract = function() {
 
-		console.log($scope.uploader.queue.length);
+		
 
 		if ($scope.uploader.queue.length) {
 			var item = $scope.uploader.queue[0];
@@ -116,12 +116,12 @@ function uploadController($scope, FileUploader,$http, UploadAbstract, Papers) {
 	}
 
 	$scope.resetUpload = function() {
-		console.log('clicked');
+		
 		$scope.uploader.clearQueue();
 	}
 	$scope.uploader.onBeforeUploadItem = function(item) {
 		item.formData.push($scope.formData);
-		console.log(item);
+		
 
 	};
 
@@ -131,36 +131,46 @@ function uploadController($scope, FileUploader,$http, UploadAbstract, Papers) {
 	};
 }
 
+
 function paperController($scope, $http, Papers) {
 
 	$scope.papers = [];
 	$scope.currentPage = 1;
+	var start = ($scope.currentPage - 1) * 5 + 1;
+	var end = $scope.currentPage * 5;
+	var papers;
 
-	$http({
-			method: 'GET',
-			url: '/api/paper', params: {'page': $scope.currentPage}
-		})
-		.success(function(data) {	
-			$scope.papers = data.papers;
-		});
+	Papers.getPaper().get()
+	.$promise.then(function(res) {
+		papers = res.papers;
+		$scope.papers = papers.slice(start-1, end);
+	});
 
 	$scope.next = function() {
-		$scope.currentPage += 1;
 
-		Papers.getPaper().get({page: $scope.currentPage})
-		.$promise.then(function(res) {
-			$scope.papers = res.papers;
-		});
+		if (end >= papers.length)
+			return;
+
+		$scope.currentPage += 1;
+	 	start = ($scope.currentPage - 1) * 5 + 1;
+	 	end = $scope.currentPage * 5;
+		$scope.papers = papers.slice(start-1, end);
+
+		
+
 	}
 
-
 	$scope.previous = function() {
-		$scope.currentPage -= 1;
 
-		Papers.getPaper().get({page: $scope.currentPage})
-		.$promise.then(function(res) {
-			$scope.papers = res.papers;
-		});
+		if ($scope.currentPage == 1)
+			return;
+
+	 	$scope.currentPage -= 1;
+	 	start = ($scope.currentPage - 1) * 5 + 1;
+	 	end = $scope.currentPage * 5;
+
+		$scope.papers = papers.slice(start-1, end);
+		
 	}
 }
 	
@@ -199,10 +209,10 @@ function abstController($scope, $routeParams, Papers,Review,Comments) {
 		Review.add(review).then(function() {
 			review.author = $scope.currentUser.userName;
 
-			console.log(review);
+			
 			$scope.paper.reviews.reviews.push(review);
 			
-			console.log($scope.paper.reviews);
+			
 			$scope.review = {};	
 		});
 	};

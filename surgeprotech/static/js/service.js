@@ -106,7 +106,7 @@ angular.module('services',[])
 
 		login.login = function() {
 			return $http({
-						url:'/api/user/',
+						url:'/api/user',
 						method: 'GET',
 						params: {}
 					});
@@ -121,7 +121,7 @@ angular.module('services',[])
 	reg.register = function (formData)	{
 		return $http({
 						method: 'POST',
-						url: '/api/user/',
+						url: '/api/user',
 						data: formData,
 						headers: {'Content-Type': 'application/json'}
 				})

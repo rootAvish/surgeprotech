@@ -105,11 +105,9 @@ def paper(paperId=None):
             if paperId == None:
 
                 # Return all papers on the requested page
-                post = Paper.query.paginate(int(request.args['page']), 
-                                            int(app.config['POSTS_PER_PAGE']), 
-                                            False)
+                post = Paper.query.all()
 
-                for item in post.items:
+                for item in post:
                     posts.append(
                         {  
                             "title":item.Title, 

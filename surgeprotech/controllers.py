@@ -58,7 +58,7 @@ def logout():
 # =====================The API endpoints begin here=================
 
 # endpoint to create and get users.
-@app.route('/api/user/', methods=['POST','GET'])
+@app.route('/api/user', methods=['POST','GET'])
 @app.route('/api/user/<user_id>')
 def registerUser():
 
@@ -76,11 +76,23 @@ def registerUser():
             db.session.add(user)
             db.session.commit()
             login_user(user, remember=False)
-            return jsonify({"success": True, "userId":user.get_id(),"userRole":'false'})
+            return  jsonify(
+                        {
+                            "success": True, 
+                            "userId":user.get_id(),
+                            "userRole":'false'
+                        }
+                    )
 
         else:
             # Return error since user was already in the database.
-            return jsonify({"success": False, "error-email": "User with this e-mail id already exists"})
+            return  jsonify(
+                        {
+                            "success": False, 
+                            "error-email": "User with this e-mail id already \
+                                            exists"
+                        }
+                    )
 
     else:
         if g.user.get_id() != None:
