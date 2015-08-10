@@ -32,23 +32,26 @@
     <script>
     //Array of images which you want to show: Use path you want.
     jQuery(document).ready(
-    function () {
-    var images=new Array('/static/img/lamp.jpg','/static/img/attendees.jpg','/static/img/hero/hero1.jpg','/static/img/hero/hero2.jpg','/static/img/hero/hero3.jpg','/static/img/hero/hero4.jpg','/static/img/hero/hero5.jpg','/static/img/hero/hero6.jpg');
-    var nextimage=1;
-    doSlideshow();
-    console.log($('#hero').css('background-image'));
-    function doSlideshow(){
-    if(nextimage >=images.length){
-    nextimage=0;
-    }
-    $('#hero').css('background-image','url("'+images[nextimage]+'")')
-    .fadeIn(5000, function() {
-    setTimeout(doSlideshow,6000);
+	function () {
+    		var images=new Array('/static/img/hero/hero1.jpg','/static/img/hero/hero2.jpg','/static/img/hero/hero3.jpg','/static/img/hero/hero4.jpg','/static/img/hero/hero5.jpg','/static/img/hero/hero6.jpg');
+    		var nextimage=1;
+   		 doSlideshow();
+    		console.log($('#hero').css('background-image'));
+    
+		function doSlideshow()  {
+
+    			if(nextimage >=images.length){
+    				nextimage=0;
+    			}
+
+    			$('#hero').css('background-image','url("'+images[nextimage]+'")')
+    			.fadeIn(5000, function() {
+    				setTimeout(doSlideshow,6000);
+   			 });
+    	
+			nextimage += 1;
+    		}
     });
-    nextimage += 1;
-    }
-    }
-    );
     </script>
   </head>
   <body id="index">
