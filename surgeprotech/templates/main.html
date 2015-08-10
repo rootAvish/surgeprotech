@@ -241,72 +241,68 @@
   </section>
   <!-- End Schedule Section -->
   <!-- Speakers Section -->
-  <section id="speakers" class="section light" ng-app="CommitteeList">
-    
-    <div class="overlay"></div>
-    <div class="container">
-      <div class="col-md-6 col-sm-6 col-xs-6">
-        <h6>Technical Committee</h6>
-        <br />
-        <br />
-        <section class="row">
-          <section class="row">
-            <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
-            
-            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="10">
-              <div class="name">Mr. O. Balagangadhar</div>
-              <div class="sub">Oblum</div>
-              <div class="sub">Chairman, TC</div>
-            </div>
-          </section>
-          <div ng-controller="tcMemberController">
-            <div ng-repeat="(company,memberList) in tcmembers">
-              <section class="row" ng-repeat="member in memberList">
-                <div class="clearfix visible-xs"></div>
-                
-                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="100">
-                  <div class="name">{{member}}</div>
-                  <div class="sub">{{company}}</div>
+  <section id="speakers" ng-app="CommitteeList" ng-controller="memberController">
+    <div class="container text-center" ng-show="technical">
+    <h5>Technical Committee</h5>
+    <a href ng-click="change()"><h4>Show Organising Committee Members</h4></a>
+      <ul class="timeline" ng-controller="tcMemberController">
+            <li>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                    <h4>Mr. O. Balgangadhar</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p>
+                      <strong>Oblum</strong>
+                      <br/>Chairman, Technical Committee
+                      </p>
+                    </div>
                 </div>
-                
-                
-              </section>
-            </div>
-          </div>
-        </section>
-      </div>
-      <!-- Begin OC members -->
-      <div class="col-md-6 col-sm-6 col-xs-6">
-        <h6>Organising Committee</h6>
-        <br />
-        <br />
-        <section class="row">
-          <section class="row">
-            <!-- <div class="col-md-2 col-sm-2 col-xs-2">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</div> -->
-            
-            <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="10">
-              <div class="name">Mr. R.K.Tyagi</div>
-              <div class="sub">POWERGRID</div>
-              <div class="sub">Chairman, OC</div>
-            </div>
-          </section>
-          <div  ng-controller="ocMemberController">
-            <div ng-repeat="(company,memberList) in ocmembers">
-              <section class="row" ng-repeat="member in memberList">
-                <div class="clearfix visible-xs"></div>
-                
-                <div class="speaker-item animated hiding" data-animation="fadeInUp" data-delay="100">
-                  <div class="name">{{member}}</div>
-                  <div class="sub">{{company}}</div>
+            </li>
+
+            <li ng-repeat="(company,member) in tcmembers" ng-class="{'':$odd,'timeline-inverted': $even}">
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                    <h4>{{member}}</h4>
+                    </div>
+                    <div class="timeline-body">{{company}}</div>
                 </div>
-                
-                
-              </section>
-            </div>
-          </div>
-        </section>
-      </div>
+            </li>
+          <!-- </div> -->
+        <!-- </div> -->
+      </ul>
     </div>
+      <div class="container text-center" ng-hide="technical">
+    <h5>Organising Committee</h5>
+    <a href ng-click="change()"><h4>Show Technical Committee Members</h4></a>
+      <ul class="timeline" ng-controller="ocMemberController">
+            <li>
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                    <h4>Mr. R.K.Tyagi</h4>
+                    </div>
+                    <div class="timeline-body">
+                      <p>
+                      <strong>Powergrid</strong>
+                      <br/>Chairman, Organising Committee
+                      </p>
+                    </div>
+                </div>
+            </li>
+
+            <li ng-repeat="(company,member) in ocmembers" ng-class="{'':$odd,'timeline-inverted': $even}">
+                <div class="timeline-panel">
+                    <div class="timeline-heading">
+                    <h4>{{member}}</h4>
+                    </div>
+                    <div class="timeline-body">{{company}}</div>
+                </div>
+            </li>
+          <!-- </div> -->
+        <!-- </div> -->
+      </ul>
+    </div>
+
   </section>
   <!-- End Speakers Section -->
   <!-- Price Section -->
@@ -431,7 +427,6 @@
   <script type="text/javascript" src="/static/js/lib/bootstrap.min.js"></script>
   <script type="text/javascript" src="/static/js/lib/jquery.nav.js"></script>
   <script type="text/javascript" src="/static/js/lib/jquery.appear.js"></script>
-  <script type="text/javascript" src="/static/js/lib/jquery.countTo.js"></script>
   <script type="text/javascript" src="/static/js/lib/waypoints.min.js"></script>
   <script type="text/javascript" src="/static/js/lib/waypoints-sticky.min.js"></script>
   <script type="text/javascript" src="/static/js/lib/jquery.fancybox.js"></script>
