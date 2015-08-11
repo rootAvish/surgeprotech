@@ -7,6 +7,7 @@ function isEmptyObject( obj ) {
     return true;
 };
 
+
 function loginController($scope, $location, AuthService) {
 	$scope.formData = {
 		"remember": false
@@ -38,11 +39,10 @@ function loginController($scope, $location, AuthService) {
 	});
 };
 
-function logoutcontroller($scope) {
-	$scope.currenUser = null;
-}
+loginController.$inject = ['$scope','$location','AuthService'];
 
-function registerController($scope,$http,$location, RegisterService) {
+
+function registerController($scope,$location, RegisterService) {
 
 	$scope.formData = {password: ''};
 	$scope.cnfpass = '';
@@ -70,7 +70,10 @@ function registerController($scope,$http,$location, RegisterService) {
 	};
 }
 
-function uploadController($scope, FileUploader,$http, UploadAbstract, Papers) {
+registerController.$inject = ['$scope','$location','RegisterService'];
+
+
+function uploadController($scope, FileUploader, UploadAbstract, Papers) {
 	$scope.formData = {};
 	
 	if ($scope.currentUser.paper != 0) {
@@ -131,8 +134,10 @@ function uploadController($scope, FileUploader,$http, UploadAbstract, Papers) {
 	};
 }
 
+uploadController.$inject = ['$scope', 'FileUploader', 'UploadAbstract', 'Papers'];
 
-function paperController($scope, $http, Papers) {
+
+function paperController($scope, Papers) {
 
 	$scope.papers = [];
 	$scope.currentPage = 1;
@@ -173,6 +178,9 @@ function paperController($scope, $http, Papers) {
 		
 	}
 }
+
+paperController.$inject = ['$scope','Papers'];
+
 	
 function abstController($scope, $routeParams, Papers,Review,Comments) {
 	var date = new Date();
@@ -218,12 +226,18 @@ function abstController($scope, $routeParams, Papers,Review,Comments) {
 	};
 }
 
+abstController.$inject = ['$scope', '$routeParams', 'Papers','Review','Comments'];
+
+
+
 function logoutController($scope,Logout,$location,Session) {
 	Logout.logout().then(function() {
 		$location.path('/login');
 		Session.destroy();
 	});
 }
+
+logoutController.$inject = ['$scope','Logout','$location','Session'];
 
 
 function tabController() {

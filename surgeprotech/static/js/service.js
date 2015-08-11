@@ -2,7 +2,7 @@
 
 angular.module('services',[])
 
-.service('Session', function ($rootScope) {
+.service('Session',['$rootScope', function ($rootScope) {
 
   this.create = function (userinfo) {
 
@@ -29,7 +29,7 @@ angular.module('services',[])
   	};
   };
 
-})
+}])
 
 // .service('PaperList', function() {
 

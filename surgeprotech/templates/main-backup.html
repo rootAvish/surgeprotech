@@ -15,7 +15,7 @@
     <link rel="apple-touch-icon" sizes="72x72" href="/static/img/apple-touch-icon-72x72.jpg">
     <link rel="apple-touch-icon" sizes="114x114" href="/static/img/apple-touch-icon-114x114.jpg">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" type="text/css" media="all" />
+    <link rel="stylesheet" href="/static/css/animate.css" type="text/css" media="all" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="/static/css/style.css" id="mainsty le" type="text/css" media="all" />
@@ -247,7 +247,7 @@
     <a href ng-click="change()"><h4>Show Organising Committee Members</h4></a>
       <ul class="timeline" ng-controller="tcMemberController">
             <li>
-                <div class="timeline-panel animated hiding" data-delay="500" data-animation="fadeInLeft">
+                <div class="timeline-panel">
                     <div class="timeline-heading">
                     <h4>Mr. O. Balgangadhar</h4>
                     </div>
@@ -261,7 +261,7 @@
             </li>
 
             <li ng-repeat="(company,member) in tcmembers" ng-class="{'':$odd,'timeline-inverted': $even}">
-                <div class="timeline-panel animated hiding" data-delay="500" ng-attr-data-animation="{{$odd && 'fadeInLeft' || 'fadeInRight'}}">
+                <div class="timeline-panel">
                     <div class="timeline-heading">
                     <h4>{{member}}</h4>
                     </div>
@@ -278,7 +278,7 @@
       <ul class="timeline" ng-controller="ocMemberController">
             <li>
                 <div class="timeline-panel">
-                    <div class="timeline-heading animated hiding" data-delay="500" data-animation="fadeInLeft">
+                    <div class="timeline-heading">
                     <h4>Mr. R.K.Tyagi</h4>
                     </div>
                     <div class="timeline-body">
@@ -291,7 +291,7 @@
             </li>
 
             <li ng-repeat="(company,member) in ocmembers" ng-class="{'':$odd,'timeline-inverted': $even}">
-                <div class="timeline-panel animated hiding" data-delay="500" ng-attr-data-animation="{{$odd && 'fadeInLeft' || 'fadeInRight'}}">
+                <div class="timeline-panel">
                     <div class="timeline-heading">
                     <h4>{{member}}</h4>
                     </div>
@@ -427,12 +427,12 @@
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
-  <script type="text/javascript" src="/static/js/lib/jquery.appear.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.appear/0.3.3/jquery.appear.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.4/waypoints-sticky.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.js"></script>
   <!--  <script type="text/javascript" src="/static/mailchimp/js/mailing-list.js"></script>-->
   <script type="text/javascript" src="/static/js/lib/scripts.js"></script>
-  <script type="text/javascript" src="/static/js/appmain.min.js"></script>
+  <script type="text/javascript" src="/static/js/appmain.js"></script>
 </body>
 </html>
