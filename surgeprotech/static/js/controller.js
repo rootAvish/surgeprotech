@@ -92,7 +92,7 @@ function uploadController($scope, FileUploader, UploadAbstract, Papers) {
 	}
 
 	$scope.uploader = new FileUploader();
-	$scope.uploader.url = "http://localhost:5000/api/paper";
+	$scope.uploader.url = "http://surgeprotech.org/api/paper";
 
 	$scope.uploadAbstract = function() {
 
