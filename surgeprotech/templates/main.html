@@ -18,44 +18,28 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.4.0/animate.min.css" type="text/css" media="all" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/fancybox/2.1.5/jquery.fancybox.min.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="/static/css/style.css" id="mainstyle" type="text/css" media="all" />
+    <link rel="stylesheet" href="/static/css/style.min.css" id="mainstyle" type="text/css" media="all" />
     <link href='http://fonts.googleapis.com/css?family=Raleway:700' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
     <!--[if lt IE 9]>
     <script src="/static/js/html5.js"></script>
     <script src="/static/js/respond.min.js"></script>
     <![endif]-->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
-    <script>
-    //Array of images which you want to show: Use path you want.
-    jQuery(document).ready(
-  function () {
-        var images=new Array('/static/img/hero/hero1.jpg','/static/img/hero/hero2.jpg','/static/img/hero/hero3.jpg','/static/img/hero/hero4.jpg','/static/img/hero/hero5.jpg','/static/img/hero/hero6.jpg');
-        var nextimage=1;
-       doSlideshow();
-        console.log($('#hero').css('background-image'));
-    
-    function doSlideshow()  {
-
-          if(nextimage >=images.length){
-            nextimage=0;
-          }
-
-          $('#hero').css('background-image','url("'+images[nextimage]+'")')
-          .fadeIn(5000, function() {
-            setTimeout(doSlideshow,6000);
-         });
-      
-      nextimage += 1;
-        }
-    });
-    </script>
   </head>
   <body id="index">
     <!-- Preloader -->
   <header id="mobileheader" class="navigation-bar-header light visible-xs"></header>
   <!-- Hero Section -->
   <section id="hero" class="light">
+  <div id="slider">
+<figure>
+<img src="/static/img/hero/hero1.jpg" alt="">
+<img src="/static/img/hero/hero2.jpg" alt="">
+<img src="/static/img/hero/hero3.jpg" alt="">
+<img src="/static/img/hero/hero4.jpg" alt="">
+<img src="/static/img/hero/hero5.jpg" alt="">
+</figure>
+</div>
     <div class="overlay color"></div>
     <div class="container">
       <div class="home-bg">
@@ -308,58 +292,54 @@
   <!-- Price Section -->
   <section id="price" class="section dark">
     <div class="container">
+      <div class="clearfix"></div>
       <!-- <div class="icon-wrap"><span class="icon icon-active icon-shopping-02"></span></div> -->
       <h3>Delegate Registration</h3>
-      <div class="sub-title">The pricing categories are:</div>
-      <br/>
-      <br/>
-      <div class="pricing-cols pricing-3-cols">
-        <div class="pricing-col animated hiding" data-animation="fadeInLeft" data-delay="0">
-          <div class="pricing-col-header">
-            <h3 class="pricing-col-header-title">Utility Participation</h3>
-            <!--                     <h4 class="pricing-col-header-amount">
-            <span class="pricing-col-amount">$100</span></h4>
-          -->                  </div>
-          <div class="pricing-col-content">
-            <ul>
-              <li>Rs. 6,000/- (combined participation in Conference and Tutorials for two days)<br/><br/></li>
-              <li>Rs. 4,000/-(participating in either Tutorial or Conference)<br/><br/></li>
-              <li><br/><br/><br/></li>
-            </ul>
-          </div>
+      <div class="panel panel-default">
+        <!-- Default panel contents -->
+        <div class="panel-heading">REGISTRATION FEES</div>
+        <div class="panel-body">
+          <p>Fee listed is for a single delegate.<i> All fee is inclusive of service tax.</i></p>
         </div>
-        <div class="pricing-col animated hiding">
-          <!-- <div class="pricing-col pricing-col-featured"> -->
-          <!-- <div class="pricing-ribbon">-20%</div> -->
-          <div class="pricing-col-header">
-            <h3 class="pricing-col-header-title">Industry participation</h3>
-            <!-- <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">$150</span></h4> -->
-          </div>
-          <div class="pricing-col-content">
-            <ul>
-              <li>Rs. 10,000/- for IEEMA members (combined participation in Conference and Tutorials for two days)</li>
-              <li>Rs. 12,000/-for Non IEEMA members (combined participation in Conference and Tutorials for two days)</li>
-              <li>Rs. 6,000/- for IEEMA /Non IEEMA members (participating in either Tutorial or Conference)</li>
-            </ul><!--
-            <a class="pricing-col-button" href="https://docs.google.com/forms/d/1yg-sod1yCEnyCZL7lLkJuLTv6Njc06b_oNnccrN2S1g/viewform">Buy Now</a> -->
-          </div>
-        </div>
-        <div class="pricing-col animated hiding" data-animation="fadeInLeft" data-delay="0">
-          <div class="pricing-col-header">
-            <h3 class="pricing-col-header-title">Student Participation</h3>
-            <!-- <h4 class="pricing-col-header-amount"><span class="pricing-col-amount">$200</span></h4> -->
-          </div>
-          <div class="pricing-col-content">
-            <ul>
-              <li>Rs. 2,000/- for bonafied students (for two days)<br/><br/></li>
-              <li><br/><br/><br/></li>
-              <li><br/><br/><br/></li>
-            </ul>
-            <!-- <a class="pricing-col-button" href="https://docs.google.com/forms/d/1yg-sod1yCEnyCZL7lLkJuLTv6Njc06b_oNnccrN2S1g/viewform">Buy Now</a> -->
-          </div>
-        </div>
+
+        <!-- Table -->
+        <table class="table table-hover table-bordered">
+          <thead>
+            <tr>
+              <th style="text-align:center;">Category</th>
+              <th style="text-align:center;">Conference/Tutorial(ONE Day)</th>
+              <th style="text-align:center;">Conference and Tutorials(TWO Days)</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>IEEMA Members</td>
+              <td>&#x20B9;5000</td>
+              <td>&#x20B9;10000</td>
+            </tr>
+            <tr>
+              <td>Non-IEEMA Members</td>
+              <td>&#x20B9;6000</td>
+              <td>&#x20B9;12000</td>
+            </tr>
+            <tr>
+              <td>Utility/Discoms</td>
+              <td>&#x20B9;4000</td>
+              <td>&#x20B9;6000</td>
+            </tr>
+            <tr>
+              <td>International</td>
+              <td>$200 (USD)</td>
+              <td>$300 (USD)</td>
+            </tr>
+            <tr>
+              <td>Student</td>
+              <td colspan="2">&#x20B9;2000</td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </div>
+    </div>  
   </section>
   <section id="sponsors" class="section dark">
     <div class="container">
@@ -448,6 +428,7 @@
   <![endif]-->
   <!--[if (gte IE 9) | (!IE)]><!-->
   <!--<![endif]-->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
   <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&amp;sensor=false"></script>
   <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
