@@ -38,15 +38,13 @@
 <body ng-controller="appController">
     <header id="header" class="navigation-bar-header light">
         <nav class="navbar navbar-default navbar-static-top" role="navigation">
-            <a class="navbar-brand navbar-text hidden-xs" href="#">IEEMA</a>
+            <a class="navbar-brand navbar-text hidden-xs" href="/" target="_self">IEEMA</a>
             <a class="navbar-brand navbar-text visible-xs" style="text-align:center;" href="#"><img alt="brand menu" src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/68133/menu.svg">IEEMA</a>
             <div class="container">
             <ul ng-show='currentUser.userId' class="nav navbar-nav hidden-xs">
-                  <li><a  class="navbar-text" href="index.html#schedule">Schedule</a></li>
                     <li><a class="navbar-text"  ng-href="/paper/{{currentUser.paper}}" ng-hide="currentUser.userRole">View Your Submitted Paper</a></li>
                     <li><a class="navbar-text"  ng-href="/paper/" ng-show="currentUser.userRole">View all Submitted Papers</a></li>
                     <li><a class="navbar-text"  ng-href="/user/" ng-hide="currentUser.userRole">Submit/Update Paper</a></li>
-                    <li><a  class="navbar-text" href="/contact">Contact Us</a></li>
             </ul>
             <ul ng-show='currentUser.userId' class="nav navbar-nav navbar-right">
                 <span class="flex"></span>
