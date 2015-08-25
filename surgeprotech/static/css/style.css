@@ -1055,7 +1055,7 @@
 	#banner {
 		padding: 16em 0 13em 0;
 		background-attachment: fixed;
-		background-image: url("img/overlay.png"), url("../img/bannerlightning.jpg");
+		background-image: url("images/overlay.png"), url("../img/bannerlightning.jpg");
 		background-position: center top;
 		background-size: cover;
 		line-height: 1.75;
@@ -1103,7 +1103,7 @@
 
 		.wrapper.style3 {
 			background-attachment: fixed;
-			background-image: url("img/overlay.png"), url("../img/bannerlightning.jpg");
+			background-image: url("images/overlay.png"), url("../img/bannerlightning.jpg");
 			background-position: center center;
 			background-size: cover;
 		}
@@ -1647,4 +1647,9 @@ tbody.collapse.in {
 #sponsors table th h4{
 	color: white;
 	text-align: center;
+}
+
+#map {
+	min-width: 100px;
+	min-height: 100%;
 }

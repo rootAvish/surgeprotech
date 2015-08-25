@@ -16,11 +16,11 @@
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/skel/2.2.1/skel.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/skel-layers/2.0.2/skel-layers.min.js"></script>
 		<script src="/static/js/init.js"></script>
-		<link rel="stylesheet" type="text/css" href="/static/css/animate.css"/>
+		<link rel="stylesheet" type="text/css" href="css/animate.css"/>
 		<noscript>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/skel/2.2.1/skel.min.css" />
-		<link rel="stylesheet" href="/static/css/style.css" />
-		<link rel="stylesheet" href="/static/css/style-xlarge.css" />
+		<link rel="stylesheet" href="css/style.css" />
+		<link rel="stylesheet" href="css/style-xlarge.css" />
 		</noscript>
 	</head>
 	<body class="landing">
@@ -30,7 +30,7 @@
 			<nav id="nav">
 				<ul>
 					<li><a href="index.html#about">About</a></li>
-					<li><a href="/delegate-registration">Delegate Registration</a></li>
+					<li><a href="/">Delegate Registration</a></li>
 					<li><a href="index.html#schedule">Schedule</a></li>
 					<li><a href="index.html#committee">Committee</a></li>
 				</ul>
@@ -42,7 +42,7 @@
 			<p>Second International Conference Cum Tutorials on <br />SURGE ARRESTERS</p>
 			<ul class="actions">
 				<li><a href="#" class="button special big">Full Brochure</a></li>
-				<li><a href="/register" class="button special big">Paper Submissions</a></li>
+				<li><a href="#" class="button special big">Paper Submissions</a></li>
 			</ul>
 		</section>
 		<!-- One -->
@@ -103,13 +103,13 @@
 					to share their expertise. The tutorial cum conference will also provide detailed insights on various key system components  and their latest technological trends, keeping in mind an end-to-end solutions scenario in the expected smart world. This tutorial cum conference is envisaged to benefit utilities, industries, various government bodies and other stake-holders in strengthening their technological choices, offering them the option to empower and utilize existing infrastructure for a sustainable future.</p>
 				</div>
 				<ul class="actions">
-					<li><a href="/delegate-registration" class="button special big">REGISTER DELEGATES</a></li>
+					<li><a href="#" class="button special big">REGISTER DELEGATES</a></li>
 					<!-- <li><a href="#" class="button big">CONTACT US</a></li> -->
 				</ul>
 			</div>
 		</section>
 		<!-- Three -->
-		<section id="commitee" class="wrapper style1">
+		<section id="committee" class="wrapper style1">
 			<div class="container">
 				<header class="major special">
 					<h2>COMMITTEE MEMBERS</h2>
@@ -439,8 +439,14 @@
 	</div>
 	</section>
 
-<section id="map" class="wrapper style-1">
-	<div id="canvasmap"></div>
+<section id="canvas-map" class="wrapper style-1">
+	<div class="container">
+		<div class="row">
+			<div class="12u">
+				<div id="map" style="height:500px; width: 500px;"></div>
+			</div>
+		</div>
+	</div>
 </section>
 
 <!-- Footer -->
@@ -480,26 +486,30 @@
 	</ul>
 </div>
 </footer>
-<script type="text/javascript">
-	var initMap = function() {
-	  var myLatLng = {lat: 28.618676, lng: 77.217858};
-
-	  var map = new google.maps.Map(document.getElementById('canvasmap'), {
-	    zoom: 4,
-	    center: myLatLng
-	  });
-
-	  var marker = new google.maps.Marker({
-	    position: myLatLng,
-	    map: map,
-	    title: 'Hotel Le-Meridien, New Delhi'
-	  });
-	};
-</script>
 <script type="text/javascript" src="/static/js/jquery.appear.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-one-page-nav/3.0.0/jquery.nav.min.js"></script>
 <script type="text/javascript" src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="/static/js/scripts.js"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
+
+    <script type="text/javascript">
+
+function initMap() {
+  var myLatLng = {lat: -25.363, lng: 131.044};
+
+  var map = new google.maps.Map(document.getElementById('map'), {
+    zoom: 4,
+    center: myLatLng
+  });
+
+  var marker = new google.maps.Marker({
+    position: myLatLng,
+    map: map,
+    title: 'Hello World!'
+  });
+}
+
+    </script>
+    <script async defer
+        src="https://maps.googleapis.com/maps/api/js?signed_in=true&callback=initMap"></script>
 </body>
 </html>
