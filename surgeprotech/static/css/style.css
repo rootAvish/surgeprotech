@@ -1653,3 +1653,29 @@ tbody.collapse.in {
 	min-width: 100px;
 	min-height: 100%;
 }
+
+.google-maps {
+        position: relative;
+        padding-bottom: 75%;
+        height: 0;
+        overflow: hidden;
+    }
+    .google-maps iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+
+    .fake-link {
+		color: #f32853;
+		text-decoration: underline;
+		cursor: pointer;
+	}
+
+		.fake-link:hover {
+			text-decoration: none;
+		}
+.hiding { opacity: 0; }
+.visible { opacity: 1; }
