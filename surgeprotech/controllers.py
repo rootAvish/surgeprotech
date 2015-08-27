@@ -21,7 +21,6 @@ def before_request():
 
 
 @app.route('/')
-@app.route('/register')
 def home():
     return make_response(open('surgeprotech/templates/main.html').read())
 
@@ -42,8 +41,9 @@ def delegateRegistration():
         return make_response(open('surgeprotech/templates/delegate-registration.html').read())
 
 
-# def register(**kwargs):
-#     return make_response(open('surgeprotech/templates/index.html').read())
+@app.route('/register')
+def register(**kwargs):
+    return make_response(open('surgeprotech/templates/index.html').read())
 
 @app.route('/<model_name>/')
 @app.route('/<model_name>/<item_id>')
@@ -61,6 +61,12 @@ def rest_pages(model_name, item_id=None):
 def logout():
     return make_response(open('surgeprotech/templates/index.html').read())
 
+
+
+@app.route('/brochure')
+def sendBrochure():
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                           'pdf/brochure.pdf')
 
 
 # =====================The API endpoints begin here=================
