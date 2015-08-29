@@ -73,3 +73,10 @@
 		#footer .icons {
 			font-size: 1em;
 		}
+
+	#header nav > ul > li {
+		border-radius: 4px;
+		display: inline-block;
+		margin-left: 0.5em;
+		padding-left: 0;
+	}

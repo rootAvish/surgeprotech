@@ -102,3 +102,10 @@
 			margin: 0;
 			padding: 0;
 		}
+
+						#header nav > ul > li {
+					border-radius: 4px;
+					display: inline-block;
+					margin-left: 1.0em;
+					padding-left: 0;
+				}

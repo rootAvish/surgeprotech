@@ -144,3 +144,17 @@
 			#navPanel nav .button {
 				width: 100%;
 			}
+
+							#header nav > ul > li {
+					border-radius: 4px;
+					display: inline-block;
+					margin-left: 0.5em;
+					padding-left: 0;
+				}
+
+				#header nav > ul > li {
+					border-radius: 4px;
+					display: inline-block;
+					margin-left: 0.5em;
+					padding-left: 0;
+				}
