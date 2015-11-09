@@ -9,7 +9,7 @@ def send_mail(subject, body, to):
 
     # Configure the specifics
     message = Message(subject, sender='admin@surgeprotech.org', recipients=[to])
-    msg.body = body
+    message.body = body
 
     # Finally send the mail
     mail.send(message)
