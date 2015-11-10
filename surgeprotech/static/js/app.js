@@ -67,7 +67,7 @@ app.controller('appController',['$scope','Session', function($scope, Session) {
 
 }])
 
-.run(['LoginState','Session',function(LoginState,Session) {
+.run(['LoginState','Session','$rootScope', '$location', function(LoginState,Session,$rootScope,$location) {
 
 	function isEmptyObject( obj ) {
 	    for ( var name in obj ) {
@@ -75,6 +75,20 @@ app.controller('appController',['$scope','Session', function($scope, Session) {
 	    }
 	    return true;
 	};
+
+	$rootScope.$on("$routeChangeSuccess", function(event, next, current) {
+
+		if (next.templateUrl == 'static/partials/register.html' && Session.getUser().userId != null) {
+			console.log("Event triggered Inside");
+
+			if(Session.getUser().userRole == true) {
+				$location.path('/paper');
+			}
+			else {
+				$location.path('/user');
+			}
+		}
+	});
 
 	LoginState.login().then(function(res) {
 
