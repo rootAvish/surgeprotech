@@ -47,7 +47,7 @@ function loginController($scope, $location, AuthService) {
 loginController.$inject = ['$scope','$location','AuthService'];
 
 
-function registerController($scope,$location, RegisterService, Session, $location) {
+function registerController($scope,$location, RegisterService, Session) {
 
 
 	if (Session.getUser().userId != null) {
@@ -85,7 +85,7 @@ function registerController($scope,$location, RegisterService, Session, $locatio
 	};
 }
 
-registerController.$inject = ['$scope','$location','RegisterService','Session','$location'];
+registerController.$inject = ['$scope','$location','RegisterService','Session'];
 
 
 function uploadController($scope, FileUploader, UploadAbstract, Papers) {
