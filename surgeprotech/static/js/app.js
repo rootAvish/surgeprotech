@@ -30,6 +30,12 @@ var app = angular.module('spForums',['ngResource', 'ngRoute','angularFileUpload'
 		controller: abstController,
 		controllerAs: 'abst'
 	})
+
+	.when('/reset/:token', {
+		templateUrl: 'static/partials/reset.html',
+		controller: pwResetController
+	})
+
 	.when('/forgot', {
 		templateUrl: 'static/partials/forgot.html',
 		controller: resetController

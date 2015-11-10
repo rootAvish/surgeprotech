@@ -52,6 +52,32 @@ def delegateRegistration():
         return make_response(open('surgeprotech/templates/delegate-registration.html').read())
 
 
+@app.route('/reset', methods=['POST'])
+def reset_password():
+
+    if request.method == 'POST':
+
+        token = request.json['token']
+        u = User.verify_auth_token(token)
+        
+        if u != None:
+
+            u.password = hashlib.sha1(request.json['password']).hexdigest()
+            
+            db.session.add(u)
+            db.session.commit()
+            
+            return json.dumps({"success": True}), 200
+
+        else:
+
+            abort(401)
+
+    else:
+
+        return make_response(open('surgeprotech/templates/index.html').read())
+
+
 @app.route('/forgot', methods=['GET','POST'])
 def forgot_pass():
 
@@ -74,7 +100,7 @@ def forgot_pass():
                 reset by then please request for a new code at surgeprotech.org/forgot.
 
                 ~ Surgeprotech admin
-            """ % ('surgeprotech.org/' + token.dumps({'user': u.id}).decode('utf-8'))
+            """ % ('surgeprotech.org/reset/' + token.dumps({'user': u.id}).decode('utf-8'))
 
             # Finally send the e-mail to this user.
             send_mail("Surgeprotech Password Reset", body, email)
@@ -83,6 +109,12 @@ def forgot_pass():
 
     else:
         return make_response(open('surgeprotech/templates/index.html').read())
+
+
+@app.route('/reset/<token>')
+def resetToken(token):
+
+    return make_response(open('surgeprotech/templates/index.html').read())
 
 
 @app.route('/register')

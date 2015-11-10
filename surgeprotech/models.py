@@ -1,6 +1,7 @@
 from surgeprotech import db, app
 import hashlib
 from datetime import datetime
+from itsdangerous import TimedJSONWebSignatureSerializer as jwt, SignatureExpired
 
 # Table to store technical commitee's comments on papers.
 class Comment(db.Model):
@@ -61,7 +62,7 @@ class User(db.Model):
 
     @staticmethod
     def verify_auth_token(token):
-        s = Serializer(app.config['SECRET_KEY'])
+        s = jwt(app.config['SECRET_KEY'])
         try:
             data = s.loads(token)
         except SignatureExpired:

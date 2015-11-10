@@ -1,0 +1,28 @@
+<div class="container">
+<div class="row">
+<div class="col-sm-12">
+<h1 class="text-center">Change Password</h1>
+</div>
+</div>
+<div class="row">
+<div class="col-sm-6 col-sm-offset-3">
+<p class="text-center">Use the form below to change your password. Your password cannot be the same as your username.</p>
+<form method="post" id="passwordForm">
+<input type="password" class="input-lg form-control" name="password1" ng-model="formdata.password" id="password1" placeholder="New Password" autocomplete="off">
+<div class="row">
+</div>
+<input type="password" class="input-lg form-control" name="password2" id="password2" ng-model="formdata.confirm" placeholder="Repeat Password" autocomplete="off">
+<div class="row">
+<div class="col-sm-12">
+<span id="pwmatch" class="glyphicon glyphicon-remove" style="color:#FF0004;" ng-hide="formdata.password == formdata.confirm && formdata.password"></span>
+<span id="pwmatch" class="glyphicon glyphicon-ok" style="color:green;" ng-show="formdata.password == formdata.confirm && formdata.confirm"></span> Passwords Match
+</div>
+</div>
+<input type="submit" ng-click="submit(formdata)" class="col-xs-12 btn btn-primary btn-load btn-lg" data-loading-text="Changing Password..." value="Change Password">
+</form>
+
+    <p class="bg-success" ng-show="success"> Your account password was successfully reset. Please <a href="/login">click here</a> to return to login screen.</p>
+    <p class="bg-danger" ng-show="error"> An error occured, if you manually entered the link for some reason please check that it is correct, else <a href="/forgot" >request for a new reset link</a> to be e-mailed to you.</p>
+</div><!--/col-sm-6-->
+</div><!--/row-->
+</div>

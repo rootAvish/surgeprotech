@@ -265,3 +265,32 @@ function resetController($scope, sendResetCode) {
 }
 
 resetController.$inject = ['$scope','sendResetCode'];
+
+
+function pwResetController($scope, $routeParams, resetPassword) {
+
+	$scope.formdata = {};
+	$scope.success = false;
+	$scope.error = false;
+
+	$scope.submit = function(formdata) {
+
+		if (formdata.password != formdata.confirm) {
+			return;
+		}
+
+		formdata.token = $routeParams.token;
+
+		resetPassword.send(formdata).success(function(res) {
+
+			$scope.success = true;
+		})
+		.error(function(x,y,z,c) {
+
+			$scope.error = true;
+		});
+
+	};
+}
+
+pwResetController.$inject = ['$scope','$routeParams', 'resetPassword'];

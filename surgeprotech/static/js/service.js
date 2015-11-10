@@ -44,6 +44,21 @@ angular.module('services',[])
     };
 
 }])
+
+.service('resetPassword', ['$http', function($http) {
+
+    this.send = function(formdata) {
+
+        return $http({
+            method: 'POST',
+            url: '/reset',
+            headers: {"Content-type": "application/json"},
+            data: formdata
+        });
+
+    };
+
+}])
 // .service('PaperList', function() {
 
 //  var paperList = this;
