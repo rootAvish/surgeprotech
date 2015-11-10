@@ -47,7 +47,17 @@ function loginController($scope, $location, AuthService) {
 loginController.$inject = ['$scope','$location','AuthService'];
 
 
-function registerController($scope,$location, RegisterService) {
+function registerController($scope,$location, RegisterService, Session, $location) {
+
+
+	if (Session.getUser().userId != null) {
+		if(Session.getUser().userRole == true) {
+			$location.path('/paper');
+		}
+		else {
+			$location.path('/user');
+		}
+	}
 
 	$scope.formData = {password: ''};
 	$scope.cnfpass = '';
@@ -75,7 +85,7 @@ function registerController($scope,$location, RegisterService) {
 	};
 }
 
-registerController.$inject = ['$scope','$location','RegisterService'];
+registerController.$inject = ['$scope','$location','RegisterService','Session','$location'];
 
 
 function uploadController($scope, FileUploader, UploadAbstract, Papers) {
