@@ -43,6 +43,7 @@ class Paper(db.Model):
 
 # Table to store the profiles of all users.
 class User(db.Model):
+
     id = db.Column(db.Integer, primary_key=True)
     email = db.Column(db.String(256), index=True,unique=True)
     ac_type = db.Column(db.Boolean)
@@ -57,6 +58,18 @@ class User(db.Model):
         self.name = name
         self.password = hashlib.sha1(password).hexdigest()
         self.ac_type = False
+
+    @staticmethod
+    def verify_auth_token(token):
+        s = Serializer(app.config['SECRET_KEY'])
+        try:
+            data = s.loads(token)
+        except SignatureExpired:
+            return None # valid token, but expired
+        except BadSignature:
+            return None # invalid token
+        user = User.query.get(data['id'])
+        return user
 
     def is_authenticated(self):
             return True

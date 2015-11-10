@@ -16,11 +16,16 @@ function loginController($scope, $location, AuthService) {
 	this.authenticate = function (formData) {
 		
 		AuthService.login(formData)
-		.then(function(user) { /*
-			$scope.setUser();*/
-
+		.then(function(user) {
 			if (!isEmptyObject(user.data)) {
-				$location.path('/user');
+
+				console.log("Loggin' in");
+				console.log(user);
+
+				if(user.userRole == false)
+					$location.path('/user');
+				else
+					$location.path('/paper');
 			}
 			else
 			{
@@ -75,7 +80,7 @@ registerController.$inject = ['$scope','$location','RegisterService'];
 
 function uploadController($scope, FileUploader, UploadAbstract, Papers) {
 	$scope.formData = {};
-	
+
 	if ($scope.currentUser.paper != 0) {
 		Papers.getPaper().get({paperId: $scope.currentUser.paper})
 		.$promise.then(function(res) {
@@ -245,3 +250,18 @@ function tabController() {
 	Logout.logout();
 	
 }
+
+function resetController($scope, sendResetCode) {
+
+	$scope.formdata = {};
+	$scope.success = false;
+
+	$scope.submit = function(formdata) {
+
+		sendResetCode.send(formdata).success(function(res) {
+			$scope.success = true;
+		});
+	}
+}
+
+resetController.$inject = ['$scope','sendResetCode'];

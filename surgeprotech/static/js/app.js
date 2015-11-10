@@ -30,6 +30,10 @@ var app = angular.module('spForums',['ngResource', 'ngRoute','angularFileUpload'
 		controller: abstController,
 		controllerAs: 'abst'
 	})
+	.when('/forgot', {
+		templateUrl: 'static/partials/forgot.html',
+		controller: resetController
+	})
 	.when('/logout', {
 		templateUrl: 'static/partials/logout.html',
 		controller: logoutController

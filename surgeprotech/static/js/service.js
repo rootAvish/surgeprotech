@@ -31,28 +31,41 @@ angular.module('services',[])
 
 }])
 
+.service('sendResetCode', ['$http', function($http){
+    
+    this.send = function(formdata) {
+
+        return $http({
+            method: 'POST',
+            url: '/forgot',
+			headers: {"Content-type": "application/json"},
+            data: formdata
+        });
+    };
+
+}])
 // .service('PaperList', function() {
 
-// 	var paperList = this;
+//  var paperList = this;
 
-// 	paperList.paper = {};
-	
-// 	paperList.set(paper) = function() {
-// 		paperList.paper = paper;
-// 	}
+//  paperList.paper = {};
+    
+//  paperList.set(paper) = function() {
+//      paperList.paper = paper;
+//  }
 // })
 
-.factory('AuthService', ['$http', 'Session',function($http, Session){	
+.factory('AuthService', ['$http', 'Session',function($http, Session){   
 
-	var auth = {};
+    var auth = {};
 
-	auth.login = function(credentials) {
+    auth.login = function(credentials) {
 
-		return $http({
-			method: 'POST',
-				url: "/api/login",
-			data: credentials,
-			headers: {"Content-type": "application/json"}
+        return $http({
+            method: 'POST',
+                url: "/api/login",
+            data: credentials,
+            headers: {"Content-type": "application/json"}
 		}).then(function(data) {
 			Session.create(data.data);
 			return data;
@@ -115,6 +128,8 @@ angular.module('services',[])
 		return login;
 }])
 
+
+// A service to register users at the backend.
 .factory('RegisterService', ['$http','Session', function($http,Session){
 	var reg = {};
 
@@ -142,6 +157,8 @@ angular.module('services',[])
 	return reg;
 }])
 
+// WYSIWYG
+// Logs out of the session
 .factory('Logout', ['$http', function($http){
 	
 	var logout = {};
@@ -157,6 +174,7 @@ angular.module('services',[])
 	return logout;
 }])
 
+// A factory to retreive all reviews of the paper by the TC.
 .factory('Review', ['$http', function($http){
 	
 	var review = {};
@@ -173,6 +191,8 @@ angular.module('services',[])
 	return review;
 }])
 
+
+// A factory that sends the Paper abstract to the backend.
 .factory('UploadAbstract', ['$resource', function($resource){
 	return $resource('/api/paper', {}, {});
 }])

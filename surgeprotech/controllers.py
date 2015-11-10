@@ -7,28 +7,39 @@ import os, hashlib
 from models import Comment, User, Paper
 from werkzeug import secure_filename
 from flask.ext.login import login_user, logout_user, current_user, login_required
-
+from surgeprotech.utils import send_mail
+from itsdangerous import TimedJSONWebSignatureSerializer as jwt
+import json
 
 app.register_blueprint(paper_api)
 
+
 @lm.user_loader
 def load_user(id):
+
     return User.query.get(int(id))
+
 
 @app.before_request
 def before_request():
+
+    # Get the current user for the session
     g.user = current_user
 
 
 @app.route('/')
 def home():
+
+    # Return the html for the homepage.
     return make_response(open('surgeprotech/templates/main.html').read())
 
 
 @app.route('/login')
 def login(**kwargs):
+
     if g.user is not None and g.user.is_authenticated():
         return redirect(url_for('rest_pages', model_name='user'))
+
     else:
         return make_response(open('surgeprotech/templates/index.html').read())
 
@@ -41,9 +52,44 @@ def delegateRegistration():
         return make_response(open('surgeprotech/templates/delegate-registration.html').read())
 
 
+@app.route('/forgot', methods=['GET','POST'])
+def forgot_pass():
+
+    if request.method == 'POST':
+        #send a recovery email
+        print request.json
+        email = request.json['email']
+
+        u = User.query.filter_by(email=email).first()
+
+        if u != None:
+
+            token = jwt(app.config['SECRET_KEY'], 3600)
+            # The e-mail to send
+            body = """
+                To reset your password for surgeprotech.org paper submission forums, please follow the link:
+                %s
+
+                The link will expire in 1 hour from the time of sending this e-mail, if you fail to complete the
+                reset by then please request for a new code at surgeprotech.org/forgot.
+
+                ~ Surgeprotech admin
+            """ % ('surgeprotech.org/' + token.dumps({'user': u.id}).decode('utf-8'))
+
+            # Finally send the e-mail to this user.
+            send_mail("Surgeprotech Password Reset", body, email)
+
+            return json.dumps({"success": True})
+
+    else:
+        return make_response(open('surgeprotech/templates/index.html').read())
+
+
 @app.route('/register')
 def register(**kwargs):
+
     return make_response(open('surgeprotech/templates/index.html').read())
+
 
 @app.route('/<model_name>/')
 @app.route('/<model_name>/<item_id>')
@@ -53,25 +99,27 @@ def rest_pages(model_name, item_id=None):
 # if the model name is a valid API endpoint, then send.
     if model_name == 'user' or model_name == 'paper':
         return make_response(open('surgeprotech/templates/index.html').read())
+
 # else abort this shit.
     abort(404)
 
 
 @app.route('/logout')
 def logout():
-    return make_response(open('surgeprotech/templates/index.html').read())
 
+    return make_response(open('surgeprotech/templates/index.html').read())
 
 
 @app.route('/brochure')
 def sendBrochure():
+
     return send_from_directory(os.path.join(app.root_path, 'static'),
                            'pdf/brochure.pdf')
 
 
 # =====================The API endpoints begin here=================
-
 # endpoint to create and get users.
+
 @app.route('/api/user', methods=['POST','GET'])
 @app.route('/api/user/<user_id>')
 def registerUser():
@@ -137,12 +185,14 @@ def registerUser():
 # The login handler.
 @app.route('/api/login', methods=['POST'])
 def loginAPI():
+
     formData = request.json
     print formData
     password = hashlib.sha1(formData['password']).hexdigest()
 
     user = User.query.filter_by(email=formData['email'], password=password).first()
     print "user is: ", user
+
     if user != None:
         login_user(user, remember = formData['remember'])
 
@@ -163,6 +213,7 @@ def loginAPI():
                             "role": user.ac_type,
                             "paper": pid
                        })
+
     else:
         return jsonify({})
 
@@ -170,10 +221,12 @@ def loginAPI():
 
 @app.route('/api/logout')
 def Logout():
+
     logout_user()
     return jsonify({"success": True})
 
 
 @app.errorhandler(404)
 def page_not_found(e):
+
         return render_template('404.html'), 404
