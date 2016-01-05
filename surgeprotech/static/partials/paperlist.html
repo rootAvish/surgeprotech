@@ -1,3 +1,15 @@
+<style>
+    .pull-right {
+
+        margin: 6px;
+    }
+
+    .abs {
+
+        margin: 5px;
+    }
+</style>
+
 <div ng-show="papers.length" class="panel panel-default">
     <div class="panel-heading">
         <h3>List of Papers</h3>
@@ -15,12 +27,12 @@
         <ul class="list-group">
             <li class="list-group-item"  ng-repeat="paper in papers">
                <div class="row">
-                <span class="pull-left"><strong>{{paper.title}}</strong></span>
-                <p class="pull-right"><a ng-href="/paper/{{paper.p_id}}"><i class="fa fa-arrow-circle-right"></i>
-                Read More</a></p>
+                <span class="pull-left"><h3  style="margin-left: 20px;">{{paper.title}}</h3></span>
+                <span class="pull-right" style="margin-top:20px;"><a ng-href="/paper/{{paper.p_id}}"><i class="fa fa-arrow-circle-right"></i>
+                    Read More</a></span>
                 
             </div>
-            <div class="row">
+            <div class="row abs">
                 <p>{{ paper.abstract }}</p>
             </div>
             </li>
