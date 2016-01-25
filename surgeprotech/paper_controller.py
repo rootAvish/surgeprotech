@@ -108,12 +108,17 @@ def paper(paperId=None):
                 post = Paper.query.all()
 
                 for item in post:
+
+                    authorname = user.query.filter_by(id=item.Author).first()
+
                     posts.append(
                         {  
                             "title":item.Title, 
                             "abstract": item.Abstract, 
                             "p_id": item.p_id, 
-                            "author": item.Author
+                            "author": item.Author,
+                            "aName": authorname.name,
+                            "aEmail": authorname.email
                         }
                     )
 

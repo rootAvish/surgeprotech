@@ -28,13 +28,14 @@
             <li class="list-group-item"  ng-repeat="paper in papers">
                <div class="row">
                 <span class="pull-left"><h3  style="margin-left: 20px;">{{paper.title}}</h3></span>
-                <span class="pull-right" style="margin-top:20px;"><a ng-href="/paper/{{paper.p_id}}"><i class="fa fa-arrow-circle-right"></i>
-                    Read More</a></span>
-                
+                <span class="pull-right" style="margin-top:20px; text-align: right;">{{paper.aName}}<br/>{{paper.aEmail}}</span>
             </div>
             <div class="row abs">
                 <p>{{ paper.abstract }}</p>
+            <span class="pull-right" style="margin-top:20px;"><a ng-href="/paper/{{paper.p_id}}"><i class="fa fa-arrow-circle-right"></i>
+                Read More</a></span>
             </div>
+
             </li>
         </ul>
     </div>
