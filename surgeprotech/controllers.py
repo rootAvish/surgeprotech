@@ -44,12 +44,34 @@ def login(**kwargs):
         return make_response(open('surgeprotech/templates/index.html').read())
 
 
-@app.route('/delegate-registration')
+@app.route('/delegate-registration', methods=['GET','POST'])
 def delegateRegistration():
 
     if request.method == 'GET':
 
         return make_response(open('surgeprotech/templates/delegate-registration.html').read())
+
+    else:
+
+        body = ""
+        
+        categories =    {
+                '1':    "IEEMA Members",
+                '2':    "Non-IEEMA Members",   
+                '3':    "Utility/Discoms", 
+                '4':    "International", 
+                '5':    "Student"
+        }
+
+        for key in request.json:
+
+            if key == 'category':
+                body += key + ":" + categories[request.json[key]] + '\n'
+            else:
+                body += key + ":" + request.json[key] + '\n'
+
+        send_mail("Delegate Registration", body, "anita.gupta@ieema.org")
+        return jsonify({"success": True})
 
 
 @app.route('/reset', methods=['POST'])

@@ -15,13 +15,14 @@
 		<script src="/static/js/skel.min.js"></script>
 		<script src="/static/js/skel-layers.min.js"></script>
 		<script src="/static/js/init.js"></script>
+		<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.28/angular.min.js"></script>
 		<noscript>
 		<link rel="stylesheet" href="/static/css/skel.css" />
 		<link rel="stylesheet" href="/static/css/style.css" />
 		<link rel="stylesheet" href="/static/css/style-xlarge.css" />
 		</noscript>
 	</head>
-	<body>
+	<body ng-app="delegateApp">
 		<!-- Header -->
 		<header id="header">
 			<h1><strong><a href="/">SURGEPROTECH</a></strong></h1>
@@ -84,6 +85,71 @@
 						</tbody>
 					</table>
 				</div>
+
+ For bulk registration, please send an e-mail with the details in the form below to <i><a href="mailto:anita.gupta@ieema.org" target="_top">anita.gupta@ieema.org</a></i>. For single registration please fill the form below.
+
+
+				<!-- Form -->
+						<section ng-controller="formController as form" style="margin-top:20px">
+							<h3>Registration Form</h3>
+							<form name="registerForm" ng-submit="formSubmit(formData)">
+								<div class="row uniform 50%">
+									<div class="6u 12u$(xsmall)">
+										<input type="text" name="name" id="name" value="" placeholder="Delegate Name" ng-model="formData.name" required/>
+									</div>
+									<div class="6u 12u$(xsmall)">
+										<input ng-model="formData.num" type="text" name="phone" id="phone" value="" placeholder="Mobile Number" required/>
+									</div>
+									<div class="6u$ 12u$(xsmall)"> 
+										<input ng-model="formData.email" type="email" name="email" id="email" value="" placeholder="Email" required/>
+									</div>
+									<div class="12u$"> 
+										<input type="text" ng-model="formData.company" name="company" id="company" value="" placeholder="Company Name" required/>
+									</div>
+									<div class="12u$">
+										<div class="select-wrapper">
+											<select name="category" ng-model="formData.category" id="category">
+												<option value="">- Category -</option>
+												<option value="1">IEEMA Member</option>
+												<option value="2">Non IEEMA Member</option>
+												<option value="3">Utility/Discom</option>
+												<option value="4">International</option>
+												<option value="5">Student</option>
+											</select>
+										</div>
+									</div>
+									<div class="4u 12u$(xsmall)">
+										<input type="radio" required id="priority-low" required value="one" ng-model="formData.days" name="priority">
+										<label for="priority-low">One Day</label>
+									</div>
+									<div class="4u 12u$(xsmall)">
+										<input type="radio" id="priority-normal" required value="two" name="priority" ng-model="formData.days" checked>
+										<label for="priority-normal">Two Day</label>
+									</div>
+									
+									<div class="12u$">
+										<textarea name="message" ng-model="message" id="message" required placeholder="How did you learn about Surgeprotech" rows="6"></textarea>
+									</div>
+									<pre ng-show="registerForm.$error.required"><b>All fields are required.</b></pre>
+									<div class="12u$">
+										<ul class="actions">
+											<li><input type="submit" value="Register Now" class="special" /></li>
+										</ul>
+									</div>
+
+
+								</div>
+
+							</form>
+						<span ng-show="success">
+							<b>	Your registration was successful, we will shortly get in touch with you regarding the payment details. Please send an e-mail to anita.gupta@ieema.org for any further queries.
+						</b></span>
+
+						<span ng-show="error">
+							<b style="color:red;">An internal error occured, please try again later.</b>
+						</span>
+						</section>
+							
 			</div>
 		</section>
 		<!-- Footer -->
@@ -118,5 +184,7 @@
 				</ul>
 			</div>
 		</footer>
+
+		<script type="text/javascript" src="/static/js/delegateapp.js"></script>
 	</body>
 </html>
