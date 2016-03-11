@@ -1636,16 +1636,7 @@ tbody.collapse.in {
 
 /*End part of bootstrap that we need.*/
 
-#sponsors table {
-	color: white !important;
-}
-
-#sponsors table strong {
-	color: white !important;
-}
-
 #sponsors table th h4{
-	color: white;
 	text-align: center;
 }
 
