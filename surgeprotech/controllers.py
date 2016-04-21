@@ -171,6 +171,20 @@ def sendBrochure():
                            'pdf/brochure.pdf')
 
 
+@app.route('/prog_tutorials')
+def sendTutorialSched():
+
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                           'pdf/prog_tutorials.pdf')
+
+
+@app.route('/prog_conference')
+def sendConfSched():
+
+    return send_from_directory(os.path.join(app.root_path, 'static'),
+                           'pdf/prog_conference.pdf')
+
+
 # =====================The API endpoints begin here=================
 # endpoint to create and get users.
 
