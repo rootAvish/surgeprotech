@@ -74,6 +74,31 @@ def delegateRegistration():
         return jsonify({"success": True})
 
 
+@app.route('/paper-download')
+def downPapers():
+    return make_response(open('surgeprotech/templates/paper-download.html').read())
+
+
+@app.route('/tutorial/<tutname>')
+def sendTutorial(tutname=None):
+    print(tutname)
+    if tutname != None:
+        return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'pdf/tutorials/'+tutname+'.pdf')
+    else:
+        abort(400)
+
+
+@app.route('/presentation/<tutname>')
+def sendPresentation(tutname=None):
+    print(tutname)
+    if tutname != None:
+        return send_from_directory(os.path.join(app.root_path, 'static'),
+                               'pdf/presentations/'+tutname+'.pdf')
+    else:
+        abort(400)
+
+
 @app.route('/reset', methods=['POST'])
 def reset_password():
 
